@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c8507df7-9e02-4f5c-ad39-7f60cfa3727e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/WanderState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/WanderState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/BulletBotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/BulletBotController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/PlayerBotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/PlayerBotController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerBaseFrameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerBaseFrameData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/SavableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/SavableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/3DBall/TFModels/3DBallHardLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/3DBall/TFModels/3DBallHardLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/3DBall/TFModels/3DBallLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/3DBall/TFModels/3DBallLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Basic/TFModels/BasicLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Basic/TFModels/BasicLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Bouncer/TFModels/BouncerLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Bouncer/TFModels/BouncerLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Crawler/TFModels/CrawlerDynamicLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Crawler/TFModels/CrawlerDynamicLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Crawler/TFModels/CrawlerStaticLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Crawler/TFModels/CrawlerStaticLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/FoodCollector/TFModels/FoodCollectorLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/FoodCollector/TFModels/FoodCollectorLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/GridWorld/TFModels/GridWorldLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/GridWorld/TFModels/GridWorldLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Hallway/TFModels/HallwayLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Hallway/TFModels/HallwayLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/PushBlock/TFModels/PushBlockLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/PushBlock/TFModels/PushBlockLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Pyramids/TFModels/PyramidsLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Pyramids/TFModels/PyramidsLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Reacher/TFModels/ReacherLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Reacher/TFModels/ReacherLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Tennis/TFModels/TennisLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Tennis/TFModels/TennisLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Walker/TFModels/WalkerLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Walker/TFModels/WalkerLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/WallJump/TFModels/BigWallJumpLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/WallJump/TFModels/BigWallJumpLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/WallJump/TFModels/SmallWallJumpLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/WallJump/TFModels/SmallWallJumpLearning.nn.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Plugins.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Plugins.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Academy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Academy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/ActionMasker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/ActionMasker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Agent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Agent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Batcher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Batcher.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Brain.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Brain.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/BrainParameters.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/BrainParameters.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/BroadcastHub.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/BroadcastHub.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Decision.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Decision.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/DemonstrationStore.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/DemonstrationStore.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/HeuristicBrain.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/HeuristicBrain.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/ICommunicator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/ICommunicator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/ApplierImpl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/ApplierImpl.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/BarracudaModelParamLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/BarracudaModelParamLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/GeneratorImpl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/GeneratorImpl.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/TensorGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/TensorGenerator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/TensorNames.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/TensorNames.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Monitor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Monitor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/PlayerBrain.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/PlayerBrain.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/ResetParameters.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/ResetParameters.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/RpcCommunicator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/RpcCommunicator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/SocketCommunicator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/SocketCommunicator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/UnityAgentsException.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/UnityAgentsException.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Utilities.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Utilities.cs.meta" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Assets/Resources/Scripts" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/AimingLaser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/ShotBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/CannonBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Utility/ObjectResetter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/3DBall/TFModels/3DBallHardLearning.nn.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Environment/Water/Water/Scripts/Water.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/IPoolableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/1-LunarLander/1-TheSimplestScenario/SimplestAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Shader/ForceField.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Tests/TimeTravelTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Tests/Tests.asmdef" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/AimingReticuleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/GunController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/SavableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/ec/dac3f163/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Batcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Agent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/b7/47b8b237/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/BulletBotController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/PlayerBotController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/44/f3f4cebb/Buffer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/Bot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/PlayerBrain.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerBaseFrameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BC0FF3BA-5219-4086-B0E2-BFBFF0B00B3E/81/e6c6eb88/BaseRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/NPCDetector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/Scripts/Utils/TransformExtensionMethods.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/c0/a8257bb1/Tuple`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/BulletFrameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/BaseAI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Savable Objects/PlayerSave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Brain.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/FollowState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/WanderState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/AttackState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/SeekBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/WanderBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/SteeringBehaviours.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/07-Drone/01-Float/DroneFloatAgent.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/BulletManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyMoveState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyWanderState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/WanderBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/SeekBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyAttackState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/Bot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/EnemyAttackState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Pool/Pool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/NPCDetector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/PoolableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/BaseBot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/BulletFrameData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/IPoolableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/AttackState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/AimingReticuleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/FreelancerFlightExample/Scripts/Ship/ShipInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/FreelancerFlightExample/Scripts/UI/MouseCrosshairUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerBaseFrameData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/SavableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" />
+        <option value="$PROJECT_DIR$/Assets/FreelancerFlightExample/Scripts/Ship/Ship.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/BulletBotController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Savable Objects/PlayerSave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/GunController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" />
+        <option value="$PROJECT_DIR$/Assets/FreelancerFlightExample/Scripts/UI/BoresightCrosshair.cs" />
+        <option value="$PROJECT_DIR$/Assets/AimingLaser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/BaseAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Shader/ForceField.shader" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/FlockState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/FollowState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/PlayerBotController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/WanderState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Tests/TimeTravelTests.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Tests/TimeTravelTests.cs" />
+        <option value="$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/ML-Simplest-Scenario-master/1-LunarLander/1-TheSimplestScenario/SimplestAgent.cs" />
+        <option value="$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/ML-Simplest-Scenario-master/1-LunarLander/4-ContinuousReward/GravityAgentContinuous.cs" />
+        <option value="$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/ML-Simplest-Scenario-master/1-LunarLander/5-Obstacle/ObstacleAgent.cs" />
+        <option value="$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/ML-Simplest-Scenario-master/4-CurriculumLearning/ThreeInputCurriculumAgent.cs" />
+        <option value="$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/1-LunarLander/1-TheSimplestScenario/SimplestAgent.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1PBwVytL2T58A56dTFan2nOsgiP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="RiderNUnitUnitTestingPageId" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="15032">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="15032" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8507df7-9e02-4f5c-ad39-7f60cfa3727e" name="Default Changelist" comment="" />
+      <created>1554124037296</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554124037296</updated>
+      <workItem from="1554124052133" duration="740000" />
+      <workItem from="1554194053339" duration="7849000" />
+      <workItem from="1554278941432" duration="12331000" />
+      <workItem from="1554366316079" duration="713000" />
+      <workItem from="1554381758614" duration="1244000" />
+      <workItem from="1554453525604" duration="1941000" />
+      <workItem from="1554631232705" duration="2888000" />
+      <workItem from="1554713164650" duration="10814000" />
+      <workItem from="1554733340853" duration="311000" />
+      <workItem from="1554734947061" duration="1306000" />
+      <workItem from="1554799954860" duration="4718000" />
+      <workItem from="1554978984796" duration="10580000" />
+      <workItem from="1555061556373" duration="5454000" />
+      <workItem from="1555079078617" duration="599000" />
+      <workItem from="1555320301929" duration="3630000" />
+      <workItem from="1555323982537" duration="472000" />
+      <workItem from="1555325246733" duration="2173000" />
+      <workItem from="1555411667907" duration="1585000" />
+      <workItem from="1555497130587" duration="8183000" />
+      <workItem from="1555581572322" duration="2505000" />
+      <workItem from="1556006907653" duration="8452000" />
+      <workItem from="1556021085845" duration="4161000" />
+      <workItem from="1556030344763" duration="364000" />
+      <workItem from="1556100062954" duration="8278000" />
+      <workItem from="1556184832940" duration="5272000" />
+      <workItem from="1556198070925" duration="3730000" />
+      <workItem from="1556266623219" duration="2369000" />
+      <workItem from="1556529177840" duration="12189000" />
+      <workItem from="1556609440043" duration="3469000" />
+      <workItem from="1556703406190" duration="2405000" />
+      <workItem from="1556793702202" duration="958000" />
+      <workItem from="1556877536789" duration="1198000" />
+      <workItem from="1557225074241" duration="9714000" />
+      <workItem from="1557304914647" duration="13827000" />
+      <workItem from="1557326244660" duration="1889000" />
+      <workItem from="1557393080440" duration="1549000" />
+      <workItem from="1557406091092" duration="2754000" />
+      <workItem from="1557670935482" duration="11950000" />
+      <workItem from="1557693152981" duration="776000" />
+      <workItem from="1557694434993" duration="3036000" />
+      <workItem from="1557735723020" duration="17091000" />
+      <workItem from="1557828082712" duration="15424000" />
+      <workItem from="1557913720654" duration="1685000" />
+      <workItem from="1558090798899" duration="2914000" />
+      <workItem from="1558343475086" duration="9630000" />
+      <workItem from="1558439860686" duration="4302000" />
+      <workItem from="1558620163173" duration="599000" />
+      <workItem from="1558694059053" duration="7392000" />
+      <workItem from="1558944158012" duration="18853000" />
+      <workItem from="1559033836609" duration="6373000" />
+      <workItem from="1559139515211" duration="603000" />
+      <workItem from="1559212423982" duration="6984000" />
+      <workItem from="1559555484676" duration="10065000" />
+      <workItem from="1559637689789" duration="11120000" />
+      <workItem from="1559729223365" duration="1972000" />
+      <workItem from="1559819521940" duration="1103000" />
+      <workItem from="1560167793408" duration="3187000" />
+      <workItem from="1560248428975" duration="2864000" />
+      <workItem from="1560262832629" duration="1128000" />
+      <workItem from="1560334226742" duration="13568000" />
+      <workItem from="1560422075554" duration="5428000" />
+      <workItem from="1560497483378" duration="10793000" />
+      <workItem from="1560761401718" duration="2625000" />
+      <workItem from="1560864811258" duration="1203000" />
+      <workItem from="1561035733639" duration="4505000" />
+      <workItem from="1561125646942" duration="597000" />
+      <workItem from="1561363872925" duration="5725000" />
+      <workItem from="1561458763331" duration="4119000" />
+      <workItem from="1561555260188" duration="627000" />
+      <workItem from="1561628630746" duration="10798000" />
+      <workItem from="1561916575382" duration="599000" />
+      <workItem from="1561970670599" duration="7182000" />
+      <workItem from="1561987326029" duration="5867000" />
+      <workItem from="1562060450394" duration="5182000" />
+      <workItem from="1562235090398" duration="7633000" />
+      <workItem from="1562255610088" duration="1234000" />
+      <workItem from="1562319318622" duration="5258000" />
+      <workItem from="1562511861657" duration="17506000" />
+      <workItem from="1562538392791" duration="4166000" />
+      <workItem from="1562574769149" duration="7242000" />
+      <workItem from="1562668148521" duration="2866000" />
+      <workItem from="1563180375136" duration="3494000" />
+      <workItem from="1563281013075" duration="8912000" />
+      <workItem from="1563353858012" duration="3508000" />
+      <workItem from="1563443283730" duration="4029000" />
+      <workItem from="1563452939366" duration="7127000" />
+      <workItem from="1563523522673" duration="5555000" />
+      <workItem from="1563784927460" duration="5150000" />
+      <workItem from="1563797008849" duration="4755000" />
+      <workItem from="1564133866574" duration="233000" />
+      <workItem from="1564341832861" duration="7654000" />
+      <workItem from="1564391379722" duration="1802000" />
+      <workItem from="1564414170400" duration="2251000" />
+      <workItem from="1564482056309" duration="2041000" />
+      <workItem from="1564498828078" duration="598000" />
+      <workItem from="1565034098498" duration="617000" />
+      <workItem from="1565036625649" duration="4482000" />
+      <workItem from="1565078836290" duration="4140000" />
+      <workItem from="1565091623966" duration="10298000" />
+      <workItem from="1565179201693" duration="1333000" />
+      <workItem from="1565360881066" duration="599000" />
+      <workItem from="1565604177399" duration="1019000" />
+      <workItem from="1565610329600" duration="3175000" />
+      <workItem from="1566133662078" duration="3743000" />
+      <workItem from="1566208858884" duration="8170000" />
+      <workItem from="1566252712729" duration="1266000" />
+      <workItem from="1567780799085" duration="1161000" />
+      <workItem from="1568028479018" duration="2188000" />
+      <workItem from="1568115507394" duration="4145000" />
+      <workItem from="1568808592172" duration="3079000" />
+      <workItem from="1568982313946" duration="430000" />
+      <workItem from="1572190467554" duration="6839000" />
+      <workItem from="1572251312776" duration="889000" />
+      <workItem from="1572253279418" duration="10566000" />
+      <workItem from="1572341060676" duration="9221000" />
+      <workItem from="1572426131032" duration="4811000" />
+      <workItem from="1572459986363" duration="919000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added a Pool and various other optimization">
+      <created>1560167981628</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560167981628</updated>
+    </task>
+    <task id="LOCAL-00002" summary="forgot some stuff">
+      <created>1560168071159</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560168071159</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <MESSAGE value="Added a Pool and various other optimization" />
+    <MESSAGE value="forgot some stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="forgot some stuff" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs</url>
+          <line>229</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" initialLine="226">
+            <startOffsets>
+              <option value="8431" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8577" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
+        <watch expression="go" language="C#" custom="RiderImportsList:" />
+        <watch expression="Vector3.Distance(formerPosition, pos)" />
+        <watch expression="hitAhead1" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>objectType == PoolableTypes.Bullets</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>objectType == PoolableTypes.PlayerBot</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="watch">
+      <expression>
+        <expression-string>go</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>id</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>GameManager.Instance.Player.GetComponent&lt;Ship&gt;()</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>GameManager.Instance.Player.GetComponentInChildren&lt;PlayerController&gt;()</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>GameManager.Instance.Player.GetComponent&lt;PlayerController&gt;()</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>hitAhead1</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Vector3.Distance(formerPosition, pos)</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>other.gameObject.CompareTag(&quot;Player&quot;)</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>other.gameObject.CompareTag(&quot;Enemy&quot;)</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Mathf.Abs(angle)</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Vector3.Dot(playerToEnemy, player.transform.forward)</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+</project>
