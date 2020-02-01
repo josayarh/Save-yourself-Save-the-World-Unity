@@ -2,6 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8507df7-9e02-4f5c-ad39-7f60cfa3727e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/AsyncBridge.Net35.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/AsyncBridge.Net35.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/ExtensionLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/ExtensionLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Api.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Api.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Unity.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Unity.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/Mono.Posix.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/Mono.Posix.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/QuickGuide.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/QuickGuide.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/ReadOnlyCollectionsInterfaces.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/ReadOnlyCollectionsInterfaces.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/System.Threading.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/System.Threading.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/UnityAPIWrapper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/UnityAPIWrapper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/big-logo@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/big-logo@2x.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/credits.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/credits.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/eula.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/eula.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/libsfw.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/libsfw.bundle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/libsfw.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/libsfw.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/sfw.net.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/sfw.net.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x64/pthreadVC2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x64/pthreadVC2.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x64/sfw_x64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x64/sfw_x64.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x86.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x86/pthreadVC2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x86/pthreadVC2.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x86/sfw_x86.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x86/sfw_x86.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player Bot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player Bot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerShip.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerShip.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scenes/Level1Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scenes/Level1Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/WanderState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/WanderState.cs" afterDir="false" />
@@ -16,50 +78,113 @@
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/SavableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/SavableObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Editor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/3DBall/TFModels/3DBallHardLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/3DBall/TFModels/3DBallHardLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/3DBall/TFModels/3DBallLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/3DBall/TFModels/3DBallLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Basic/TFModels/BasicLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Basic/TFModels/BasicLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Bouncer/TFModels/BouncerLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Bouncer/TFModels/BouncerLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Crawler/TFModels/CrawlerDynamicLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Crawler/TFModels/CrawlerDynamicLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Crawler/TFModels/CrawlerStaticLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Crawler/TFModels/CrawlerStaticLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/FoodCollector/TFModels/FoodCollectorLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/FoodCollector/TFModels/FoodCollectorLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/GridWorld/TFModels/GridWorldLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/GridWorld/TFModels/GridWorldLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Hallway/TFModels/HallwayLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Hallway/TFModels/HallwayLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/PushBlock/TFModels/PushBlockLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/PushBlock/TFModels/PushBlockLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Pyramids/TFModels/PyramidsLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Pyramids/TFModels/PyramidsLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Reacher/TFModels/ReacherLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Reacher/TFModels/ReacherLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Tennis/TFModels/TennisLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Tennis/TFModels/TennisLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Walker/TFModels/WalkerLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/Walker/TFModels/WalkerLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/WallJump/TFModels/BigWallJumpLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/WallJump/TFModels/BigWallJumpLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/WallJump/TFModels/SmallWallJumpLearning.nn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/WallJump/TFModels/SmallWallJumpLearning.nn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Plugins.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Plugins.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Academy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Academy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/ActionMasker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/ActionMasker.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Agent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Agent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Batcher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Batcher.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Brain.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Brain.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/BrainParameters.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/BrainParameters.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/BroadcastHub.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/BroadcastHub.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Decision.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Decision.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/DemonstrationStore.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/DemonstrationStore.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/HeuristicBrain.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/HeuristicBrain.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/ICommunicator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/ICommunicator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/ApplierImpl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/ApplierImpl.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/BarracudaModelParamLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/BarracudaModelParamLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/GeneratorImpl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/GeneratorImpl.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/TensorGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/TensorGenerator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/TensorNames.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/InferenceBrain/TensorNames.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Monitor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Monitor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/PlayerBrain.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/PlayerBrain.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/ResetParameters.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/ResetParameters.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/RpcCommunicator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/RpcCommunicator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/SocketCommunicator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/SocketCommunicator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/UnityAgentsException.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/UnityAgentsException.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Utilities.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Utilities.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Tests/Tests.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Tests/Tests.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/01 (15).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/01 (15).mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/03 (8).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/03 (8).mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/03 (9).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/03 (9).mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/05 (8).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/05 (8).mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/05 (9).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/05 (9).mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/06 (7).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/06 (7).mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/07 (6).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/07 (6).mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/4-2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/4-2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/Wall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/Wall.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b1-1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b1-1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b12.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b12.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b2-2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b2-2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b3-1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b3-1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b3-2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b3-2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b4-1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b4-1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b4-2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b4-2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b4-3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b4-3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b5-1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b5-1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b6-1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b6-1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b7-1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b7-1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b7.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b7.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b8.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b8.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b87.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b87.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b9-1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b9-1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b9-2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b9-2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b9.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/b9.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/c3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/c3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/depositphotos_8483461-Seamless-pattern-resembling-glass-windows-on-a-modern-building.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/depositphotos_8483461-Seamless-pattern-resembling-glass-windows-on-a-modern-building.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/h2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/h2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/i2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/i2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/lambert1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/lambert1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/m2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/m2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/n2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/n2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/orange.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/v2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/v2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/v4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/v4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/x2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/x2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/z2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Buildings/Materials/z2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/05 (8).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/05 (8).mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/43.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/43.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/Aircos0005_240.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/Aircos0005_240.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/airduct_grate_02b.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/airduct_grate_02b.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/d1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/d1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/d3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/d3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/eeee.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/eeee.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/lambert1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/lambert1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p1-1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p1-1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p1-2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p1-2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p3-1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p3-1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p33.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p33.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-10.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-10.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-11.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-11.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-12.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-12.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-13.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-13.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-7.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-7.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-8.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-8.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-9.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/p5-9.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/photo_2016-05-15_10-21-39.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/photo_2016-05-15_10-21-39.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/sadsadsadasd.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Models/Roof/Materials/sadsadsadasd.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/11.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/11.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/12.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/12.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/13.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/13.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/14.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/14.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/15.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/15.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/16.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/16.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/17.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/17.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/9.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/Pipe/Pipe_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/Pipe/Pipe_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/Pipe/Pipe_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/Pipe/Pipe_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/Pipe/Pipe_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Prefabs/Roof/Pipe/Pipe_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Scenes/Sample.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Scenes/Sample.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WhiteCity/Textures/Lensflare/Sun.flare" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WhiteCity/Textures/Lensflare/Sun.flare" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ml-agents/ml-agents.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,70 +194,77 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Assets/Resources/Scripts" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/AimingLaser.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/ShotBehavior.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/CannonBehavior.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Utility/ObjectResetter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Examples/3DBall/TFModels/3DBallHardLearning.nn.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Environment/Water/Water/Scripts/Water.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/IPoolableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/ShipInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/1-LunarLander/1-TheSimplestScenario/SimplestAgent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Shader/ForceField.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Tests/TimeTravelTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Tests/Tests.asmdef" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/AimingReticuleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/GunController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/SavableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/ec/dac3f163/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Batcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Agent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/b7/47b8b237/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/BulletBotController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/PlayerBotController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/44/f3f4cebb/Buffer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/Bot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/PlayerBrain.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerBaseFrameData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BC0FF3BA-5219-4086-B0E2-BFBFF0B00B3E/81/e6c6eb88/BaseRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/NPCDetector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/Scripts/Utils/TransformExtensionMethods.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/c0/a8257bb1/Tuple`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/BulletFrameData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/BaseAI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Savable Objects/PlayerSave.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ml-agents/ml-agents/UnitySDK/Assets/ML-Agents/Scripts/Brain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/AimingReticuleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AEEE2A46-43FD-4B25-995B-A1E9BB530B29/ad/5baaede2/CompressionTypeProto.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/MLScripts/AgentController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/NPCDetector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/SavableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/BaseAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/FollowState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Scripts/Grpc/CommunicatorObjects/Observation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/WanderState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/AttackState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/Pyramids/Scripts/PyramidAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/BulletBotController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/SeekBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/WanderBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/PlayerBotController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/SteeringBehaviours.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/07-Drone/01-Float/DroneFloatAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/Bot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/WanderBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/BulletFrameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerBaseFrameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Scripts/InferenceBrain/TensorApplier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Savable Objects/PlayerSave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Scripts/InferenceBrain/TensorGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Scripts/InferenceBrain/BarracudaModelParamLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Scripts/InferenceBrain/ModelRunner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Scripts/DemonstrationRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/68DD6E4A-CC00-4C7C-8BB1-2C0E7EB964F9/20/ee78396e/Model.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D27DFFC2-6BB9-411A-9DB4-0B1FBACE639C/87/5b51b6cd/ProcessTask`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/FoodCollector/Scripts/FoodCollectorAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/ec/dac3f163/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/Scripts/Utils/TransformExtensionMethods.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/b7/47b8b237/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Utility/ObjectResetter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Scripts/Monitor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/SharedAssets/Scripts/RayPerception3D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Scripts/Academy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/44/f3f4cebb/Buffer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BC0FF3BA-5219-4086-B0E2-BFBFF0B00B3E/81/e6c6eb88/BaseRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/c0/a8257bb1/Tuple`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Scripts/DemonstrationStore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Scripts/Agent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Shader/ForceField.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Tests/TimeTravelTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/IPoolableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Scripts/Grpc/CommunicatorObjects/AgentInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/Basic/Scripts/BasicAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/CannonBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Environment/Water/Water/Scripts/Water.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AimingLaser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/ShotBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/BulletManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/EnemyController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyMoveState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyWanderState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/WanderBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/SeekBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyAttackState.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/Bot.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/EnemyAttackState.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Pool/Pool.cs" />
@@ -152,72 +284,83 @@
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" />
         <option value="$PROJECT_DIR$/Assets/FreelancerFlightExample/Scripts/Ship/Ship.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/BulletBotController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Savable Objects/PlayerSave.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/GunController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" />
         <option value="$PROJECT_DIR$/Assets/FreelancerFlightExample/Scripts/UI/BoresightCrosshair.cs" />
         <option value="$PROJECT_DIR$/Assets/AimingLaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/BaseAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Shader/ForceField.shader" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/FlockState.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/FollowState.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/PlayerBotController.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/WanderState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Tests/TimeTravelTests.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Tests/TimeTravelTests.cs" />
         <option value="$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/ML-Simplest-Scenario-master/1-LunarLander/1-TheSimplestScenario/SimplestAgent.cs" />
         <option value="$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/ML-Simplest-Scenario-master/1-LunarLander/4-ContinuousReward/GravityAgentContinuous.cs" />
         <option value="$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/ML-Simplest-Scenario-master/1-LunarLander/5-Obstacle/ObstacleAgent.cs" />
         <option value="$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/ML-Simplest-Scenario-master/4-CurriculumLearning/ThreeInputCurriculumAgent.cs" />
         <option value="$PROJECT_DIR$/Assets/ML-Simplest-Scenario-master/1-LunarLander/1-TheSimplestScenario/SimplestAgent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/MLScripts/AgentController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Tests/TimeTravelTests.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Machine Learning Script/LevelOneAcademy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Machine Learning Script/CustomDemoRecorder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Savable Objects/PlayerSave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/ML-Agents/Scripts/Grpc/CommunicatorObjects/Observation.cs" />
+        <option value="$PROJECT_DIR$/Assets/ML-Agents/Scripts/InferenceBrain/TensorGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/ML-Agents/Scripts/InferenceBrain/TensorApplier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1PBwVytL2T58A56dTFan2nOsgiP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="RiderNUnitUnitTestingPageId" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="15032">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="15032" />
-      <option name="userSelectedPid" value="false" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -346,6 +489,33 @@
       <workItem from="1572341060676" duration="9221000" />
       <workItem from="1572426131032" duration="4811000" />
       <workItem from="1572459986363" duration="919000" />
+      <workItem from="1572509185576" duration="8414000" />
+      <workItem from="1573047280674" duration="3098000" />
+      <workItem from="1573110539162" duration="10576000" />
+      <workItem from="1573724490664" duration="3289000" />
+      <workItem from="1574261701585" duration="1593000" />
+      <workItem from="1574268364959" duration="476000" />
+      <workItem from="1574281986812" duration="623000" />
+      <workItem from="1574323153273" duration="9496000" />
+      <workItem from="1574796285116" duration="598000" />
+      <workItem from="1574869807027" duration="9719000" />
+      <workItem from="1574887560865" duration="2262000" />
+      <workItem from="1574929491612" duration="4714000" />
+      <workItem from="1575467672543" duration="896000" />
+      <workItem from="1575471032729" duration="1453000" />
+      <workItem from="1575537262222" duration="3403000" />
+      <workItem from="1576503849759" duration="913000" />
+      <workItem from="1576742808036" duration="14353000" />
+      <workItem from="1578318697675" duration="1000" />
+      <workItem from="1578328157252" duration="179000" />
+      <workItem from="1578583781165" duration="1198000" />
+      <workItem from="1579097238051" duration="1222000" />
+      <workItem from="1579161789481" duration="3349000" />
+      <workItem from="1579170879921" duration="2230000" />
+      <workItem from="1579773486118" duration="599000" />
+      <workItem from="1579776905710" duration="600000" />
+      <workItem from="1580121728581" duration="1209000" />
+      <workItem from="1580556536427" duration="1089000" />
     </task>
     <task id="LOCAL-00001" summary="Added a Pool and various other optimization">
       <created>1560167981628</created>
@@ -397,10 +567,86 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Assets/ml-agents/ml-agents" />
+    </ignored-roots>
     <MESSAGE value="Added a Pool and various other optimization" />
     <MESSAGE value="forgot some stuff" />
     <option name="LAST_COMMIT_MESSAGE" value="forgot some stuff" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="640" y="253" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1580123634024">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="640" y="253" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1580123634024" />
+    <state width="924" height="294" key="GridCell.Tab.0.bottom" timestamp="1579170717693">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717693" />
+    <state width="924" height="294" key="GridCell.Tab.0.center" timestamp="1579170717693">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717693" />
+    <state width="924" height="294" key="GridCell.Tab.0.left" timestamp="1579170717693">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717693" />
+    <state width="924" height="294" key="GridCell.Tab.0.right" timestamp="1579170717693">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717693" />
+    <state width="924" height="294" key="GridCell.Tab.1.bottom" timestamp="1579170717694">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717694" />
+    <state width="924" height="294" key="GridCell.Tab.1.center" timestamp="1579170717694">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717694" />
+    <state width="924" height="294" key="GridCell.Tab.1.left" timestamp="1579170717693">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717693" />
+    <state width="924" height="294" key="GridCell.Tab.1.right" timestamp="1579170717694">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717694" />
+    <state width="924" height="294" key="GridCell.Tab.2.bottom" timestamp="1579170717694">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717694" />
+    <state width="924" height="294" key="GridCell.Tab.2.center" timestamp="1579170717694">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.2.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717694" />
+    <state width="924" height="294" key="GridCell.Tab.2.left" timestamp="1579170717694">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.2.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717694" />
+    <state width="924" height="294" key="GridCell.Tab.2.right" timestamp="1579170717694">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.2.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717694" />
+    <state width="924" height="294" key="GridCell.Tab.3.bottom" timestamp="1579170717694">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717694" />
+    <state width="924" height="294" key="GridCell.Tab.3.center" timestamp="1579170717694">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.3.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717694" />
+    <state width="924" height="294" key="GridCell.Tab.3.left" timestamp="1579170717694">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.3.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717694" />
+    <state width="924" height="294" key="GridCell.Tab.3.right" timestamp="1579170717694">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="294" key="GridCell.Tab.3.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579170717694" />
+    <state x="-1127" y="231" key="RiderGenerateDialog" timestamp="1579171760135">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state x="-1127" y="231" key="RiderGenerateDialog/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1579171760135" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -409,19 +655,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs</url>
-          <line>229</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" initialLine="226">
-            <startOffsets>
-              <option value="8431" />
-            </startOffsets>
-            <endOffsets>
-              <option value="8577" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -429,93 +662,8 @@
         <watch expression="go" language="C#" custom="RiderImportsList:" />
         <watch expression="Vector3.Distance(formerPosition, pos)" />
         <watch expression="hitAhead1" />
+        <watch expression="player.transform.position" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="breakpointCondition">
-      <expression>
-        <expression-string>objectType == PoolableTypes.Bullets</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>objectType == PoolableTypes.PlayerBot</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-    <expressions id="watch">
-      <expression>
-        <expression-string>go</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>id</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>GameManager.Instance.Player.GetComponent&lt;Ship&gt;()</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>GameManager.Instance.Player.GetComponentInChildren&lt;PlayerController&gt;()</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>GameManager.Instance.Player.GetComponent&lt;PlayerController&gt;()</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>hitAhead1</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Vector3.Distance(formerPosition, pos)</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>other.gameObject.CompareTag(&quot;Player&quot;)</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>other.gameObject.CompareTag(&quot;Enemy&quot;)</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Mathf.Abs(angle)</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Vector3.Dot(playerToEnemy, player.transform.forward)</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
   </component>
 </project>

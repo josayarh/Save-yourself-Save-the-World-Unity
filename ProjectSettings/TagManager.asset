@@ -8,6 +8,8 @@ TagManager:
   - Dynamic
   - PlayerBot
   - Laser
+  - Building
+  - Wall
   layers:
   - Default
   - TransparentFX

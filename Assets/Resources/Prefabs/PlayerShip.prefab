@@ -141,6 +141,7 @@ MonoBehaviour:
   rightTraverse: 60
   elevation: 60
   depression: 5
+  fixedReticule: {fileID: 0}
 --- !u!1 &7160778316339827416
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,8 +653,10 @@ GameObject:
   - component: {fileID: 7164090769982043978}
   - component: {fileID: 7180934704442544348}
   - component: {fileID: 7129253895138731656}
-  - component: {fileID: 7130309958617404024}
+  - component: {fileID: 2117572297373086102}
   - component: {fileID: 7129260240684046570}
+  - component: {fileID: 6828791124844834616}
+  - component: {fileID: 8638510375613632872}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Player
@@ -704,11 +707,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b58cb9e30ec724fb88a15da2da0354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 1
+  agentParameters:
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 1
+  isPlayer: 0
   fireRate: 0.5
   gunTipPosition: {fileID: 4903848018014802456}
   gun: {fileID: 4096409141499774165}
---- !u!114 &7130309958617404024
+  useObs: 0
+--- !u!114 &2117572297373086102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -717,19 +726,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7161115892463551462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f3cffa8d3c0ec449aa2ab4930c283f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bankLimit: 35
-  pitchSensitivity: 2
-  yawSensitivity: 2
-  rollSensitivity: 1
-  pitch: 0
-  yaw: 0
-  roll: 0
-  strafe: 0
-  throttle: 0
-  cursorPoistion: {fileID: 0}
+  m_BrainParameters:
+    vectorObservationSize: 49
+    numStackedVectorObservations: 1
+    vectorActionSize: 07000000
+    vectorActionDescriptions: []
+    vectorActionSpaceType: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_UseHeuristic: 0
+  m_BehaviorName: PlayerShipRecord
 --- !u!114 &7129260240684046570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -746,6 +755,30 @@ MonoBehaviour:
   angularForce: {x: 100, y: 100, z: 100}
   reverseMultiplier: 1
   forceMultiplier: 100
+--- !u!114 &6828791124844834616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7161115892463551462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb172294dbbcc408286b156a2c4b553c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8638510375613632872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7161115892463551462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24809743c3f1941478c95a66fa7a0509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7161662288692279664
 GameObject:
   m_ObjectHideFlags: 0
