@@ -1,0 +1,16 @@
+{
+    "name": "CustomScripts",
+    "references": [
+        "MLAgents",
+        "MLAgentsShared",
+        "Unity.TextMeshPro"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
