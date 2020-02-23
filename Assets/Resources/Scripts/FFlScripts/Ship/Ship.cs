@@ -38,10 +38,6 @@ namespace FLFlight
 
         private void Start()
         {
-            transform.position = Vector3.zero;
-            transform.rotation = Quaternion.identity;
-            transform.localScale = Vector3.one;
-            
             if(isPlayer)
                 DontDestroyOnLoad(gameObject);
         }
@@ -173,7 +169,7 @@ namespace FLFlight
 
         public override void AgentAction(float[] vectorAction)
         {
-            if (!isPlayer)
+            if (!isPlayer && vectorAction.Length > 6)
             {
                 rBody.velocity = new Vector3(vectorAction[0],vectorAction[1],vectorAction[2]);
                 transform.Rotate(vectorAction[3],vectorAction[4],vectorAction[5]);

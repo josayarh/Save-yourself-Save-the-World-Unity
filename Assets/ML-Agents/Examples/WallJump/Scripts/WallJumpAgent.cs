@@ -29,7 +29,7 @@ public class WallJumpAgent : Agent
     Rigidbody m_AgentRb;
     Material m_GroundMaterial;
     Renderer m_GroundRenderer;
-    WallJumpSettings m_WallJumpSettings;
+    WallJumpAcademy m_Academy;
 
     public float jumpingTime;
     public float jumpTime;
@@ -43,7 +43,7 @@ public class WallJumpAgent : Agent
 
     public override void InitializeAgent()
     {
-        m_WallJumpSettings = FindObjectOfType<WallJumpSettings>();
+        m_Academy = FindObjectOfType<WallJumpAcademy>();
         m_Configuration = Random.Range(0, 5);
 
         m_AgentRb = GetComponent<Rigidbody>();
@@ -201,17 +201,17 @@ public class WallJumpAgent : Agent
             }
 
         transform.Rotate(rotateDir, Time.fixedDeltaTime * 300f);
-        m_AgentRb.AddForce(dirToGo * m_WallJumpSettings.agentRunSpeed,
+        m_AgentRb.AddForce(dirToGo * m_Academy.agentRunSpeed,
             ForceMode.VelocityChange);
 
         if (jumpingTime > 0f)
         {
             m_JumpTargetPos =
                 new Vector3(m_AgentRb.position.x,
-                    m_JumpStartingPos.y + m_WallJumpSettings.agentJumpHeight,
+                    m_JumpStartingPos.y + m_Academy.agentJumpHeight,
                     m_AgentRb.position.z) + dirToGo;
-            MoveTowards(m_JumpTargetPos, m_AgentRb, m_WallJumpSettings.agentJumpVelocity,
-                m_WallJumpSettings.agentJumpVelocityMaxChange);
+            MoveTowards(m_JumpTargetPos, m_AgentRb, m_Academy.agentJumpVelocity,
+                m_Academy.agentJumpVelocityMaxChange);
         }
 
         if (!(jumpingTime > 0f) && !largeGrounded)
@@ -232,7 +232,7 @@ public class WallJumpAgent : Agent
             SetReward(-1f);
             ResetBlock(m_ShortBlockRb);
             StartCoroutine(
-                GoalScoredSwapGroundMaterial(m_WallJumpSettings.failMaterial, .5f));
+                GoalScoredSwapGroundMaterial(m_Academy.failMaterial, .5f));
         }
     }
 
@@ -267,7 +267,7 @@ public class WallJumpAgent : Agent
             SetReward(1f);
             Done();
             StartCoroutine(
-                GoalScoredSwapGroundMaterial(m_WallJumpSettings.goalScoredMaterial, 2));
+                GoalScoredSwapGroundMaterial(m_Academy.goalScoredMaterial, 2));
         }
     }
 
@@ -312,7 +312,7 @@ public class WallJumpAgent : Agent
         {
             localScale = new Vector3(
                 localScale.x,
-                Academy.Instance.FloatProperties.GetPropertyWithDefault("no_wall_height", 0),
+                m_Academy.FloatProperties.GetPropertyWithDefault("no_wall_height", 0),
                 localScale.z);
             wall.transform.localScale = localScale;
             GiveModel("SmallWallJump", noWallBrain);
@@ -321,15 +321,15 @@ public class WallJumpAgent : Agent
         {
             localScale = new Vector3(
                 localScale.x,
-                Academy.Instance.FloatProperties.GetPropertyWithDefault("small_wall_height", 4),
+                m_Academy.FloatProperties.GetPropertyWithDefault("small_wall_height", 4),
                 localScale.z);
             wall.transform.localScale = localScale;
             GiveModel("SmallWallJump", smallWallBrain);
         }
         else
         {
-            var min = Academy.Instance.FloatProperties.GetPropertyWithDefault("big_wall_min_height", 8);
-            var max = Academy.Instance.FloatProperties.GetPropertyWithDefault("big_wall_max_height", 8);
+            var min = m_Academy.FloatProperties.GetPropertyWithDefault("big_wall_min_height", 8);
+            var max = m_Academy.FloatProperties.GetPropertyWithDefault("big_wall_max_height", 8);
             var height = min + Random.value * (max - min);
             localScale = new Vector3(
                 localScale.x,

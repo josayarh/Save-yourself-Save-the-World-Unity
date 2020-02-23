@@ -5,12 +5,32 @@ using MLAgents.Sensor;
 
 namespace MLAgents.Tests
 {
+    public class TestAcademy : Academy
+    {
+        public int initializeAcademyCalls;
+        public int AcademyStepCalls;
+
+        public override void InitializeAcademy()
+        {
+            initializeAcademyCalls += 1;
+        }
+
+        public override void AcademyReset()
+        {
+        }
+
+        public override void AcademyStep()
+        {
+            AcademyStepCalls += 1;
+        }
+    }
     public class TestAgent : Agent
     {
         public int initializeAgentCalls;
         public int collectObservationsCalls;
         public int agentActionCalls;
         public int agentResetCalls;
+        public int agentOnDoneCalls;
         public override void InitializeAgent()
         {
             initializeAgentCalls += 1;
@@ -40,11 +60,15 @@ namespace MLAgents.Tests
             agentResetCalls += 1;
         }
 
+        public override void AgentOnDone()
+        {
+            agentOnDoneCalls += 1;
+        }
+
         public override float[] Heuristic()
         {
             return new float[0];
         }
-
     }
 
     public class TestSensor : ISensor
@@ -56,7 +80,7 @@ namespace MLAgents.Tests
             sensorName = n;
         }
 
-        public int[] GetObservationShape()
+        public int[] GetFloatObservationShape()
         {
             return new[] { 0 };
         }
@@ -85,26 +109,19 @@ namespace MLAgents.Tests
         public void Update() { }
     }
 
-    [TestFixture]
     public class EditModeTestGeneration
     {
-        [SetUp]
-        public void SetUp()
-        {
-            if (Academy.IsInitialized)
-            {
-                Academy.Instance.Dispose();
-            }
-        }
-
         [Test]
         public void TestAcademy()
         {
-            var aca = Academy.Instance;
+            // Use the Assert class to test conditions.
+            var acaGo = new GameObject("TestAcademy");
+            acaGo.AddComponent<TestAcademy>();
+            var aca = acaGo.GetComponent<TestAcademy>();
             Assert.AreNotEqual(null, aca);
+            Assert.AreEqual(0, aca.initializeAcademyCalls);
             Assert.AreEqual(0, aca.GetEpisodeCount());
             Assert.AreEqual(0, aca.GetStepCount());
-            Assert.AreEqual(0, aca.GetTotalStepCount());
         }
 
         [Test]
@@ -118,50 +135,25 @@ namespace MLAgents.Tests
         }
     }
 
-    [TestFixture]
     public class EditModeTestInitialization
     {
-        [SetUp]
-        public void SetUp()
-        {
-            if (Academy.IsInitialized)
-            {
-                Academy.Instance.Dispose();
-            }
-        }
-
         [Test]
         public void TestAcademy()
         {
-            Assert.AreEqual(false, Academy.IsInitialized);
-            var aca = Academy.Instance;
-            Assert.AreEqual(true, Academy.IsInitialized);
-
-            // Check that init is idempotent
-            aca.LazyInitialization();
-            aca.LazyInitialization();
-
+            var acaGo = new GameObject("TestAcademy");
+            acaGo.AddComponent<TestAcademy>();
+            var aca = acaGo.GetComponent<TestAcademy>();
+            Assert.AreEqual(0, aca.initializeAcademyCalls);
+            Assert.AreEqual(0, aca.GetStepCount());
+            Assert.AreEqual(0, aca.GetEpisodeCount());
+            //This will call the method even though it is private
+            var academyInitializeMethod = typeof(Academy).GetMethod("InitializeEnvironment",
+                BindingFlags.Instance | BindingFlags.NonPublic);
+            academyInitializeMethod?.Invoke(aca, new object[] { });
+            Assert.AreEqual(1, aca.initializeAcademyCalls);
             Assert.AreEqual(0, aca.GetEpisodeCount());
             Assert.AreEqual(0, aca.GetStepCount());
-            Assert.AreEqual(0, aca.GetTotalStepCount());
-            Assert.AreNotEqual(null, aca.FloatProperties);
-
-            // Check that Dispose is idempotent
-            aca.Dispose();
-            Assert.AreEqual(false, Academy.IsInitialized);
-            aca.Dispose();
-        }
-
-        [Test]
-        public void TestAcademyDispose()
-        {
-            var floatProperties1 = Academy.Instance.FloatProperties;
-            Academy.Instance.Dispose();
-
-            var floatProperties2 = Academy.Instance.FloatProperties;
-            Academy.Instance.Dispose();
-
-            Assert.AreNotEqual(floatProperties1, floatProperties2);
+            Assert.AreEqual(0, aca.AcademyStepCalls);
         }
 
         [Test]
@@ -173,6 +165,9 @@ namespace MLAgents.Tests
             var agentGo2 = new GameObject("TestAgent");
             agentGo2.AddComponent<TestAgent>();
             var agent2 = agentGo2.GetComponent<TestAgent>();
+            var acaGo = new GameObject("TestAcademy");
+            acaGo.AddComponent<TestAcademy>();
+            var aca = acaGo.GetComponent<TestAcademy>();
 
             Assert.AreEqual(false, agent1.IsDone());
             Assert.AreEqual(false, agent2.IsDone());
@@ -185,9 +180,13 @@ namespace MLAgents.Tests
 
             var agentEnableMethod = typeof(Agent).GetMethod("OnEnableHelper",
                 BindingFlags.Instance | BindingFlags.NonPublic);
+            var academyInitializeMethod = typeof(Academy).GetMethod("InitializeEnvironment",
+                BindingFlags.Instance | BindingFlags.NonPublic);
 
-            agentEnableMethod?.Invoke(agent2, new object[] { });
-            agentEnableMethod?.Invoke(agent1, new object[] { });
+
+            agentEnableMethod?.Invoke(agent2, new object[] { aca });
+            academyInitializeMethod?.Invoke(aca, new object[] { });
+            agentEnableMethod?.Invoke(agent1, new object[] { aca });
 
             Assert.AreEqual(false, agent1.IsDone());
             Assert.AreEqual(false, agent2.IsDone());
@@ -206,47 +205,36 @@ namespace MLAgents.Tests
         }
     }
 
-    [TestFixture]
     public class EditModeTestStep
     {
-        [SetUp]
-        public void SetUp()
-        {
-            if (Academy.IsInitialized)
-            {
-                Academy.Instance.Dispose();
-            }
-        }
-
         [Test]
         public void TestAcademy()
         {
-            var aca = Academy.Instance;
+            var acaGo = new GameObject("TestAcademy");
+            acaGo.AddComponent<TestAcademy>();
+            var aca = acaGo.GetComponent<TestAcademy>();
+            var academyInitializeMethod = typeof(Academy).GetMethod("InitializeEnvironment",
+                BindingFlags.Instance | BindingFlags.NonPublic);
+            academyInitializeMethod?.Invoke(aca, new object[] { });
+
+            var academyStepMethod = typeof(Academy).GetMethod("EnvironmentStep",
+                BindingFlags.Instance | BindingFlags.NonPublic);
 
             var numberReset = 0;
             for (var i = 0; i < 10; i++)
             {
+                Assert.AreEqual(1, aca.initializeAcademyCalls);
                 Assert.AreEqual(numberReset, aca.GetEpisodeCount());
                 Assert.AreEqual(i, aca.GetStepCount());
+                Assert.AreEqual(i, aca.AcademyStepCalls);
 
                 // The reset happens at the beginning of the first step
                 if (i == 0)
                 {
                     numberReset += 1;
                 }
-                Academy.Instance.EnvironmentStep();
+                academyStepMethod?.Invoke(aca, new object[] { });
             }
-        }
-
-        [Test]
-        public void TestAcademyAutostep()
-        {
-            var aca = Academy.Instance;
-            Assert.IsTrue(aca.IsAutomaticSteppingEnabled);
-            aca.DisableAutomaticStepping(true);
-            Assert.IsFalse(aca.IsAutomaticSteppingEnabled);
-            aca.EnableAutomaticStepping();
-            Assert.IsTrue(aca.IsAutomaticSteppingEnabled);
         }
 
         [Test]
@@ -258,11 +246,15 @@ namespace MLAgents.Tests
             var agentGo2 = new GameObject("TestAgent");
             agentGo2.AddComponent<TestAgent>();
             var agent2 = agentGo2.GetComponent<TestAgent>();
+            var acaGo = new GameObject("TestAcademy");
+            acaGo.AddComponent<TestAcademy>();
+            var aca = acaGo.GetComponent<TestAcademy>();
 
-            var aca = Academy.Instance;
 
             var agentEnableMethod = typeof(Agent).GetMethod(
                 "OnEnableHelper", BindingFlags.Instance | BindingFlags.NonPublic);
+            var academyInitializeMethod = typeof(Academy).GetMethod(
+                "InitializeEnvironment", BindingFlags.Instance | BindingFlags.NonPublic);
 
             agent1.agentParameters = new AgentParameters();
             agent2.agentParameters = new AgentParameters();
@@ -273,7 +265,11 @@ namespace MLAgents.Tests
             agent2.agentParameters.onDemandDecision = true;
             // agent2 will request decisions only when RequestDecision is called
 
-            agentEnableMethod?.Invoke(agent1, new object[] { });
+            agentEnableMethod?.Invoke(agent1, new object[] { aca });
+            academyInitializeMethod?.Invoke(aca, new object[] { });
+
+            var academyStepMethod = typeof(Academy).GetMethod(
+                "EnvironmentStep", BindingFlags.Instance | BindingFlags.NonPublic);
 
             var numberAgent1Reset = 0;
             var numberAgent2Initialization = 0;
@@ -298,7 +294,7 @@ namespace MLAgents.Tests
                 //Agent 2 is only initialized at step 2
                 if (i == 2)
                 {
-                    agentEnableMethod?.Invoke(agent2, new object[] { });
+                    agentEnableMethod?.Invoke(agent2, new object[] { aca });
                     numberAgent2Initialization += 1;
                 }
 
@@ -317,35 +313,34 @@ namespace MLAgents.Tests
                     requestAction += 1;
                     agent2.RequestAction();
                 }
-                aca.EnvironmentStep();
+                academyStepMethod?.Invoke(aca, new object[] { });
             }
         }
     }
 
-    [TestFixture]
     public class EditModeTestReset
     {
-        [SetUp]
-        public void SetUp()
-        {
-            if (Academy.IsInitialized)
-            {
-                Academy.Instance.Dispose();
-            }
-        }
-
         [Test]
         public void TestAcademy()
         {
-            var aca = Academy.Instance;
+            var acaGo = new GameObject("TestAcademy");
+            acaGo.AddComponent<TestAcademy>();
+            var aca = acaGo.GetComponent<TestAcademy>();
+            var academyInitializeMethod = typeof(Academy).GetMethod(
+                "InitializeEnvironment", BindingFlags.Instance | BindingFlags.NonPublic);
+            academyInitializeMethod?.Invoke(aca, new object[] { });
+
+            var academyStepMethod = typeof(Academy).GetMethod(
+                "EnvironmentStep", BindingFlags.Instance | BindingFlags.NonPublic);
 
             var numberReset = 0;
             var stepsSinceReset = 0;
             for (var i = 0; i < 50; i++)
             {
                 Assert.AreEqual(stepsSinceReset, aca.GetStepCount());
+                Assert.AreEqual(1, aca.initializeAcademyCalls);
                 Assert.AreEqual(numberReset, aca.GetEpisodeCount());
-                Assert.AreEqual(i, aca.GetTotalStepCount());
+                Assert.AreEqual(i, aca.AcademyStepCalls);
                 // Academy resets at the first step
                 if (i == 0)
                 {
@@ -353,7 +348,7 @@ namespace MLAgents.Tests
                 }
 
                 stepsSinceReset += 1;
-                aca.EnvironmentStep();
+                academyStepMethod.Invoke(aca, new object[] { });
             }
         }
 
@@ -366,11 +361,18 @@ namespace MLAgents.Tests
             var agentGo2 = new GameObject("TestAgent");
             agentGo2.AddComponent<TestAgent>();
             var agent2 = agentGo2.GetComponent<TestAgent>();
+            var acaGo = new GameObject("TestAcademy");
+            acaGo.AddComponent<TestAcademy>();
+            var aca = acaGo.GetComponent<TestAcademy>();
 
-            var aca = Academy.Instance;
 
             var agentEnableMethod = typeof(Agent).GetMethod(
                 "OnEnableHelper", BindingFlags.Instance | BindingFlags.NonPublic);
+            var academyInitializeMethod = typeof(Academy).GetMethod(
+                "InitializeEnvironment", BindingFlags.Instance | BindingFlags.NonPublic);
+
+            var academyStepMethod = typeof(Academy).GetMethod(
+                "EnvironmentStep", BindingFlags.Instance | BindingFlags.NonPublic);
 
             agent1.agentParameters = new AgentParameters();
             agent2.agentParameters = new AgentParameters();
@@ -380,7 +382,8 @@ namespace MLAgents.Tests
             // agent1 will take an action at every step and request a decision every 2 steps
             agent2.agentParameters.onDemandDecision = true;
 
-            agentEnableMethod?.Invoke(agent2, new object[] { });
+            agentEnableMethod?.Invoke(agent2, new object[] { aca });
+            academyInitializeMethod?.Invoke(aca, new object[] { });
 
             var numberAgent1Reset = 0;
             var numberAgent2Reset = 0;
@@ -390,9 +393,10 @@ namespace MLAgents.Tests
             for (var i = 0; i < 5000; i++)
             {
                 Assert.AreEqual(acaStepsSinceReset, aca.GetStepCount());
+                Assert.AreEqual(1, aca.initializeAcademyCalls);
                 Assert.AreEqual(numberAcaReset, aca.GetEpisodeCount());
 
-                Assert.AreEqual(i, aca.GetTotalStepCount());
+                Assert.AreEqual(i, aca.AcademyStepCalls);
 
                 Assert.AreEqual(agent2StepSinceReset, agent2.GetStepCount());
                 Assert.AreEqual(numberAgent1Reset, agent1.agentResetCalls);
@@ -407,7 +411,7 @@ namespace MLAgents.Tests
                 //Agent 1 is only initialized at step 2
                 if (i == 2)
                 {
-                    agentEnableMethod?.Invoke(agent1, new object[] { });
+                    agentEnableMethod?.Invoke(agent1, new object[] { aca });
                 }
                 // Set agent 1 to done every 11 steps to test behavior
                 if (i % 11 == 5)
@@ -446,21 +450,86 @@ namespace MLAgents.Tests
                 //Agent 1 is only initialized at step 2
                 if (i < 2)
                 { }
-                aca.EnvironmentStep();
+                academyStepMethod?.Invoke(aca, new object[] { });
             }
         }
     }
 
-    [TestFixture]
     public class EditModeTestMiscellaneous
     {
-
-        [SetUp]
-        public void SetUp()
+        [Test]
+        public void TestResetOnDone()
         {
-            if (Academy.IsInitialized)
+            var agentGo1 = new GameObject("TestAgent");
+            agentGo1.AddComponent<TestAgent>();
+            var agent1 = agentGo1.GetComponent<TestAgent>();
+            var agentGo2 = new GameObject("TestAgent");
+            agentGo2.AddComponent<TestAgent>();
+            var agent2 = agentGo2.GetComponent<TestAgent>();
+            var acaGo = new GameObject("TestAcademy");
+            acaGo.AddComponent<TestAcademy>();
+            var aca = acaGo.GetComponent<TestAcademy>();
+
+
+            var agentEnableMethod = typeof(Agent).GetMethod(
+                "OnEnableHelper", BindingFlags.Instance | BindingFlags.NonPublic);
+            var academyInitializeMethod = typeof(Academy).GetMethod(
+                "InitializeEnvironment", BindingFlags.Instance | BindingFlags.NonPublic);
+
+            var academyStepMethod = typeof(Academy).GetMethod(
+                "EnvironmentStep", BindingFlags.Instance | BindingFlags.NonPublic);
+
+            agent1.agentParameters = new AgentParameters();
+            agent2.agentParameters = new AgentParameters();
+            // We use event based so the agent will now try to send anything to the brain
+            agent1.agentParameters.onDemandDecision = false;
+            // agent1 will take an action at every step and request a decision every steps
+            agent1.agentParameters.numberOfActionsBetweenDecisions = 1;
+            // agent2 will request decisions only when RequestDecision is called
+            agent2.agentParameters.onDemandDecision = true;
+            agent1.agentParameters.maxStep = 20;
+            //Here we specify that the agent does not reset when done
+            agent1.agentParameters.resetOnDone = false;
+            agent2.agentParameters.resetOnDone = false;
+
+            agentEnableMethod?.Invoke(agent2, new object[] { aca });
+            academyInitializeMethod?.Invoke(aca, new object[] { });
+            agentEnableMethod?.Invoke(agent1, new object[] { aca });
+
+            var agent1ResetOnDone = 0;
+            var agent2ResetOnDone = 0;
+            var agent1StepSinceReset = 0;
+            var agent2StepSinceReset = 0;
+
+            for (var i = 0; i < 50; i++)
             {
-                Academy.Instance.Dispose();
+                Assert.AreEqual(i, aca.AcademyStepCalls);
+
+                Assert.AreEqual(agent1StepSinceReset, agent1.GetStepCount());
+                Assert.AreEqual(agent2StepSinceReset, agent2.GetStepCount());
+                Assert.AreEqual(agent1ResetOnDone, agent1.agentOnDoneCalls);
+                Assert.AreEqual(agent2ResetOnDone, agent2.agentOnDoneCalls);
+
+                // we request a decision at each step
+                agent2.RequestDecision();
+                if (agent1ResetOnDone == 0)
+                    agent1StepSinceReset += 1;
+                if (agent2ResetOnDone == 0)
+                    agent2StepSinceReset += 1;
+
+                if ((i > 2) && (i % 21 == 0))
+                {
+                    agent1ResetOnDone = 1;
+                }
+
+                if (i == 31)
+                {
+                    agent2ResetOnDone = 1;
+                    agent2.Done();
+                }
+
+
+                academyStepMethod?.Invoke(aca, new object[] { });
             }
         }
 
@@ -473,10 +542,19 @@ namespace MLAgents.Tests
             var agentGo2 = new GameObject("TestAgent");
             agentGo2.AddComponent<TestAgent>();
             var agent2 = agentGo2.GetComponent<TestAgent>();
-            var aca = Academy.Instance;
+            var acaGo = new GameObject("TestAcademy");
+            acaGo.AddComponent<TestAcademy>();
+            var aca = acaGo.GetComponent<TestAcademy>();
+
 
             var agentEnableMethod = typeof(Agent).GetMethod(
                 "OnEnableHelper", BindingFlags.Instance | BindingFlags.NonPublic);
+            var academyInitializeMethod = typeof(Academy).GetMethod(
+                "InitializeEnvironment", BindingFlags.Instance | BindingFlags.NonPublic);
+
+            var academyStepMethod = typeof(Academy).GetMethod(
+                "EnvironmentStep", BindingFlags.Instance | BindingFlags.NonPublic);
+
             agent1.agentParameters = new AgentParameters();
             agent2.agentParameters = new AgentParameters();
             // We use event based so the agent will now try to send anything to the brain
@@ -487,8 +565,9 @@ namespace MLAgents.Tests
             // agent2 will request decisions only when RequestDecision is called
             agent1.agentParameters.maxStep = 20;
 
-            agentEnableMethod?.Invoke(agent2, new object[] { });
-            agentEnableMethod?.Invoke(agent1, new object[] { });
+            agentEnableMethod?.Invoke(agent2, new object[] { aca });
+            academyInitializeMethod?.Invoke(aca, new object[] { });
+            agentEnableMethod?.Invoke(agent1, new object[] { aca });
 
 
             var j = 0;
@@ -499,7 +578,7 @@ namespace MLAgents.Tests
                 Assert.LessOrEqual(Mathf.Abs(i * 0.1f - agent2.GetCumulativeReward()), 0.05f);
 
 
-                aca.EnvironmentStep();
+                academyStepMethod?.Invoke(aca, new object[] { });
                 agent1.AddReward(10f);
 
                 if ((i % 21 == 0) && (i > 0))

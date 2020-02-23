@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 
 public class GridAgent : Agent
 {
+    Academy m_Academy;
     [FormerlySerializedAs("m_Area")]
     [Header("Specific to GridWorld")]
     public GridArea area;
@@ -29,6 +30,7 @@ public class GridAgent : Agent
 
     public override void InitializeAgent()
     {
+        m_Academy = FindObjectOfType<Academy>();
     }
 
     public override void CollectObservations()
@@ -51,7 +53,7 @@ public class GridAgent : Agent
         // Prevents the agent from picking an action that would make it collide with a wall
         var positionX = (int)transform.position.x;
         var positionZ = (int)transform.position.z;
-        var maxPosition = (int)Academy.Instance.FloatProperties.GetPropertyWithDefault("gridSize", 5f) - 1;
+        var maxPosition = (int)m_Academy.FloatProperties.GetPropertyWithDefault("gridSize", 5f) - 1;
 
         if (positionX == 0)
         {
@@ -160,7 +162,7 @@ public class GridAgent : Agent
             renderCamera.Render();
         }
 
-        if (Academy.Instance.IsCommunicatorOn)
+        if (m_Academy.IsCommunicatorOn)
         {
             RequestDecision();
         }

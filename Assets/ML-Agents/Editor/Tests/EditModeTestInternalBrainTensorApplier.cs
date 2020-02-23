@@ -4,7 +4,6 @@ using UnityEngine;
 using System.Reflection;
 using Barracuda;
 using MLAgents.InferenceBrain;
-using System;
 
 namespace MLAgents.Tests
 {
@@ -18,6 +17,16 @@ namespace MLAgents.Tests
                     "m_Action", BindingFlags.Instance | BindingFlags.NonPublic);
                 return (AgentAction)f.GetValue(this);
             }
+        }
+
+        List<Agent> GetFakeAgentInfos()
+        {
+            var goA = new GameObject("goA");
+            var agentA = goA.AddComponent<TestAgent>();
+            var goB = new GameObject("goB");
+            var agentB = goB.AddComponent<TestAgent>();
+
+            return new List<Agent> { agentA, agentB };
         }
 
         [Test]
@@ -39,27 +48,25 @@ namespace MLAgents.Tests
                 shape = new long[] { 2, 3 },
                 data = new Tensor(2, 3, new float[] { 1, 2, 3, 4, 5, 6 })
             };
+            var agentInfos = GetFakeAgentInfos();
 
             var applier = new ContinuousActionOutputApplier();
+            applier.Apply(inputTensor, agentInfos);
+            var agents = agentInfos;
 
-            var action0 = new AgentAction();
-            var action1 = new AgentAction();
-            var callbacks = new List<AgentIdActionPair>()
-            {
-                new AgentIdActionPair{agentId = 0, action = (a) => action0 = a},
-                new AgentIdActionPair{agentId = 1, action = (a) => action1 = a}
-            };
+            var agent = agents[0] as TestAgent;
+            Assert.NotNull(agent);
+            var action = agent.GetAction();
+            Assert.AreEqual(action.vectorActions[0], 1);
+            Assert.AreEqual(action.vectorActions[1], 2);
+            Assert.AreEqual(action.vectorActions[2], 3);
 
-            applier.Apply(inputTensor, callbacks);
-
-
-            Assert.AreEqual(action0.vectorActions[0], 1);
-            Assert.AreEqual(action0.vectorActions[1], 2);
-            Assert.AreEqual(action0.vectorActions[2], 3);
-
-            Assert.AreEqual(action1.vectorActions[0], 4);
-            Assert.AreEqual(action1.vectorActions[1], 5);
-            Assert.AreEqual(action1.vectorActions[2], 6);
+            agent = agents[1] as TestAgent;
+            Assert.NotNull(agent);
+            action = agent.GetAction();
+            Assert.AreEqual(action.vectorActions[0], 4);
+            Assert.AreEqual(action.vectorActions[1], 5);
+            Assert.AreEqual(action.vectorActions[2], 6);
         }
 
         [Test]
@@ -73,25 +80,49 @@ namespace MLAgents.Tests
                     5,
                     new[] { 0.5f, 22.5f, 0.1f, 5f, 1f, 4f, 5f, 6f, 7f, 8f })
             };
+            var agentInfos = GetFakeAgentInfos();
             var alloc = new TensorCachingAllocator();
             var applier = new DiscreteActionOutputApplier(new[] { 2, 3 }, 0, alloc);
+            applier.Apply(inputTensor, agentInfos);
+            var agents = agentInfos;
 
-            var action0 = new AgentAction();
-            var action1 = new AgentAction();
-            var callbacks = new List<AgentIdActionPair>()
-            {
-                new AgentIdActionPair{agentId = 0, action = (a) => action0 = a},
-                new AgentIdActionPair{agentId = 1, action = (a) => action1 = a}
-            };
+            var agent = agents[0] as TestAgent;
+            Assert.NotNull(agent);
+            var action = agent.GetAction();
+            Assert.AreEqual(action.vectorActions[0], 1);
+            Assert.AreEqual(action.vectorActions[1], 1);
 
-            applier.Apply(inputTensor, callbacks);
-
-            Assert.AreEqual(action0.vectorActions[0], 1);
-            Assert.AreEqual(action0.vectorActions[1], 1);
-
-            Assert.AreEqual(action1.vectorActions[0], 1);
-            Assert.AreEqual(action1.vectorActions[1], 2);
+            agent = agents[1] as TestAgent;
+            Assert.NotNull(agent);
+            action = agent.GetAction();
+            Assert.AreEqual(action.vectorActions[0], 1);
+            Assert.AreEqual(action.vectorActions[1], 2);
             alloc.Dispose();
+        }
+
+        [Test]
+        public void ApplyValueEstimate()
+        {
+            var inputTensor = new TensorProxy()
+            {
+                shape = new long[] { 2, 1 },
+                data = new Tensor(2, 1, new[] { 0.5f, 8f })
+            };
+            var agentInfos = GetFakeAgentInfos();
+
+            var applier = new ValueEstimateApplier();
+            applier.Apply(inputTensor, agentInfos);
+            var agents = agentInfos;
+
+            var agent = agents[0] as TestAgent;
+            Assert.NotNull(agent);
+            var action = agent.GetAction();
+            Assert.AreEqual(action.value, 0.5f);
+
+            agent = agents[1] as TestAgent;
+            Assert.NotNull(agent);
+            action = agent.GetAction();
+            Assert.AreEqual(action.value, 8);
         }
     }
 }

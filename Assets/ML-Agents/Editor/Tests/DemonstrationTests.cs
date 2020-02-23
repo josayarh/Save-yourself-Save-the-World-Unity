@@ -3,25 +3,14 @@ using UnityEngine;
 using System.IO.Abstractions.TestingHelpers;
 using System.Reflection;
 using MLAgents.CommunicatorObjects;
-using MLAgents.Sensor;
 
 namespace MLAgents.Tests
 {
-    [TestFixture]
     public class DemonstrationTests : MonoBehaviour
     {
         const string k_DemoDirecory = "Assets/Demonstrations/";
         const string k_ExtensionType = ".demo";
         const string k_DemoName = "Test";
-
-        [SetUp]
-        public void SetUp()
-        {
-            if (Academy.IsInitialized)
-            {
-                Academy.Instance.Dispose();
-            }
-        }
 
         [Test]
         public void TestSanitization()
@@ -65,7 +54,7 @@ namespace MLAgents.Tests
                 storedVectorActions = new[] { 0f, 1f },
             };
 
-            demoStore.Record(agentInfo, new System.Collections.Generic.List<ISensor>());
+            demoStore.Record(agentInfo);
             demoStore.Close();
         }
 
@@ -101,12 +90,19 @@ namespace MLAgents.Tests
             demoRecorder.record = true;
             demoRecorder.InitializeDemoStore(fileSystem);
 
+            var acaGo = new GameObject("TestAcademy");
+            acaGo.AddComponent<TestAcademy>();
+            var aca = acaGo.GetComponent<TestAcademy>();
+
+            var academyInitializeMethod = typeof(Academy).GetMethod("InitializeEnvironment",
+                BindingFlags.Instance | BindingFlags.NonPublic);
             var agentEnableMethod = typeof(Agent).GetMethod("OnEnable",
                 BindingFlags.Instance | BindingFlags.NonPublic);
             var agentSendInfo = typeof(Agent).GetMethod("SendInfo",
                 BindingFlags.Instance | BindingFlags.NonPublic);
 
             agentEnableMethod?.Invoke(agent1, new object[] { });
+            academyInitializeMethod?.Invoke(aca, new object[] { });
 
             // Step the agent
             agent1.RequestDecision();
@@ -129,6 +125,8 @@ namespace MLAgents.Tests
                     Assert.AreEqual((float)i + 1, vecObs[i]);
                 }
             }
+
+
         }
     }
 }

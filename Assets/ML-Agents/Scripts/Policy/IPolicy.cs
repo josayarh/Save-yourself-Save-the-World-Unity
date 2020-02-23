@@ -1,6 +1,5 @@
 using System;
-using System.Collections.Generic;
-using MLAgents.Sensor;
+using UnityEngine;
 
 namespace MLAgents
 {
@@ -18,7 +17,7 @@ namespace MLAgents
         /// batching of requests.
         /// </summary>
         /// <param name="agent"></param>
-        void RequestDecision(AgentInfo info, List<ISensor> sensors, Action<AgentAction> action);
+        void RequestDecision(Agent agent);
 
         /// <summary>
         /// Signals the Policy that if the Decision has not been taken yet,

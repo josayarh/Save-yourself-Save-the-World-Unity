@@ -11,10 +11,8 @@ namespace MLAgents.Sensor
         bool m_Grayscale;
         string m_Name;
         int[] m_Shape;
-        SensorCompressionType m_CompressionType;
 
-        public CameraSensor(Camera camera, int width, int height, bool grayscale, string name,
-            SensorCompressionType compression)
+        public CameraSensor(Camera camera, int width, int height, bool grayscale, string name)
         {
             m_Camera = camera;
             m_Width = width;
@@ -22,7 +20,6 @@ namespace MLAgents.Sensor
             m_Grayscale = grayscale;
             m_Name = name;
             m_Shape = new[] { height, width, grayscale ? 1 : 3 };
-            m_CompressionType = compression;
         }
 
         public string GetName()
@@ -30,7 +27,7 @@ namespace MLAgents.Sensor
             return m_Name;
         }
 
-        public int[] GetObservationShape()
+        public int[] GetFloatObservationShape()
         {
             return m_Shape;
         }
@@ -62,7 +59,7 @@ namespace MLAgents.Sensor
 
         public SensorCompressionType GetCompressionType()
         {
-            return m_CompressionType;
+            return SensorCompressionType.PNG;
         }
 
         /// <summary>

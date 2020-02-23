@@ -8,11 +8,10 @@ namespace MLAgents.Sensor
         public RenderTexture renderTexture;
         public string sensorName = "RenderTextureSensor";
         public bool grayscale;
-        public SensorCompressionType compression = SensorCompressionType.PNG;
 
         public override ISensor CreateSensor()
         {
-            return new RenderTextureSensor(renderTexture, grayscale, sensorName, compression);
+            return new RenderTextureSensor(renderTexture, grayscale, sensorName);
         }
 
         public override int[] GetObservationShape()

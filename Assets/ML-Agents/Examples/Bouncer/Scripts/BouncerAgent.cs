@@ -20,7 +20,8 @@ public class BouncerAgent : Agent
         m_Rb = gameObject.GetComponent<Rigidbody>();
         m_LookDir = Vector3.zero;
 
-        m_ResetParams = Academy.Instance.FloatProperties;
+        var academy = FindObjectOfType<Academy>();
+        m_ResetParams = academy.FloatProperties;
 
         SetResetParameters();
     }
@@ -67,6 +68,9 @@ public class BouncerAgent : Agent
         SetResetParameters();
     }
 
+    public override void AgentOnDone()
+    {
+    }
 
     void FixedUpdate()
     {

@@ -112,7 +112,7 @@ namespace MLAgents.Sensor
         {
         }
 
-        public int[] GetObservationShape()
+        public int[] GetFloatObservationShape()
         {
             return m_Shape;
         }

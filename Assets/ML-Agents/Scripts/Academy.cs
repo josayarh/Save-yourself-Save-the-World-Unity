@@ -1,6 +1,6 @@
-using System;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -22,19 +22,11 @@ using Barracuda;
 
 namespace MLAgents
 {
-    /// <summary>
-    /// Helper class to step the Academy during FixedUpdate phase.
-    /// </summary>
-    public class AcademyFixedUpdateStepper : MonoBehaviour
-    {
-        void FixedUpdate()
-        {
-            Academy.Instance.EnvironmentStep();
-        }
-    }
 
     /// <summary>
     /// An Academy is where Agent objects go to train their behaviors.
+    /// Currently, this class is expected to be extended to
+    /// implement the desired academy behavior.
     /// </summary>
     /// <remarks>
     /// When an academy is run, it can either be in inference or training mode.
@@ -47,20 +39,22 @@ namespace MLAgents
     /// </remarks>
     [HelpURL("https://github.com/Unity-Technologies/ml-agents/blob/master/" +
         "docs/Learning-Environment-Design-Academy.md")]
-    public class Academy : IDisposable
+    public abstract class Academy : MonoBehaviour
     {
         const string k_ApiVersion = "API-13";
         const int k_EditorTrainingPort = 5004;
 
-        // Lazy initializer pattern, see https://csharpindepth.com/articles/singleton#lazy
-        static Lazy<Academy> lazy = new Lazy<Academy>(() => new Academy());
+        /// Temporary storage for global gravity value
+        /// Used to restore oringal value when deriving Academy modifies it
+        Vector3 m_OriginalGravity;
 
-        public static bool IsInitialized
-        {
-            get { return lazy.IsValueCreated; }
-        }
+        /// Temporary storage for global fixedDeltaTime value
+        /// Used to restore original value when deriving Academy modifies it
+        float m_OriginalFixedDeltaTime;
 
-        public static Academy Instance { get { return lazy.Value; } }
+        /// Temporary storage for global maximumDeltaTime value
+        /// Used to restore original value when deriving Academy modifies it
+        float m_OriginalMaximumDeltaTime;
 
         public IFloatProperties FloatProperties;
 
@@ -84,7 +78,7 @@ namespace MLAgents
 
         /// The number of steps completed within the current episode. Incremented
         /// each time a step is taken in the environment. Is reset to 0 during
-        /// <see cref="EnvironmentReset"/>.
+        /// <see cref="AcademyReset"/>.
         int m_StepCount;
 
         /// The number of total number of steps completed during the whole simulation. Incremented
@@ -135,30 +129,17 @@ namespace MLAgents
         // Signals to all the agents each time the Academy force resets.
         public event System.Action AgentForceReset;
 
-        // Signals that the Academy has been reset by the training process
-        public event System.Action OnEnvironmentReset;
-
-        AcademyFixedUpdateStepper m_FixedUpdateStepper;
-        GameObject m_StepperObject;
-
-
         /// <summary>
-        /// Private constructor called the first time the Academy is used.
-        /// Academy uses this time to initialize internal data
+        /// MonoBehavior function called at the very beginning of environment
+        /// creation. Academy uses this time to initialize internal data
         /// structures, initialize the environment and check for the existence
         /// of a communicator.
         /// </summary>
-        Academy()
+        void Awake()
         {
-            Application.quitting += Dispose;
-
             LazyInitialization();
         }
 
-        /// <summary>
-        /// Initialize the Academy if it hasn't already been initialized.
-        /// This method is always safe to call; it will have no effect if the Academy is already initialized.
-        /// </summary>
         public void LazyInitialization()
         {
             if (!m_Initialized)
@@ -168,59 +149,10 @@ namespace MLAgents
             }
         }
 
-        /// <summary>
-        /// Enable stepping of the Academy during the FixedUpdate phase.  This is done by creating a temporary
-        /// GameObject with a MonoBehavior that calls Academy.EnvironmentStep().
-        /// </summary>
-        public void EnableAutomaticStepping()
-        {
-            if (m_FixedUpdateStepper != null)
-            {
-                return;
-            }
-
-            m_StepperObject = new GameObject("AcademyFixedUpdateStepper");
-            // Don't show this object in the hierarchy
-            m_StepperObject.hideFlags = HideFlags.HideInHierarchy;
-            m_FixedUpdateStepper = m_StepperObject.AddComponent<AcademyFixedUpdateStepper>();
-        }
-
-        /// <summary>
-        /// Disable stepping of the Academy during the FixedUpdate phase. If this is called, the Academy must be
-        /// stepped manually by the user by calling Academy.EnvironmentStep().
-        /// </summary>
-        public void DisableAutomaticStepping(bool destroyImmediate = false)
-        {
-            if (m_FixedUpdateStepper == null)
-            {
-                return;
-            }
-
-            m_FixedUpdateStepper = null;
-            if (destroyImmediate)
-            {
-                UnityEngine.Object.DestroyImmediate(m_StepperObject);
-            }
-            else
-            {
-                UnityEngine.Object.Destroy(m_StepperObject);
-            }
-
-            m_StepperObject = null;
-        }
-
-        /// <summary>
-        /// Returns whether or not the Academy is automatically stepped during the FixedUpdate phase.
-        /// </summary>
-        public bool IsAutomaticSteppingEnabled
-        {
-            get { return m_FixedUpdateStepper != null; }
-        }
-
         // Used to read Python-provided environment parameters
         static int ReadPortFromArgs()
         {
-            var args = Environment.GetCommandLineArgs();
+            var args = System.Environment.GetCommandLineArgs();
             var inputPort = "";
             for (var i = 0; i < args.Length; i++)
             {
@@ -245,6 +177,7 @@ namespace MLAgents
                 return -1;
 #endif
             }
+
         }
 
         /// <summary>
@@ -252,10 +185,14 @@ namespace MLAgents
         /// </summary>
         void InitializeEnvironment()
         {
-            EnableAutomaticStepping();
+            m_OriginalGravity = Physics.gravity;
+            m_OriginalFixedDeltaTime = Time.fixedDeltaTime;
+            m_OriginalMaximumDeltaTime = Time.maximumDeltaTime;
 
             var floatProperties = new FloatPropertiesChannel();
             FloatProperties = floatProperties;
+            InitializeAcademy();
+
 
             // Try to launch the communicator by using the arguments passed at launch
             var port = ReadPortFromArgs();
@@ -282,9 +219,9 @@ namespace MLAgents
                         new CommunicatorInitParameters
                         {
                             version = k_ApiVersion,
-                            name = "AcademySingleton",
+                            name = gameObject.name,
                         });
-                    UnityEngine.Random.InitState(unityRLInitParameters.seed);
+                    Random.InitState(unityRLInitParameters.seed);
                 }
                 catch
                 {
@@ -306,19 +243,14 @@ namespace MLAgents
             // training mode. In the absence of a communicator, we assume we are
             // in inference mode.
 
-            ResetActions();
-        }
+            DecideAction += () => { };
+            DestroyAction += () => { };
+            AgentSetStatus += i => { };
+            AgentResetIfDone += () => { };
+            AgentSendState += () => { };
+            AgentAct += () => { };
+            AgentForceReset += () => { };
 
-        void ResetActions()
-        {
-            DecideAction = () => { };
-            DestroyAction = () => { };
-            AgentSetStatus = i => { };
-            AgentResetIfDone = () => { };
-            AgentSendState = () => { };
-            AgentAct = () => { };
-            AgentForceReset = () => { };
-            OnEnvironmentReset = () => { };
         }
 
         static void OnQuitCommandReceived()
@@ -333,6 +265,31 @@ namespace MLAgents
         {
             ForcedFullReset();
         }
+
+        /// <summary>
+        /// Initializes the academy and environment. Called during the waking-up
+        /// phase of the environment before any of the scene objects/agents have
+        /// been initialized.
+        /// </summary>
+        public virtual void InitializeAcademy()
+        {
+        }
+
+        /// <summary>
+        /// Specifies the academy behavior at every step of the environment.
+        /// </summary>
+        public virtual void AcademyStep()
+        {
+        }
+
+        /// <summary>
+        /// Specifies the academy behavior when being reset (i.e. at the completion
+        /// of a global episode).
+        /// </summary>
+        public virtual void AcademyReset()
+        {
+        }
+
 
         /// <summary>
         /// Returns the current episode counter.
@@ -383,7 +340,7 @@ namespace MLAgents
         /// Performs a single environment update to the Academy, and Agent
         /// objects within the environment.
         /// </summary>
-        public void EnvironmentStep()
+        void EnvironmentStep()
         {
             if (!m_FirstAcademyReset)
             {
@@ -407,6 +364,11 @@ namespace MLAgents
                 DecideAction?.Invoke();
             }
 
+            using (TimerStack.Instance.Scoped("AcademyStep"))
+            {
+                AcademyStep();
+            }
+
             using (TimerStack.Instance.Scoped("AgentAct"))
             {
                 AgentAct?.Invoke();
@@ -423,7 +385,15 @@ namespace MLAgents
         {
             m_StepCount = 0;
             m_EpisodeCount++;
-            OnEnvironmentReset?.Invoke();
+            AcademyReset();
+        }
+
+        /// <summary>
+        /// MonoBehaviour function that dictates each environment step.
+        /// </summary>
+        void FixedUpdate()
+        {
+            EnvironmentStep();
         }
 
         /// <summary>
@@ -450,38 +420,25 @@ namespace MLAgents
         }
 
         /// <summary>
-        /// Shut down the Academy.
+        /// Cleanup function
         /// </summary>
-        public void Dispose()
+        protected virtual void OnDestroy()
         {
-            DisableAutomaticStepping(true);
+            Physics.gravity = m_OriginalGravity;
+            Time.fixedDeltaTime = m_OriginalFixedDeltaTime;
+            Time.maximumDeltaTime = m_OriginalMaximumDeltaTime;
+
             // Signal to listeners that the academy is being destroyed now
             DestroyAction?.Invoke();
 
-            Communicator?.Dispose();
-            Communicator = null;
-
-            if (m_ModelRunners != null)
+            foreach (var mr in m_ModelRunners)
             {
-                foreach (var mr in m_ModelRunners)
-                {
-                    mr.Dispose();
-                }
-                m_ModelRunners = null;
+                mr.Dispose();
             }
-
-            // Clear out the actions so we're not keeping references to any old objects
-            ResetActions();
 
             // TODO - Pass worker ID or some other identifier,
             // so that multiple envs won't overwrite each others stats.
             TimerStack.Instance.SaveJsonTimers();
-
-            FloatProperties = null;
-            m_Initialized = false;
-
-            // Reset the Lazy instance
-            lazy = new Lazy<Academy>(() => new Academy());
         }
     }
 }

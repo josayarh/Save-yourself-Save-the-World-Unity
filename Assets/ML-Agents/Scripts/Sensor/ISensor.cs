@@ -17,7 +17,7 @@ namespace MLAgents.Sensor
         /// A sensor that returns an RGB image would return new [] {Width, Height, 3}
         /// </summary>
         /// <returns></returns>
-        int[] GetObservationShape();
+        int[] GetFloatObservationShape();
 
         /// <summary>
         /// Write the observation data directly to the WriteAdapter.
@@ -65,7 +65,7 @@ namespace MLAgents.Sensor
         /// <returns></returns>
         public static int ObservationSize(this ISensor sensor)
         {
-            var shape = sensor.GetObservationShape();
+            var shape = sensor.GetFloatObservationShape();
             int count = 1;
             for (var i = 0; i < shape.Length; i++)
             {

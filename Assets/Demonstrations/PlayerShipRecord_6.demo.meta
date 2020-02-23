@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: d70f29dc73525114b8c43c0be396dee6
+guid: f5ae13a4fa36a3442970407c4daf15ed
 ScriptedImporter:
-  fileIDToRecycleName:
-    11400000: Assets/Demonstrations/PlayerShipRecord_6.demo
+  fileIDToRecycleName: {}
   externalObjects: {}
-  userData: ' (MLAgents.Demonstration)'
+  userData: 
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 7bd65ce151aaa4a41a45312543c56be1, type: 3}

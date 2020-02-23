@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Barracuda;
-using MLAgents.Sensor;
 
 namespace MLAgents.InferenceBrain
 {
@@ -26,10 +25,10 @@ namespace MLAgents.InferenceBrain
             /// </summary>
             /// <param name="tensorProxy"> The tensor the data and shape will be modified</param>
             /// <param name="batchSize"> The number of agents present in the current batch</param>
-            /// <param name="infos"> List of AgentInfos containing the
+            /// <param name="agents"> List of Agents containing the
             /// information that will be used to populate the tensor's data</param>
             void Generate(
-                TensorProxy tensorProxy, int batchSize, IEnumerable<AgentInfoSensorsPair> infos);
+                TensorProxy tensorProxy, int batchSize, IEnumerable<Agent> agents);
         }
 
         readonly Dictionary<string, IGenerator> m_Dict = new Dictionary<string, IGenerator>();
@@ -79,17 +78,17 @@ namespace MLAgents.InferenceBrain
             m_Dict[TensorNames.ValueEstimateOutput] = new BiDimensionalOutputGenerator(allocator);
         }
 
-        public void InitializeObservations(List<ISensor> sensors, ITensorAllocator allocator)
+        public void InitializeObservations(Agent agent, ITensorAllocator allocator)
         {
             // Loop through the sensors on a representative agent.
             // For vector observations, add the index to the (single) VectorObservationGenerator
             // For visual observations, make a VisualObservationInputGenerator
             var visIndex = 0;
             VectorObservationGenerator vecObsGen = null;
-            for (var sensorIndex = 0; sensorIndex < sensors.Count; sensorIndex++)
+            for (var sensorIndex = 0; sensorIndex < agent.sensors.Count; sensorIndex++)
             {
-                var sensor = sensors[sensorIndex];
-                var shape = sensor.GetObservationShape();
+                var sensor = agent.sensors[sensorIndex];
+                var shape = sensor.GetFloatObservationShape();
                 // TODO generalize - we currently only have vector or visual, but can't handle "2D" observations
                 var isVectorSensor = (shape.Length == 1);
                 if (isVectorSensor)
@@ -127,7 +126,7 @@ namespace MLAgents.InferenceBrain
         /// <exception cref="UnityAgentsException"> One of the tensor does not have an
         /// associated generator.</exception>
         public void GenerateTensors(
-            IEnumerable<TensorProxy> tensors, int currentBatchSize, IEnumerable<AgentInfoSensorsPair> infos)
+            IEnumerable<TensorProxy> tensors, int currentBatchSize, IEnumerable<Agent> agents)
         {
             foreach (var tensor in tensors)
             {
@@ -136,7 +135,7 @@ namespace MLAgents.InferenceBrain
                     throw new UnityAgentsException(
                         $"Unknown tensorProxy expected as input : {tensor.name}");
                 }
-                m_Dict[tensor.name].Generate(tensor, currentBatchSize, infos);
+                m_Dict[tensor.name].Generate(tensor, currentBatchSize, agents);
             }
         }
     }
