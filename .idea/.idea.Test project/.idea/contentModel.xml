@@ -358,6 +358,7 @@
               <e p="AimingReticuleController.cs" t="Include" />
               <e p="BulletController.cs" t="Include" />
               <e p="GunController.cs" t="Include" />
+              <e p="MLPlayerScript.cs" t="Include" />
               <e p="MLScripts" t="Include">
                 <e p="AgentController.cs" t="Include" />
               </e>

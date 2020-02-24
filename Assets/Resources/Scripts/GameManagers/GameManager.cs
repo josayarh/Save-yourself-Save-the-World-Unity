@@ -138,8 +138,8 @@ public class GameManager : MonoBehaviour
         // }
         
         
-        playerObj.transform.position = pos;
         player = playerObj.transform.Find("PlayerShip").gameObject;
+        player.transform.position = pos;
         GameObjectStateManager.Instance.initializeDynamicObjects();
 
         Ship playerShip = player.GetComponent<Ship>();
