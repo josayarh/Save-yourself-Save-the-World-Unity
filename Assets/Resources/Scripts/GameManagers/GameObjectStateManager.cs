@@ -207,8 +207,9 @@ public class GameObjectStateManager : MonoBehaviour
     public uint FrameNumber
     {
         get => frameNumber;
+        set => frameNumber = value;
     }
-    
+
     public Dictionary<Guid, GameObject> InstanciatedGameobjects
     {
         get => instanciatedGameobjects;

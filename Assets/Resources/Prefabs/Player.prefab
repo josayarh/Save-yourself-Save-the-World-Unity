@@ -564,9 +564,9 @@ GameObject:
   - component: {fileID: 5175795138777961344}
   - component: {fileID: 3724653650060622726}
   - component: {fileID: 4055217565581277948}
-  - component: {fileID: 320744934688410926}
   - component: {fileID: 3266545570039640958}
   - component: {fileID: 7116590713895824843}
+  - component: {fileID: 4613836272851220351}
   m_Layer: 9
   m_Name: PlayerShip
   m_TagString: Player
@@ -619,8 +619,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentParameters:
     maxStep: 0
-    onDemandDecision: 0
-    numberOfActionsBetweenDecisions: 1
+  hasUpgradedFromAgentParameters: 1
+  maxStep: 0
   isPlayer: 1
   fireRate: 0.5
   gunTipPosition: {fileID: 2214303456480079886}
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    vectorObservationSize: 49
+    vectorObservationSize: 28
     numStackedVectorObservations: 1
     vectorActionSize: 07000000
     vectorActionDescriptions: []
@@ -649,7 +649,7 @@ MonoBehaviour:
   m_BehaviorType: 0
   m_BehaviorName: PlayerShipRecord
   m_TeamID: 0
-  m_useChildSensors: 1
+  m_UseChildSensors: 1
 --- !u!114 &3724653650060622726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -688,18 +688,6 @@ MonoBehaviour:
   angularForce: {x: 100, y: 100, z: 100}
   reverseMultiplier: 1
   forceMultiplier: 100
---- !u!114 &320744934688410926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4167618010638279152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb172294dbbcc408286b156a2c4b553c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3266545570039640958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,6 +714,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   record: 1
   demonstrationName: PlayerShipRecord
+--- !u!114 &4613836272851220351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4167618010638279152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensorName: RayPerceptionSensor
+  detectableTags:
+  - Wall
+  - Enemy
+  - PlayerBot
+  - Building
+  raysPerDirection: 3
+  maxRayDegrees: 70
+  sphereCastRadius: 0.5
+  rayLength: 50
+  rayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  observationStacks: 1
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  useWorldPositions: 1
+  startVerticalOffset: 0
+  endVerticalOffset: 0
 --- !u!1 &4167638723596720512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,6 +1162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6212589016689801208}
+  - component: {fileID: 7601813005226644600}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -1167,6 +1187,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7601813005226644600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6212589016689801211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca48fecec0972445b7b57d3c9d11f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6429107196850287920
 GameObject:
   m_ObjectHideFlags: 0

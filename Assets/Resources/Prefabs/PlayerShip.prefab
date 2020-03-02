@@ -655,8 +655,8 @@ GameObject:
   - component: {fileID: 7129253895138731656}
   - component: {fileID: 2117572297373086102}
   - component: {fileID: 7129260240684046570}
-  - component: {fileID: 6828791124844834616}
   - component: {fileID: 8638510375613632872}
+  - component: {fileID: 4065066926138993745}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Player
@@ -709,9 +709,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentParameters:
     maxStep: 0
-    resetOnDone: 1
-    onDemandDecision: 0
-    numberOfActionsBetweenDecisions: 1
+  hasUpgradedFromAgentParameters: 1
+  maxStep: 0
   isPlayer: 0
   fireRate: 0.5
   gunTipPosition: {fileID: 4903848018014802456}
@@ -730,15 +729,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    vectorObservationSize: 49
+    vectorObservationSize: 28
     numStackedVectorObservations: 1
     vectorActionSize: 07000000
     vectorActionDescriptions: []
     vectorActionSpaceType: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
-  m_UseHeuristic: 0
+  m_BehaviorType: 0
   m_BehaviorName: PlayerShipRecord
+  m_TeamID: 0
+  m_UseChildSensors: 1
 --- !u!114 &7129260240684046570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,18 +756,6 @@ MonoBehaviour:
   angularForce: {x: 100, y: 100, z: 100}
   reverseMultiplier: 1
   forceMultiplier: 100
---- !u!114 &6828791124844834616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7161115892463551462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb172294dbbcc408286b156a2c4b553c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8638510375613632872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,6 +768,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24809743c3f1941478c95a66fa7a0509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4065066926138993745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7161115892463551462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensorName: RayPerceptionSensor
+  detectableTags:
+  - Wall
+  - Enemy
+  - PlayerBot
+  - Building
+  raysPerDirection: 3
+  maxRayDegrees: 70
+  sphereCastRadius: 0.5
+  rayLength: 50
+  rayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  observationStacks: 1
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  useWorldPositions: 1
+  startVerticalOffset: 0
+  endVerticalOffset: 0
 --- !u!1 &7161662288692279664
 GameObject:
   m_ObjectHideFlags: 0

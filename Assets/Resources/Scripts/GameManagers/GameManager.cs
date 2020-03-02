@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using FLFlight;
+using MLAgents;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
         if (gMInstance == null)
         {
             gMInstance = this;
+            Academy.Instance.OnEnvironmentReset += reloadObject;
             reloadObject();
         }
         else
@@ -74,7 +76,11 @@ public class GameManager : MonoBehaviour
     public void reloadScene()
     {
         Pool.Instance.recycleAllObjects();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameObjectStateManager.Instance.FrameNumber = 0;
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        reloadObject();
+
     }
 
     private void reloadObject()

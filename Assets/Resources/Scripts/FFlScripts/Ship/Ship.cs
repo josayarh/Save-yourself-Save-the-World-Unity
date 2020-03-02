@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using MLAgents;
+using MLAgents.Sensor;
 using UnityEngine;
 
 namespace FLFlight
@@ -30,7 +31,7 @@ namespace FLFlight
         
         private float timer = 0.0f;
         private PlayerSave playerSave;
-        private RayPerception3D rayPer;
+        private RayPerceptionSensorComponent3D rayPer;
         private Rigidbody rBody;
         private bool isShooting = false;
         
@@ -38,6 +39,7 @@ namespace FLFlight
 
         private void Start()
         {
+            
             if(isPlayer)
                 DontDestroyOnLoad(gameObject);
         }
@@ -125,10 +127,13 @@ namespace FLFlight
             else 
                 playerSave.Destroy();
             
-            GameManager.Instance.reloadScene();
-            
-            if(isPlayer)
+            if (isPlayer)
+            {
                 OnRelease();
+                Done();
+            }
+            
+            GameManager.Instance.reloadScene();
             
             if(!isPlayer)
                 Pool.Instance.release(gameObject.transform.parent.gameObject, 
@@ -137,7 +142,7 @@ namespace FLFlight
 
         public override void InitializeAgent()
         {
-            rayPer = GetComponent<RayPerception3D>();
+            rayPer = GetComponent<RayPerceptionSensorComponent3D>();
         }
 
         public override float[] Heuristic()
@@ -153,8 +158,9 @@ namespace FLFlight
                 const float rayDistance = 50f;
                 float[] rayAngles = {20f, 90f, 160f, 45f, 135f, 70f, 110f};
                 string[] detectableObjects = {"Wall", "Enemy", "PlayerBot", "Building"};
-                AddVectorObs(rayPer.Perceive(rayDistance, rayAngles, detectableObjects, 0f, 0f));
+                //AddVectorObs(rayPer.Perceive(rayDistance, rayAngles, detectableObjects, 0f, 0f));
 
+                
                 var localVelocity = transform.InverseTransformDirection(Velocity);
                 var localRotation = transform.localRotation;
                 AddVectorObs(localVelocity.normalized.x);
