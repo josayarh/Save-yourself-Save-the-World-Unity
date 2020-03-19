@@ -8065,7 +8065,7 @@ MonoBehaviour:
   - key: 2
     prefab: {fileID: 7161115892463551462, guid: a5f95611ba0df554dbb2a2d3823afb34,
       type: 3}
-    numberOfObjects: 200
+    numberOfObjects: 0
   - key: 3
     prefab: {fileID: 1658584023439639168, guid: 01762aad992b16f4faa6c1ec3c3a9461,
       type: 3}
@@ -8807,6 +8807,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065066926138993745, guid: a5f95611ba0df554dbb2a2d3823afb34,
+        type: 3}
+      propertyPath: sensorName
+      value: RayPerceptionSensor_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065066926138993745, guid: a5f95611ba0df554dbb2a2d3823afb34,
+        type: 3}
+      propertyPath: useWorldPositions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117572297373086102, guid: a5f95611ba0df554dbb2a2d3823afb34,
+        type: 3}
+      propertyPath: m_BrainParameters.vectorObservationSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117572297373086102, guid: a5f95611ba0df554dbb2a2d3823afb34,
+        type: 3}
+      propertyPath: m_BrainParameters.numStackedVectorObservations
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6828791124844834616, guid: a5f95611ba0df554dbb2a2d3823afb34, type: 3}
@@ -11874,6 +11894,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613836272851220351, guid: 9961cfd7e8aedf149a71014461980a24,
+        type: 3}
+      propertyPath: raysPerDirection
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613836272851220351, guid: 9961cfd7e8aedf149a71014461980a24,
+        type: 3}
+      propertyPath: startVerticalOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613836272851220351, guid: 9961cfd7e8aedf149a71014461980a24,
+        type: 3}
+      propertyPath: observationStacks
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175795138777961344, guid: 9961cfd7e8aedf149a71014461980a24,
+        type: 3}
+      propertyPath: m_BrainParameters.numStackedVectorObservations
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175795138777961344, guid: 9961cfd7e8aedf149a71014461980a24,
+        type: 3}
+      propertyPath: m_BrainParameters.vectorObservationSize
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9961cfd7e8aedf149a71014461980a24, type: 3}

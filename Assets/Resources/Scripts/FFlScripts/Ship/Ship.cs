@@ -160,7 +160,6 @@ namespace FLFlight
                 string[] detectableObjects = {"Wall", "Enemy", "PlayerBot", "Building"};
                 //AddVectorObs(rayPer.Perceive(rayDistance, rayAngles, detectableObjects, 0f, 0f));
 
-                
                 var localVelocity = transform.InverseTransformDirection(Velocity);
                 var localRotation = transform.localRotation;
                 AddVectorObs(localVelocity.normalized.x);
@@ -170,6 +169,8 @@ namespace FLFlight
                 AddVectorObs(localRotation.normalized.y);
                 AddVectorObs(localRotation.normalized.z);
                 AddVectorObs(System.Convert.ToInt32(isShooting));
+                
+                
             }
         }
 
