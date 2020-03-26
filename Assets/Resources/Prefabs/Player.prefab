@@ -639,14 +639,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    vectorObservationSize: 28
+    vectorObservationSize: 7
     numStackedVectorObservations: 1
     vectorActionSize: 07000000
     vectorActionDescriptions: []
     vectorActionSpaceType: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
-  m_BehaviorType: 0
+  m_BehaviorType: 1
   m_BehaviorName: PlayerShipRecord
   m_TeamID: 0
   m_UseChildSensors: 1

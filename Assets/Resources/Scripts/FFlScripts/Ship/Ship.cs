@@ -108,8 +108,10 @@ namespace FLFlight
                 // Pass the input to the physics to move the ship.
                 Physics.SetPhysicsInput(new Vector3(Input.Strafe, 0.0f, Input.Throttle),
                     new Vector3(Input.Pitch, Input.Yaw, Input.Roll));
+                
 
                 PlayerShip = this;
+                
             }
         }
         
@@ -129,8 +131,8 @@ namespace FLFlight
             
             if (isPlayer)
             {
-                OnRelease();
                 Done();
+                OnRelease();
             }
             
             GameManager.Instance.reloadScene();
@@ -151,6 +153,8 @@ namespace FLFlight
         }
 
         //Start methods for machine learning 
+        
+        
         public override void CollectObservations()
         {
             if (useObs)
@@ -160,17 +164,15 @@ namespace FLFlight
                 string[] detectableObjects = {"Wall", "Enemy", "PlayerBot", "Building"};
                 //AddVectorObs(rayPer.Perceive(rayDistance, rayAngles, detectableObjects, 0f, 0f));
 
-                var localVelocity = transform.InverseTransformDirection(Velocity);
-                var localRotation = transform.localRotation;
-                AddVectorObs(localVelocity.normalized.x);
-                AddVectorObs(localVelocity.normalized.y);
-                AddVectorObs(localVelocity.normalized.z);
-                AddVectorObs(localRotation.normalized.x);
-                AddVectorObs(localRotation.normalized.y);
-                AddVectorObs(localRotation.normalized.z);
+                var velocity = rBody.velocity;
+                var rotation = transform.rotation;
+                AddVectorObs(velocity.normalized.x);
+                AddVectorObs(velocity.normalized.y);
+                AddVectorObs(velocity.normalized.z);
+                AddVectorObs(rotation.normalized.x);
+                AddVectorObs(rotation.normalized.y);
+                AddVectorObs(rotation.normalized.z);
                 AddVectorObs(System.Convert.ToInt32(isShooting));
-                
-                
             }
         }
 

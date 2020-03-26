@@ -656,6 +656,7 @@ GameObject:
   - component: {fileID: 2117572297373086102}
   - component: {fileID: 7129260240684046570}
   - component: {fileID: 8638510375613632872}
+  - component: {fileID: 6616515648112729034}
   - component: {fileID: 4065066926138993745}
   m_Layer: 0
   m_Name: PlayerShip
@@ -729,12 +730,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    vectorObservationSize: 28
+    vectorObservationSize: 7
     numStackedVectorObservations: 1
     vectorActionSize: 07000000
     vectorActionDescriptions: []
     vectorActionSpaceType: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 11400000, guid: bb4dd6426a624734d9214e40b383cb4a, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PlayerShipRecord
@@ -768,6 +769,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24809743c3f1941478c95a66fa7a0509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6616515648112729034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7161115892463551462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  RepeatAction: 1
+  offsetStep: 0
 --- !u!114 &4065066926138993745
 MonoBehaviour:
   m_ObjectHideFlags: 0
