@@ -3,19 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="c8507df7-9e02-4f5c-ad39-7f60cfa3727e" name="Default Changelist" comment="Fix for machine learning">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Config/trainer_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Config/trainer_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demonstrations/PlayerShipRecord.demo" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Demonstrations/PlayerShipRecord.demo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Level1Scene_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Level1Scene_timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerShip.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerShip.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scenes/Level1Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scenes/Level1Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ml-agents.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ml-agents.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord.nn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord.nn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/checkpoint" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/frozen_graph_def.pb" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/frozen_graph_def.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-0.cptk.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-0.cptk.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-0.cptk.index" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-0.cptk.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-0.cptk.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-0.cptk.data-00000-of-00001.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-0.cptk.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-0.cptk.index.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-320.cptk.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-320.cptk.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-320.cptk.data-00000-of-00001.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-320.cptk.index" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-320.cptk.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-320.cptk.index.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-832.cptk.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-832.cptk.data-00000-of-00001.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-832.cptk.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-832.cptk.index.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/raw_graph_def.pb" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/raw_graph_def.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/summaries/SY-SW_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/summaries/SY-SW_timers.json" afterDir="false" />
     </list>
@@ -31,91 +41,84 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/ShipInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Machine Learning Script/MyAcademy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerBaseFrameData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Tests/Editor/Sensor/RayPerceptionSensorTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/44/f3f4cebb/Buffer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/csharp_timers.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/GunController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/AimingReticuleController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AEEE2A46-43FD-4B25-995B-A1E9BB530B29/ad/5baaede2/CompressionTypeProto.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/MLScripts/AgentController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/NPCDetector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/SavableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/BaseAI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/FollowState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/ISensor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/ec/dac3f163/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Policy/BrainParameters.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Policy/BehaviorParameters.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E1319B71-95C3-43E7-9B38-5CD3AA43F5DC/9b/04cf1c1d/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/RayPerceptionSensorComponent3D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/NPCDetector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/DemonstrationRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BC0FF3BA-5219-4086-B0E2-BFBFF0B00B3E/81/e6c6eb88/BaseRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/BaseAI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/FollowState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/DemonstrationStore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AimingLaser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/WanderState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/AttackState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/BulletBotController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/SeekBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/PlayerBotController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/SteeringBehaviours.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/Bot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/WanderBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/BulletFrameData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Grpc/RpcCommunicator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerBaseFrameData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/28/02d56d33/Tuple`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Savable Objects/PlayerSave.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/DemonstrationStore.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Agent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/68DD6E4A-CC00-4C7C-8BB1-2C0E7EB964F9/20/ee78396e/Model.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Tests/Editor/Sensor/RayPerceptionSensorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/WanderBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Academy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D27DFFC2-6BB9-411A-9DB4-0B1FBACE639C/87/5b51b6cd/ProcessTask`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/csharp_timers.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/DecisionRequester.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/ec/dac3f163/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/Scripts/Utils/TransformExtensionMethods.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/b7/47b8b237/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/DemonstrationRecorder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Utility/ObjectResetter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/Crawler/Scripts/CrawlerAgent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/44/f3f4cebb/Buffer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BC0FF3BA-5219-4086-B0E2-BFBFF0B00B3E/81/e6c6eb88/BaseRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/RayPerceptionSensor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/c0/a8257bb1/Tuple`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/ISensor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Shader/ForceField.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/RayPerceptionSensorComponent3D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/VectorSensor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/IPoolableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/InferenceBrain/ModelRunner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/RayPerceptionSensorComponentBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/Scripts/Utils/TransformExtensionMethods.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Utility/ObjectResetter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Policy/BarracudaPolicy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/RayPerceptionSensor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/ShipInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/b7/47b8b237/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/ShipPhysics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/DecisionRequester.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scenes/Level1Scene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/ce/d129757c/Guid.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CC163A10-8007-4888-B933-E1956CA90549/3a/20e52f03/BaseRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/28/02d56d33/Tuple`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/Crawler/Scripts/CrawlerAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CC163A10-8007-4888-B933-E1956CA90549/2d/f1665692/CanvasScaler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/SensorShapeValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Agent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Savable Objects/PlayerSave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/GunController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/VectorSensor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/AimingReticuleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/68DD6E4A-CC00-4C7C-8BB1-2C0E7EB964F9/20/ee78396e/Model.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/MLScripts/AgentController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/SavableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AEEE2A46-43FD-4B25-995B-A1E9BB530B29/ad/5baaede2/CompressionTypeProto.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/CannonBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Environment/Water/Water/Scripts/Water.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/AimingLaser.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Policy/BarracudaPolicy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/ShotBehavior.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E1319B71-95C3-43E7-9B38-5CD3AA43F5DC/9b/04cf1c1d/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/PlayerBotController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/ce/d129757c/Guid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/BulletBotController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/Bot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Shader/ForceField.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/BulletFrameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D27DFFC2-6BB9-411A-9DB4-0B1FBACE639C/87/5b51b6cd/ProcessTask`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -178,10 +181,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
@@ -189,6 +193,12 @@
     <property name="TWShift.3" value="true" />
     <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -200,24 +210,12 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="9992">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5308">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="9992" />
+      <option name="pid" value="5308" />
       <method v="2" />
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -393,7 +391,10 @@
       <workItem from="1583845569693" duration="3517000" />
       <workItem from="1584614377223" duration="4914000" />
       <workItem from="1585042946431" duration="4073000" />
-      <workItem from="1585210615219" duration="6643000" />
+      <workItem from="1585210615219" duration="11088000" />
+      <workItem from="1585314159728" duration="7077000" />
+      <workItem from="1585657718784" duration="1959000" />
+      <workItem from="1585818183814" duration="1996000" />
     </task>
     <task id="LOCAL-00001" summary="Added a Pool and various other optimization">
       <created>1560167981628</created>
@@ -420,7 +421,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
@@ -429,9 +430,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -450,12 +449,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/Assets/ml-agents/ml-agents" />
       <path value="$PROJECT_DIR$/Assets/Resources/Scripts" />
     </ignored-roots>
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Added a Pool and various other optimization" />
     <MESSAGE value="forgot some stuff" />
     <MESSAGE value="Fix for machine learning" />
@@ -470,91 +471,91 @@
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
     <state x="-1205" y="233" key="#xdebugger.evaluate/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585219331606" />
-    <state width="524" height="493" key="DebuggerActiveHint" timestamp="1585223351307">
+    <state width="524" height="493" key="DebuggerActiveHint" timestamp="1585819848216">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="524" height="493" key="DebuggerActiveHint/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585223351307" />
+    <state width="524" height="493" key="DebuggerActiveHint/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819848216" />
     <state width="524" height="466" key="DebuggerActiveHint/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585215746386" />
-    <state width="924" height="274" key="GridCell.Tab.0.bottom" timestamp="1585218935621">
+    <state width="1877" height="301" key="GridCell.Tab.0.bottom" timestamp="1585819922522">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935621" />
-    <state width="924" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212825014" />
-    <state width="924" height="274" key="GridCell.Tab.0.center" timestamp="1585218935621">
+    <state width="1877" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922522" />
+    <state width="1877" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878430" />
+    <state width="1877" height="301" key="GridCell.Tab.0.center" timestamp="1585819922522">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935621" />
-    <state width="924" height="274" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212825013" />
-    <state width="924" height="274" key="GridCell.Tab.0.left" timestamp="1585218935620">
+    <state width="1877" height="301" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922522" />
+    <state width="1877" height="301" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878430" />
+    <state width="1877" height="301" key="GridCell.Tab.0.left" timestamp="1585819922522">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935620" />
-    <state width="924" height="274" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212825013" />
-    <state width="924" height="274" key="GridCell.Tab.0.right" timestamp="1585218935621">
+    <state width="1877" height="301" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922522" />
+    <state width="1877" height="301" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878430" />
+    <state width="1877" height="301" key="GridCell.Tab.0.right" timestamp="1585819922522">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935621" />
-    <state width="924" height="274" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212825013" />
-    <state width="924" height="274" key="GridCell.Tab.1.bottom" timestamp="1585218935621">
+    <state width="1877" height="301" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922522" />
+    <state width="1877" height="301" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878430" />
+    <state width="1877" height="301" key="GridCell.Tab.1.bottom" timestamp="1585819922522">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935621" />
-    <state width="924" height="274" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212877949" />
-    <state width="924" height="274" key="GridCell.Tab.1.center" timestamp="1585218935621">
+    <state width="1877" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922522" />
+    <state width="1877" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878431" />
+    <state width="1877" height="301" key="GridCell.Tab.1.center" timestamp="1585819922522">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935621" />
-    <state width="924" height="274" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212877949" />
-    <state width="924" height="274" key="GridCell.Tab.1.left" timestamp="1585218935621">
+    <state width="1877" height="301" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922522" />
+    <state width="1877" height="301" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878431" />
+    <state width="1877" height="301" key="GridCell.Tab.1.left" timestamp="1585819922522">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935621" />
-    <state width="924" height="274" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212877949" />
-    <state width="924" height="274" key="GridCell.Tab.1.right" timestamp="1585218935621">
+    <state width="1877" height="301" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922522" />
+    <state width="1877" height="301" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878431" />
+    <state width="1877" height="301" key="GridCell.Tab.1.right" timestamp="1585819922522">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935621" />
-    <state width="924" height="274" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212877949" />
-    <state width="924" height="274" key="GridCell.Tab.2.bottom" timestamp="1585218935621">
+    <state width="1877" height="301" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922522" />
+    <state width="1877" height="301" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878431" />
+    <state width="1877" height="301" key="GridCell.Tab.2.bottom" timestamp="1585819922523">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935621" />
-    <state width="924" height="274" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212824818" />
-    <state width="924" height="274" key="GridCell.Tab.2.center" timestamp="1585218935621">
+    <state width="1877" height="301" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922523" />
+    <state width="1877" height="301" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878432" />
+    <state width="1877" height="301" key="GridCell.Tab.2.center" timestamp="1585819922522">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.2.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935621" />
-    <state width="924" height="274" key="GridCell.Tab.2.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212824818" />
-    <state width="924" height="274" key="GridCell.Tab.2.left" timestamp="1585218935621">
+    <state width="1877" height="301" key="GridCell.Tab.2.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922522" />
+    <state width="1877" height="301" key="GridCell.Tab.2.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878431" />
+    <state width="1877" height="301" key="GridCell.Tab.2.left" timestamp="1585819922522">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.2.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935621" />
-    <state width="924" height="274" key="GridCell.Tab.2.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212824818" />
-    <state width="924" height="274" key="GridCell.Tab.2.right" timestamp="1585218935621">
+    <state width="1877" height="301" key="GridCell.Tab.2.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922522" />
+    <state width="1877" height="301" key="GridCell.Tab.2.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878431" />
+    <state width="1877" height="301" key="GridCell.Tab.2.right" timestamp="1585819922522">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.2.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935621" />
-    <state width="924" height="274" key="GridCell.Tab.2.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212824818" />
-    <state width="924" height="274" key="GridCell.Tab.3.bottom" timestamp="1585218935622">
+    <state width="1877" height="301" key="GridCell.Tab.2.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922522" />
+    <state width="1877" height="301" key="GridCell.Tab.2.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878431" />
+    <state width="1877" height="301" key="GridCell.Tab.3.bottom" timestamp="1585819922523">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935622" />
-    <state width="924" height="274" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212824818" />
-    <state width="924" height="274" key="GridCell.Tab.3.center" timestamp="1585218935622">
+    <state width="1877" height="301" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922523" />
+    <state width="1877" height="301" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878434" />
+    <state width="1877" height="301" key="GridCell.Tab.3.center" timestamp="1585819922523">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.3.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935622" />
-    <state width="924" height="274" key="GridCell.Tab.3.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212824818" />
-    <state width="924" height="274" key="GridCell.Tab.3.left" timestamp="1585218935621">
+    <state width="1877" height="301" key="GridCell.Tab.3.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922523" />
+    <state width="1877" height="301" key="GridCell.Tab.3.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878432" />
+    <state width="1877" height="301" key="GridCell.Tab.3.left" timestamp="1585819922523">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.3.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935621" />
-    <state width="924" height="274" key="GridCell.Tab.3.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212824818" />
-    <state width="924" height="274" key="GridCell.Tab.3.right" timestamp="1585218935622">
+    <state width="1877" height="301" key="GridCell.Tab.3.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922523" />
+    <state width="1877" height="301" key="GridCell.Tab.3.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878432" />
+    <state width="1877" height="301" key="GridCell.Tab.3.right" timestamp="1585819922523">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="924" height="274" key="GridCell.Tab.3.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218935622" />
-    <state width="924" height="274" key="GridCell.Tab.3.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585212824818" />
+    <state width="1877" height="301" key="GridCell.Tab.3.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585819922523" />
+    <state width="1877" height="301" key="GridCell.Tab.3.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1585668878433" />
     <state x="793" y="226" key="RiderGenerateDialog" timestamp="1584614413247">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -609,7 +610,112 @@
               <option value="1618" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <condition expression="m_SensorShapes.Count != sensors.Count" language="C#" custom="RiderImportsList:" />
+          <url>file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/SensorShapeValidator.cs</url>
+          <line>28</line>
+          <properties documentPath="$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/SensorShapeValidator.cs" initialLine="28">
+            <startOffsets>
+              <option value="984" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1112" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Agent.cs</url>
+          <line>659</line>
+          <properties documentPath="$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Agent.cs" initialLine="659">
+            <startOffsets>
+              <option value="26027" />
+            </startOffsets>
+            <endOffsets>
+              <option value="26081" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs</url>
+          <line>164</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" initialLine="168">
+            <startOffsets>
+              <option value="5010" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5046" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/VectorSensor.cs</url>
+          <line>40</line>
+          <properties documentPath="$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/VectorSensor.cs" initialLine="40">
+            <startOffsets>
+              <option value="1396" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1623" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/SensorShapeValidator.cs</url>
+          <line>17</line>
+          <properties documentPath="$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/SensorShapeValidator.cs" initialLine="17">
+            <startOffsets>
+              <option value="526" />
+            </startOffsets>
+            <endOffsets>
+              <option value="574" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Policy/BehaviorParameters.cs</url>
+          <line>78</line>
+          <properties documentPath="$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Policy/BehaviorParameters.cs" initialLine="78">
+            <startOffsets>
+              <option value="2291" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2329" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Agent.cs</url>
+          <line>479</line>
+          <properties documentPath="$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Agent.cs" initialLine="479">
+            <startOffsets>
+              <option value="18222" />
+            </startOffsets>
+            <endOffsets>
+              <option value="18266" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Agent.cs</url>
+          <line>540</line>
+          <properties documentPath="$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Agent.cs" initialLine="540">
+            <startOffsets>
+              <option value="20245" />
+            </startOffsets>
+            <endOffsets>
+              <option value="20284" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -621,6 +727,8 @@
     <watches-manager>
       <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
         <watch expression="playerSave" />
+        <watch expression="isPlayer" />
+        <watch expression="sensors" />
       </configuration>
     </watches-manager>
   </component>

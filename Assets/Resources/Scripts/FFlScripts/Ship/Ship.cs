@@ -144,7 +144,7 @@ namespace FLFlight
 
         public override void InitializeAgent()
         {
-            rayPer = GetComponent<RayPerceptionSensorComponent3D>();
+            //rayPer = GetComponent<RayPerceptionSensorComponent3D>();
         }
 
         public override float[] Heuristic()
@@ -159,13 +159,9 @@ namespace FLFlight
         {
             if (useObs)
             {
-                const float rayDistance = 50f;
-                float[] rayAngles = {20f, 90f, 160f, 45f, 135f, 70f, 110f};
-                string[] detectableObjects = {"Wall", "Enemy", "PlayerBot", "Building"};
-                //AddVectorObs(rayPer.Perceive(rayDistance, rayAngles, detectableObjects, 0f, 0f));
-
-                var velocity = rBody.velocity;
+                var velocity = transform.position;
                 var rotation = transform.rotation;
+                
                 AddVectorObs(velocity.normalized.x);
                 AddVectorObs(velocity.normalized.y);
                 AddVectorObs(velocity.normalized.z);

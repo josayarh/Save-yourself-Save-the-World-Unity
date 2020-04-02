@@ -724,7 +724,7 @@
       <e p="Unity.ML-Agents.Editor.Tests.csproj" t="IncludeRecursive" />
       <e p="Unity.ML-Agents.Runtime.Tests.csproj" t="IncludeRecursive" />
     </e>
-    <e p="C:\Users\jojoX\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\jojoX\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Test project.1028585843.00" t="ExcludeRecursive" />
+    <e p="C:\Users\jojoX\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\jojoX\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_Test project.1028585843.00" t="ExcludeRecursive" />
   </component>
 </project>

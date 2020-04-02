@@ -726,7 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorName: RayPerceptionSensor
+  sensorName: PlayerShipRecord
   detectableTags:
   - Wall
   - Enemy
