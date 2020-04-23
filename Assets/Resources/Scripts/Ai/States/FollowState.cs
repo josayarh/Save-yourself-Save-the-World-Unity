@@ -20,7 +20,7 @@ public class FollowState : FSMState
     private Vector3 steering = Vector3.zero;
     private float MaxForce = 0.2f;
     private NPCDetector npcDetector;
-    private float detectrange = 100;
+    private float detectrange = 300;
 
     private bool isMovementset;
 
