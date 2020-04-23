@@ -12,7 +12,7 @@ namespace FLFlight
     /// Ties all the primary ship components together.
     /// </summary>
     [RequireComponent(typeof(Rigidbody))]
-    public class Ship : Agent,IPoolableObject
+    public class Ship : Agent,IPoolableObject,BaseAI
     {
         [Tooltip("Set this ship to be the player ship. The player ship can always be accessed through the PlayerShip property.")]
         [SerializeField] private bool isPlayer = false;
@@ -20,6 +20,7 @@ namespace FLFlight
         [SerializeField] private Transform gunTipPosition;
         [SerializeField] private Transform gun;
         [SerializeField] private bool useObs;
+        [SerializeField] private bool isFSMdriven;
         
         // Keep a static reference for whether or not this is the player ship. It can be used
         // by various gameplay mechanics. Returns the player ship if possible, otherwise null.
@@ -35,11 +36,13 @@ namespace FLFlight
         private Rigidbody rBody;
         private bool isShooting = false;
         
+        private FSMSystem fsm;
+        private AttackState attackState;
+        
         protected List<String> frameSteps;
 
         private void Start()
         {
-            
             if(isPlayer)
                 DontDestroyOnLoad(gameObject);
         }
@@ -60,7 +63,28 @@ namespace FLFlight
             {
                 if(playerSave)
                     playerSave.Id = Guid.NewGuid();
+                if (isFSMdriven)
+                {
+                    makeFSM();
+                }
             }
+        }
+        
+        private void makeFSM()
+        {
+            fsm = new FSMSystem();
+            PlayerSave ps = gameObject.GetComponent<PlayerSave>();
+        
+            FollowState followState = new FollowState(GameManager.Instance.Player, 
+                GameManager.Instance.Player.GetComponent<Ship>(), Velocity.magnitude, NpcType.Enemy);
+            followState.AddTransition(Transition.Follow_Attack, StateID.EnemyAttackStateID);
+        
+            attackState = new AttackState(gunTipPosition,Vector3.forward*Velocity.magnitude, 
+                Resources.Load("Prefabs/shot_prefab") as GameObject, ps.Id);
+            attackState.AddTransition(Transition.Attack_Follow, StateID.BotFollowStateID);
+        
+            fsm.AddState(followState);
+            fsm.AddState(attackState);
         }
 
         public void OnRelease()
@@ -82,11 +106,8 @@ namespace FLFlight
 
         private void Awake()
         {
-            if (isPlayer)
-            {
-                Input = GetComponent<ShipInput>();
-                Physics = GetComponent<ShipPhysics>();
-            }
+            Input = GetComponent<ShipInput>();
+            Physics = GetComponent<ShipPhysics>();
 
             playerSave = GetComponent<PlayerSave>();
             rBody = GetComponent<Rigidbody>();
@@ -96,23 +117,37 @@ namespace FLFlight
         {
             if (isPlayer)
             {
-                float fireKey = UnityEngine.Input.GetAxis("Fire1");
-                timer += Time.deltaTime;
-                isShooting = false;
-
-                if (timer > fireRate && fireKey != 0)
+                if (isFSMdriven)
                 {
-                    fire();
+                    fsm.CurrentState.Reason(GameManager.Instance.Player, gameObject);
+                    fsm.CurrentState.Act(GameManager.Instance.Player, gameObject);
                 }
+                else{
+                    float fireKey = UnityEngine.Input.GetAxis("Fire1");
+                    timer += Time.deltaTime;
+                    isShooting = false;
 
-                // Pass the input to the physics to move the ship.
-                Physics.SetPhysicsInput(new Vector3(Input.Strafe, 0.0f, Input.Throttle),
-                    new Vector3(Input.Pitch, Input.Yaw, Input.Roll));
-                
+                    if (timer > fireRate && fireKey != 0)
+                    {
+                        fire();
+                    }
 
-                PlayerShip = this;
-                
+                    // Pass the input to the physics to move the ship.
+                    Physics.SetPhysicsInput(new Vector3(Input.Strafe, 0.0f, Input.Throttle),
+                        new Vector3(Input.Pitch, Input.Yaw, Input.Roll));
+
+
+                    PlayerShip = this;
+
+                }
             }
+        }
+
+        public void setAIMovement(Vector3 velocity)
+        {
+            Physics.SetPhysicsInput(new Vector3(0.0f,0.0f
+                    ,(velocity * Time.fixedDeltaTime).normalized.magnitude),
+                Vector3.zero);
         }
         
         private void fire()
@@ -176,10 +211,11 @@ namespace FLFlight
         {
             if (!isPlayer && vectorAction.Length > 6)
             {
-                rBody.velocity = new Vector3(vectorAction[0],vectorAction[1],vectorAction[2]);
-                transform.Rotate(vectorAction[3],vectorAction[4],vectorAction[5]);
 
-                if (vectorAction[6] == 1.0f)
+                Physics.SetPhysicsInput(new Vector3(vectorAction[0], 0.0f, vectorAction[2]),
+                    new Vector3(vectorAction[3], vectorAction[4], vectorAction[5]));
+                
+                if (vectorAction[6] >= 0.4f)
                 {
                     fire();
                 }
@@ -217,7 +253,16 @@ namespace FLFlight
         
             playerSave.Id = new Guid(data.id);
         }
-        
-        
+
+        public void attackWanderTransition()
+        {
+            fsm.PerformTransition(Transition.Attack_Follow);
+        }
+
+        public void wanderAttackTransistion(GameObject target)
+        {
+            attackState.Target = target;
+            fsm.PerformTransition(Transition.Follow_Attack);
+        }
     }
 }

@@ -11967,6 +11967,11 @@ PrefabInstance:
       propertyPath: m_BrainParameters.numStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4055223373720765598, guid: 9961cfd7e8aedf149a71014461980a24,
+        type: 3}
+      propertyPath: isFSMdriven
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9961cfd7e8aedf149a71014461980a24, type: 3}
 --- !u!1 &1613267192

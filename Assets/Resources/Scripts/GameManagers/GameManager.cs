@@ -64,7 +64,10 @@ public class GameManager : MonoBehaviour
 
         if (ennemiesLeft == 0 && Ship.PlayerShip != null && GameObjectStateManager.Instance.FrameNumber < 5)
         {
-            win();
+            //win();
+
+            Ship playerShip = player.GetComponent<Ship>();
+            playerShip.Destroy();
         }
     }
 
@@ -78,6 +81,11 @@ public class GameManager : MonoBehaviour
         Pool.Instance.recycleAllObjects();
         GameObjectStateManager.Instance.FrameNumber = 0;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        if (ennemiesLeft == 0 && Ship.PlayerShip != null && GameObjectStateManager.Instance.FrameNumber < 5)
+        {
+            
+        }
 
         reloadObject();
 

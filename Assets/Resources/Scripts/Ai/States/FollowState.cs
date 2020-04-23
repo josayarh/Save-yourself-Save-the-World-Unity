@@ -22,6 +22,8 @@ public class FollowState : FSMState
     private NPCDetector npcDetector;
     private float detectrange = 100;
 
+    private bool isMovementset;
+
     public FollowState(GameObject leader, Ship leaderController, 
         float maxVelocity, NpcType typeToDetect)
     {
@@ -124,8 +126,25 @@ public class FollowState : FSMState
         steering /= npc.GetComponent<Rigidbody>().mass;
 
         velocity = Vector3.ClampMagnitude(velocity + steering, maxVelocity);
+
         
         npc.transform.LookAt(npc.transform.position + velocity);
-        npc.transform.position += velocity * Time.fixedDeltaTime;
+        if (npc.tag == "Player")
+        {
+            if (!isMovementset)
+            {
+                npc.GetComponent<Ship>().setAIMovement(velocity);
+                isMovementset = true;
+            }
+        }
+        else
+        {
+            npc.transform.position += velocity * Time.fixedDeltaTime;
+        }
+    }
+
+    public override void DoBeforeLeaving()
+    {
+        isMovementset = false;
     }
 }
