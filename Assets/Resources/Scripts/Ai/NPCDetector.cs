@@ -27,8 +27,12 @@ public class NPCDetector
         {
             foreach (GameObject npc in npcList)
             {
-                if (Vector3.Distance(npc.transform.position, position) < range)
+                int layerMask = 1 << 10;
+                if (Vector3.Distance(npc.transform.position, position) < range
+                && !Physics.Linecast(npc.transform.position, position, layerMask))
+                {
                     return npc;
+                }
             }
         }
 

@@ -25,12 +25,13 @@ public class FollowState : FSMState
     private bool isMovementset;
 
     public FollowState(GameObject leader, Ship leaderController, 
-        float maxVelocity, NpcType typeToDetect)
+        float maxVelocity, NpcType typeToDetect, float detectrange = 300)
     {
         this.leader = leader;
         this.leaderController = leaderController;
         this.maxVelocity = 30;
         this.typeToDetect = typeToDetect;
+        this.detectrange = detectrange;
         
         npcDetector = new NPCDetector();
 

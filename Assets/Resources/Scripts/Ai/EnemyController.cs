@@ -72,6 +72,11 @@ public class EnemyController : SavableObject, IPoolableObject, BaseAI
                 LoadDiffFrame(frameSaveList[(int)frameNumber]);
             }
         }
+
+        if (transform.position.y < 0)
+        {
+            Destroy();
+        }
     }
 
     private void makeFSM()

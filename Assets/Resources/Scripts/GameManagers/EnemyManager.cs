@@ -18,27 +18,7 @@ public class EnemyManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             instance = this;
 
-            for (int i = 0; i < transform.childCount && enemyPositions.Count < maxEnemies; ++i)
-            {
-                Transform childTransform = transform.GetChild(i);
-                if (childTransform.childCount > 0)
-                {
-                    for (int c = 0; c < childTransform.childCount; ++c)
-                    {
-                        enemyPositions.Add(childTransform.GetChild(c));
-                    }
-                }
-                else
-                {
-                    enemyPositions.Add(childTransform);
-                }
-            }
-            
-            foreach (var transform in enemyPositions)
-            {
-                GameObject go = Pool.Instance.get(PoolableTypes.Enemy, transform);
-                
-            }
+            launchmanager();
         }
         else
         {
@@ -46,5 +26,35 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    public EnemyManager Instance => instance;
+    public void launchmanager()
+    {
+        for (int i = 0; i < transform.childCount && enemyPositions.Count < maxEnemies; ++i)
+        {
+            Transform childTransform = transform.GetChild(i);
+            if (childTransform.childCount > 0)
+            {
+                for (int c = 0; c < childTransform.childCount && enemyPositions.Count < maxEnemies; ++c)
+                {
+                    enemyPositions.Add(childTransform.GetChild(c));
+                }
+            }
+            else
+            {
+                enemyPositions.Add(childTransform);
+            }
+        }
+            
+        foreach (var transform in enemyPositions)
+        {
+            GameObject go = Pool.Instance.get(PoolableTypes.Enemy, transform);
+                
+        }
+    }
+
+    public void clearPositions()
+    {
+        enemyPositions.Clear();
+    }
+
+    public static EnemyManager Instance => instance;
 }

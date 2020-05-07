@@ -62,10 +62,12 @@ public class GameManager : MonoBehaviour
         ennemiesLeft = Pool.Instance.EnemyList.Count;
         timerText.text = ennemiesLeft.ToString();
 
-        if (ennemiesLeft == 0 && Ship.PlayerShip != null && GameObjectStateManager.Instance.FrameNumber < 5)
+        if (ennemiesLeft == 0 && Ship.PlayerShip != null && 
+            GameObjectStateManager.Instance.FrameNumber > 5)
         {
             //win();
 
+            EnemyManager.Instance.clearPositions();
             Ship playerShip = player.GetComponent<Ship>();
             playerShip.Destroy();
         }
@@ -82,9 +84,11 @@ public class GameManager : MonoBehaviour
         GameObjectStateManager.Instance.FrameNumber = 0;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-        if (ennemiesLeft == 0 && Ship.PlayerShip != null && GameObjectStateManager.Instance.FrameNumber < 5)
+        if (ennemiesLeft == 0 && Ship.PlayerShip != null &&
+            GameObjectStateManager.Instance.FrameNumber > 5)
         {
-            
+            GameObjectStateManager.Instance.resetDico();
+            EnemyManager.Instance.launchmanager();
         }
 
         reloadObject();

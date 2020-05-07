@@ -21,6 +21,7 @@ namespace FLFlight
         [SerializeField] private Transform gun;
         [SerializeField] private bool useObs;
         [SerializeField] private bool isFSMdriven;
+        [SerializeField] private float detectRange = 300;
         
         // Keep a static reference for whether or not this is the player ship. It can be used
         // by various gameplay mechanics. Returns the player ship if possible, otherwise null.
@@ -76,7 +77,8 @@ namespace FLFlight
             PlayerSave ps = gameObject.GetComponent<PlayerSave>();
         
             FollowState followState = new FollowState(GameManager.Instance.Player, 
-                GameManager.Instance.Player.GetComponent<Ship>(), Velocity.magnitude, NpcType.Enemy);
+                GameManager.Instance.Player.GetComponent<Ship>(), Velocity.magnitude,
+                NpcType.Enemy, detectRange);
             followState.AddTransition(Transition.Follow_Attack, StateID.EnemyAttackStateID);
         
             attackState = new AttackState(gunTipPosition,Vector3.forward*Velocity.magnitude, 
@@ -168,12 +170,12 @@ namespace FLFlight
             {
                 Done();
                 OnRelease();
+                GameManager.Instance.reloadScene();
             }
             
-            GameManager.Instance.reloadScene();
             
             if(!isPlayer)
-                Pool.Instance.release(gameObject.transform.parent.gameObject, 
+                Pool.Instance.release(gameObject, 
                     PoolableTypes.Player);
         }
 
@@ -215,7 +217,7 @@ namespace FLFlight
                 Physics.SetPhysicsInput(new Vector3(vectorAction[0], 0.0f, vectorAction[2]),
                     new Vector3(vectorAction[3], vectorAction[4], vectorAction[5]));
                 
-                if (vectorAction[6] >= 0.4f)
+                if (vectorAction[6] >= 0.6f)
                 {
                     fire();
                 }

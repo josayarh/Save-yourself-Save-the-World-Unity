@@ -204,6 +204,14 @@ public class GameObjectStateManager : MonoBehaviour
         return parentObject;
     }
 
+    public void resetDico()
+    {
+        instanciatedGameobjects.Clear();
+        parentIds.Clear();
+        objectApperanceDictionnary.Clear();
+        frameDataDictionary.Clear();
+    }
+
     public uint FrameNumber
     {
         get => frameNumber;
