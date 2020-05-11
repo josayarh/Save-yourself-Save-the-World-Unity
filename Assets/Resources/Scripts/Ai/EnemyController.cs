@@ -37,7 +37,7 @@ public class EnemyController : SavableObject, IPoolableObject, BaseAI
         
         if (frameSaveList.Count <= frameNumber)
         {
-            if(hasBeenKilled)
+            if(hasBeenKilled && frameNumber > 1)
                 Destroy();
             else
             {

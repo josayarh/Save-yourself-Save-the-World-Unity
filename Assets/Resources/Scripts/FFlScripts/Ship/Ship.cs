@@ -44,9 +44,13 @@ namespace FLFlight
 
         private void Start()
         {
-            if(isPlayer)
+            if (isPlayer)
+            {
+                PlayerShip = this;
                 DontDestroyOnLoad(gameObject);
+            }
         }
+        
 
         public void OnPoolCreation()
         {

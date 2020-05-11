@@ -81,16 +81,16 @@ public class GameManager : MonoBehaviour
     public void reloadScene()
     {
         Pool.Instance.recycleAllObjects();
-        GameObjectStateManager.Instance.FrameNumber = 0;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-        if (ennemiesLeft == 0 && Ship.PlayerShip != null &&
-            GameObjectStateManager.Instance.FrameNumber > 5)
-        {
-            GameObjectStateManager.Instance.resetDico();
-            EnemyManager.Instance.launchmanager();
-        }
+        // if (ennemiesLeft == 0 && Ship.PlayerShip != null &&
+        //     GameObjectStateManager.Instance.FrameNumber > 5)
+        // {
+        //     GameObjectStateManager.Instance.resetDico();
+        //     EnemyManager.Instance.launchmanager();
+        // }
 
+        GameObjectStateManager.Instance.FrameNumber = 0;
         reloadObject();
 
     }
@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
         if(timerText == null)
             Debug.LogError("Time Counter TextMeshPro or it's UGUI component could not be found");
         
-        ennemiesLeft = timeLeft;
+        ennemiesLeft = Pool.Instance.EnemyList.Count;
 
         spawnPlayer();
 
