@@ -139,7 +139,8 @@ namespace FLFlight
                     }
 
                     // Pass the input to the physics to move the ship.
-                    Physics.SetPhysicsInput(new Vector3(Input.Strafe, 0.0f, Input.Throttle),
+                    Physics.SetPhysicsInput(
+                        new Vector3(Input.Strafe, 0.0f, Input.Throttle),
                         new Vector3(Input.Pitch, Input.Yaw, Input.Roll));
 
 
@@ -188,11 +189,6 @@ namespace FLFlight
             //rayPer = GetComponent<RayPerceptionSensorComponent3D>();
         }
 
-        public override float[] Heuristic()
-        {
-            return new float[] { 0 };
-        }
-
         //Start methods for machine learning 
         
         
@@ -218,16 +214,28 @@ namespace FLFlight
             if (!isPlayer && vectorAction.Length > 6)
             {
 
-                Physics.SetPhysicsInput(new Vector3(vectorAction[0], 0.0f, vectorAction[2]),
-                    new Vector3(vectorAction[3], vectorAction[4], vectorAction[5]));
+                Physics.SetPhysicsInput(
+                    new Vector3(vectorAction[1], 0.0f, 0.0f),
+                    Vector3.zero);
+
                 
-                if (vectorAction[6] >= 0.6f)
+                if (vectorAction[2] == 1)
                 {
                     fire();
                 }
                 
                 AddReward(0.1f);
             }
+        }
+        
+        public override float[] Heuristic()
+        {
+            var action = new float[2];
+
+            action[1] = Convert.ToSingle(fsm.CurrentStateID == StateID.BotFollowStateID);
+            action[2] = Convert.ToSingle(fsm.CurrentStateID == StateID.EnemyAttackStateID);
+
+            return action;
         }
 
         public void addRewardOnKill()

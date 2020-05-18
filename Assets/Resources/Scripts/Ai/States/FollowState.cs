@@ -108,7 +108,9 @@ public class FollowState : FSMState
     public override void Reason(GameObject player, GameObject npc)
     {
         GameObject target = npcDetector.getNpcInRange(typeToDetect, npc.transform.position, detectrange);
-
+        
+        // TODO : increase range if nothing found 
+        
         if (target != null)
         {
             BaseAI baseAi = npc.GetComponent<BaseAI>();
