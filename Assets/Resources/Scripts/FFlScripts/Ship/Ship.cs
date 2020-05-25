@@ -42,6 +42,9 @@ namespace FLFlight
         
         protected List<String> frameSteps;
 
+        private Vector3 prevPoint;
+        private Vector3 prevForward;
+
         private void Start()
         {
             if (isPlayer)
@@ -196,6 +199,7 @@ namespace FLFlight
         {
             if (useObs)
             {
+                
                 var velocity = transform.position;
                 var rotation = transform.rotation;
                 
@@ -215,11 +219,11 @@ namespace FLFlight
             {
 
                 Physics.SetPhysicsInput(
-                    new Vector3(vectorAction[1], 0.0f, 0.0f),
-                    Vector3.zero);
+                    new Vector3(vectorAction[0], 0.0f, vectorAction[1]),
+                    new Vector3(vectorAction[2], vectorAction[3], vectorAction[4]));
 
                 
-                if (vectorAction[2] == 1)
+                if (vectorAction[5] == 1)
                 {
                     fire();
                 }
@@ -230,11 +234,38 @@ namespace FLFlight
         
         public override float[] Heuristic()
         {
-            var action = new float[2];
+            var action = new float[7];
+            
+            if(isPlayer){
+                if (isFSMdriven)
+                {
+                    action[1] = 1;
 
-            action[1] = Convert.ToSingle(fsm.CurrentStateID == StateID.BotFollowStateID);
-            action[2] = Convert.ToSingle(fsm.CurrentStateID == StateID.EnemyAttackStateID);
+                    var quat = Quaternion.LookRotation
+                        (transform.forward, Vector3.up);
 
+                    action[4] = Mathf.Atan2(2*quat.y*quat.w - 2*quat.x*quat.z,
+                        1 - 2*quat.y*quat.y - 2*quat.z*quat.z);
+                    action[2] = Mathf.Atan2(2*quat.x*quat.w - 2*quat.y*quat.z,
+                        1 - 2*quat.x*quat.x - 2*quat.z*quat.z);
+                    action[3] = Mathf.Asin(2*quat.x*quat.y + 2*quat.z*quat.w);
+
+                    action[5] = Convert.ToSingle(isShooting);
+                }
+                else
+                {
+                    action[0] = Input.Strafe;
+                    action[1] = Input.Throttle;
+
+                    action[2] = Input.Pitch;
+                    action[3] = Input.Yaw;
+                    action[4] = Input.Roll;
+
+                    action[5] = Convert.ToSingle(isShooting);
+                }
+
+            }
+            
             return action;
         }
 
