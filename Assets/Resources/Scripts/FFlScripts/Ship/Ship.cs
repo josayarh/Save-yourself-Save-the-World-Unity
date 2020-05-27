@@ -223,7 +223,7 @@ namespace FLFlight
                     new Vector3(vectorAction[2], vectorAction[3], vectorAction[4]));
 
                 
-                if (vectorAction[5] == 1)
+                if (vectorAction[5] >= 0.80)
                 {
                     fire();
                 }
@@ -271,7 +271,7 @@ namespace FLFlight
 
         public void addRewardOnKill()
         {
-            AddReward(5.0f);
+            AddReward(200.0f);
         }
 
         public bool IsPlayer => isPlayer;

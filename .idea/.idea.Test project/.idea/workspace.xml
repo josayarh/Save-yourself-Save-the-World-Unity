@@ -5,14 +5,35 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Level1Scene_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Level1Scene_timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scenes/Level1Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scenes/Level1Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord.nn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord.nn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/checkpoint" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/frozen_graph_def.pb" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/frozen_graph_def.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-128.cptk.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-128.cptk.data-00000-of-00001.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-128.cptk.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-128.cptk.index.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-149888.cptk.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-149888.cptk.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-149888.cptk.index" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-149888.cptk.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-199872.cptk.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-199872.cptk.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-199872.cptk.index" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-199872.cptk.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-2816.cptk.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-2816.cptk.data-00000-of-00001.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-2816.cptk.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-2816.cptk.index.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49728.cptk.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49728.cptk.data-00000-of-00001.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49728.cptk.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49728.cptk.index.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49920.cptk.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49920.cptk.data-00000-of-00001.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49920.cptk.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49920.cptk.index.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-79680.cptk.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-79680.cptk.data-00000-of-00001.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-79680.cptk.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-79680.cptk.index.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/raw_graph_def.pb" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/raw_graph_def.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/summaries/SY-SW_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/summaries/SY-SW_timers.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,7 +409,8 @@
       <workItem from="1589201074532" duration="3561000" />
       <workItem from="1589457646835" duration="1926000" />
       <workItem from="1589792485928" duration="5086000" />
-      <workItem from="1590407338814" duration="4068000" />
+      <workItem from="1590407338814" duration="5771000" />
+      <workItem from="1590592452487" duration="585000" />
     </task>
     <task id="LOCAL-00001" summary="Added a Pool and various other optimization">
       <created>1560167981628</created>
