@@ -239,7 +239,8 @@ namespace FLFlight
             if(isPlayer){
                 if (isFSMdriven)
                 {
-                    action[1] = 1;
+                    action[0] = 1;
+                    action[1] = 0;
 
                     var quat = Quaternion.LookRotation
                         (transform.forward, Vector3.up);
