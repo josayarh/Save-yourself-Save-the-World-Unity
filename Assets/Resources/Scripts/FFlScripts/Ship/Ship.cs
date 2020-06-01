@@ -219,7 +219,7 @@ namespace FLFlight
             {
 
                 Physics.SetPhysicsInput(
-                    new Vector3(vectorAction[0], 0.0f, vectorAction[1]),
+                    new Vector3(0.0f, 0.0f, vectorAction[0]),
                     new Vector3(vectorAction[2], vectorAction[3], vectorAction[4]));
 
                 

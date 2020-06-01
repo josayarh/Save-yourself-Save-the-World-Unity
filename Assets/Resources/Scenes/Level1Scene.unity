@@ -9083,6 +9083,11 @@ PrefabInstance:
       propertyPath: useObs
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7129253895138731656, guid: a5f95611ba0df554dbb2a2d3823afb34,
+        type: 3}
+      propertyPath: detectRange
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6828791124844834616, guid: a5f95611ba0df554dbb2a2d3823afb34, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a5f95611ba0df554dbb2a2d3823afb34, type: 3}
@@ -12250,7 +12255,7 @@ PrefabInstance:
     - target: {fileID: 4055223373720765598, guid: 9961cfd7e8aedf149a71014461980a24,
         type: 3}
       propertyPath: isFSMdriven
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4055223373720765598, guid: 9961cfd7e8aedf149a71014461980a24,
         type: 3}
@@ -13626,7 +13631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad78e5d3be203345975556febb7a07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 10
+  maxEnemies: 20
 --- !u!4 &1786898105
 Transform:
   m_ObjectHideFlags: 0
