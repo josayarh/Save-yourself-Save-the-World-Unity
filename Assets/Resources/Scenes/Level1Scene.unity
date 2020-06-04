@@ -2973,6 +2973,27 @@ Transform:
   m_Father: {fileID: 1617913715}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &324812687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4167618010638279152, guid: 9961cfd7e8aedf149a71014461980a24,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610104498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &324812697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324812687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  RepeatAction: 1
+  offsetStep: 0
 --- !u!1 &326238864
 GameObject:
   m_ObjectHideFlags: 0
@@ -9061,7 +9082,7 @@ PrefabInstance:
     - target: {fileID: 2117572297373086102, guid: a5f95611ba0df554dbb2a2d3823afb34,
         type: 3}
       propertyPath: m_InferenceDevice
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2117572297373086102, guid: a5f95611ba0df554dbb2a2d3823afb34,
         type: 3}
@@ -12235,7 +12256,7 @@ PrefabInstance:
     - target: {fileID: 5175795138777961344, guid: 9961cfd7e8aedf149a71014461980a24,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5175795138777961344, guid: 9961cfd7e8aedf149a71014461980a24,
         type: 3}
@@ -13631,7 +13652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad78e5d3be203345975556febb7a07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 20
+  maxEnemies: 10
 --- !u!4 &1786898105
 Transform:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ SY-SW:
             strength: 1.00
             gamma: 0.99
             encoding_size: 128
-            demo_path: ./Demonstrations/PlayerShipRecord.demo
+            demo_path: Demonstrations/PlayerShipRecord.demo
         behavioral_cloning:
-            demo_path: ./Demonstrations/PlayerShipRecord.demo
+            demo_path: Demonstrations/PlayerShipRecord.demo
             strength: 0.5

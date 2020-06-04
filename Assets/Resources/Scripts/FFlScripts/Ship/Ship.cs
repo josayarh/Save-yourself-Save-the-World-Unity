@@ -22,6 +22,7 @@ namespace FLFlight
         [SerializeField] private bool useObs;
         [SerializeField] private bool isFSMdriven;
         [SerializeField] private float detectRange = 300;
+        [SerializeField] private float attackRange = 20;
         
         // Keep a static reference for whether or not this is the player ship. It can be used
         // by various gameplay mechanics. Returns the player ship if possible, otherwise null.
@@ -44,6 +45,8 @@ namespace FLFlight
 
         private Vector3 prevPoint;
         private Vector3 prevForward;
+        private NPCDetector npcDetector;
+        private GameObject target;
 
         private void Start()
         {
@@ -52,6 +55,8 @@ namespace FLFlight
                 PlayerShip = this;
                 DontDestroyOnLoad(gameObject);
             }
+            
+            npcDetector = new NPCDetector();
         }
         
 
@@ -122,35 +127,40 @@ namespace FLFlight
             rBody = GetComponent<Rigidbody>();
         }
 
+        // private void FixedUpdate()
+        // {
+        //     if (isPlayer)
+        //     {
+        //         if (isFSMdriven)
+        //         {
+        //             fsm.CurrentState.Reason(GameManager.Instance.Player, gameObject);
+        //             fsm.CurrentState.Act(GameManager.Instance.Player, gameObject);
+        //         }
+        //         else{
+        //             float fireKey = UnityEngine.Input.GetAxis("Fire1");
+        //             timer += Time.deltaTime;
+        //             isShooting = false;
+        //
+        //             if (timer > fireRate && fireKey != 0)
+        //             {
+        //                 fire();
+        //             }
+        //
+        //             // Pass the input to the physics to move the ship.
+        //             Physics.SetPhysicsInput(
+        //                 new Vector3(Input.Strafe, 0.0f, Input.Throttle),
+        //                 new Vector3(Input.Pitch, Input.Yaw, Input.Roll));
+        //
+        //
+        //             PlayerShip = this;
+        //
+        //         }
+        //     }
+        // }
+
         private void FixedUpdate()
         {
-            if (isPlayer)
-            {
-                if (isFSMdriven)
-                {
-                    fsm.CurrentState.Reason(GameManager.Instance.Player, gameObject);
-                    fsm.CurrentState.Act(GameManager.Instance.Player, gameObject);
-                }
-                else{
-                    float fireKey = UnityEngine.Input.GetAxis("Fire1");
-                    timer += Time.deltaTime;
-                    isShooting = false;
-
-                    if (timer > fireRate && fireKey != 0)
-                    {
-                        fire();
-                    }
-
-                    // Pass the input to the physics to move the ship.
-                    Physics.SetPhysicsInput(
-                        new Vector3(Input.Strafe, 0.0f, Input.Throttle),
-                        new Vector3(Input.Pitch, Input.Yaw, Input.Roll));
-
-
-                    PlayerShip = this;
-
-                }
-            }
+            timer += Time.deltaTime;
         }
 
         public void setAIMovement(Vector3 velocity)
@@ -215,12 +225,14 @@ namespace FLFlight
 
         public override void AgentAction(float[] vectorAction)
         {
-            if (!isPlayer && vectorAction.Length > 6)
+            if (vectorAction.Length > 5)
             {
+                Debug.Log(vectorAction[0]);
 
                 Physics.SetPhysicsInput(
-                    new Vector3(0.0f, 0.0f, vectorAction[0]),
-                    new Vector3(vectorAction[2], vectorAction[3], vectorAction[4]));
+                    new Vector3(vectorAction[1], 0.0f, vectorAction[0]),
+                    new Vector3(vectorAction[2], vectorAction[3], 
+                        vectorAction[4]));
 
                 
                 if (vectorAction[5] >= 0.80)
@@ -239,30 +251,45 @@ namespace FLFlight
             if(isPlayer){
                 if (isFSMdriven)
                 {
+                    if (target == null || !target.activeSelf){
+                        target = npcDetector.getNpcInRange(NpcType.Enemy, 
+                            transform.position, detectRange);
+                    }
+        
                     action[0] = 1;
                     action[1] = 0;
 
-                    var quat = Quaternion.LookRotation
-                        (transform.forward, Vector3.up);
+                    if (target != null)
+                    {
+                        Vector3 localGotoPos = transform.InverseTransformVector
+                            (target.transform.position - transform.position).normalized;
 
-                    action[4] = Mathf.Atan2(2*quat.y*quat.w - 2*quat.x*quat.z,
-                        1 - 2*quat.y*quat.y - 2*quat.z*quat.z);
-                    action[2] = Mathf.Atan2(2*quat.x*quat.w - 2*quat.y*quat.z,
-                        1 - 2*quat.x*quat.x - 2*quat.z*quat.z);
-                    action[3] = Mathf.Asin(2*quat.x*quat.y + 2*quat.z*quat.w);
+                        action[2] = Mathf.Clamp(-localGotoPos.y * 
+                                                Input.PitchSensitivity, -1f, 1f);
+                        action[3] = Mathf.Clamp(localGotoPos.x * Input.YawSensitivity,
+                                -1f, 1f);
 
-                    action[5] = Convert.ToSingle(isShooting);
+                        if (timer > fireRate && Vector3.Distance(target.transform.position,
+                                transform.position) > attackRange)
+                            action[5] = 1;
+                        
+                    }
                 }
                 else
                 {
-                    action[0] = Input.Strafe;
-                    action[1] = Input.Throttle;
+                    action[0] = Input.Throttle;
+                    action[1] = Input.Strafe;
 
                     action[2] = Input.Pitch;
                     action[3] = Input.Yaw;
                     action[4] = Input.Roll;
 
-                    action[5] = Convert.ToSingle(isShooting);
+                    float fireKey = UnityEngine.Input.GetAxis("Fire1");
+                    
+                    if (timer > fireRate && fireKey != 0)
+                    {
+                        action[5] = 1;
+                    }
                 }
 
             }

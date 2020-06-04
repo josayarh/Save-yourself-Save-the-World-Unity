@@ -143,6 +143,12 @@ namespace FLFlight
             throttle += Input.GetAxis("Mouse ScrollWheel");
             throttle = Mathf.Clamp(throttle, 0.0f, 1.0f);
         }
+
+        public float PitchSensitivity => pitchSensitivity;
+
+        public float YawSensitivity => yawSensitivity;
+
+        public float RollSensitivity => rollSensitivity;
     }
 }
 
