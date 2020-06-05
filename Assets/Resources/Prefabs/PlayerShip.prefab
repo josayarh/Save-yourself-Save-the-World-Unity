@@ -717,6 +717,9 @@ MonoBehaviour:
   gunTipPosition: {fileID: 4903848018014802456}
   gun: {fileID: 4096409141499774165}
   useObs: 0
+  isFSMdriven: 0
+  detectRange: 300
+  attackRange: 20
 --- !u!114 &2117572297373086102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,14 +808,14 @@ MonoBehaviour:
   raysPerDirection: 3
   maxRayDegrees: 70
   sphereCastRadius: 0.5
-  rayLength: 50
+  rayLength: 500
   rayLayerMask:
     serializedVersion: 2
     m_Bits: 4294967291
   observationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  useWorldPositions: 1
+  useWorldPositions: 0
   startVerticalOffset: 0
   endVerticalOffset: 0
 --- !u!1 &7161662288692279664

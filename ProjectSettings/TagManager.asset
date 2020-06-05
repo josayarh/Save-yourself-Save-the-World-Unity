@@ -10,6 +10,7 @@ TagManager:
   - Laser
   - Building
   - Wall
+  - PlayerAi
   layers:
   - Default
   - TransparentFX
