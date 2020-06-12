@@ -184,13 +184,14 @@ namespace FLFlight
             else 
                 playerSave.Destroy();
             
+            Done();
+            
             if (isPlayer)
             {
-                Done();
+                GameManager.Instance.notifyAgentsAlldone();
                 OnRelease();
                 GameManager.Instance.reloadScene();
             }
-            
             
             if(!isPlayer)
                 Pool.Instance.release(gameObject, 

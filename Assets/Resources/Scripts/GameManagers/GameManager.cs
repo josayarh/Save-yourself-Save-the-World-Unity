@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Canvas winScreen;
     [SerializeField] private float minDistanceBetweenShips = 5.0f;
     [SerializeField] private float playerSpawnSphereRadius = 20.0f;
+    [SerializeField] private GameObject MlAgents;
     
     private float ennemiesLeft;
     private TextMeshProUGUI timerText = null;
@@ -70,6 +71,15 @@ public class GameManager : MonoBehaviour
             EnemyManager.Instance.clearPositions();
             Ship playerShip = player.GetComponent<Ship>();
             playerShip.Destroy();
+        }
+    }
+
+    public void notifyAgentsAlldone()
+    {
+        for (int c =0; c<MlAgents.transform.childCount; c++)
+        {
+            Agent agent = MlAgents.transform.GetChild(c).GetComponent<Agent>();
+            if(agent != null) agent.Done();
         }
     }
 
