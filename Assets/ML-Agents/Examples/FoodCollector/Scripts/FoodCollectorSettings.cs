@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
-using MLAgents;
+using Unity.MLAgents;
 
 public class FoodCollectorSettings : MonoBehaviour
 {
@@ -13,12 +12,15 @@ public class FoodCollectorSettings : MonoBehaviour
     public int totalScore;
     public Text scoreText;
 
+    StatsRecorder m_Recorder;
+
     public void Awake()
     {
         Academy.Instance.OnEnvironmentReset += EnvironmentReset;
+        m_Recorder = Academy.Instance.StatsRecorder;
     }
 
-    public void EnvironmentReset()
+    void EnvironmentReset()
     {
         ClearObjects(GameObject.FindGameObjectsWithTag("food"));
         ClearObjects(GameObject.FindGameObjectsWithTag("badFood"));
@@ -44,5 +46,13 @@ public class FoodCollectorSettings : MonoBehaviour
     public void Update()
     {
         scoreText.text = $"Score: {totalScore}";
+
+        // Send stats via SideChannel so that they'll appear in TensorBoard.
+        // These values get averaged every summary_frequency steps, so we don't
+        // need to send every Update() call.
+        if ((Time.frameCount % 100)== 0)
+        {
+            m_Recorder.Add("TotalScore", totalScore);
+        }
     }
 }

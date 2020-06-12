@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using MLAgents;
-using MLAgents.Sensor;
+using Unity.MLAgents;
+using Unity.MLAgents.Sensors;
 using UnityEngine;
 
 namespace FLFlight
@@ -184,7 +184,7 @@ namespace FLFlight
             else 
                 playerSave.Destroy();
             
-            Done();
+            EndEpisode();
             
             if (isPlayer)
             {
@@ -198,15 +198,12 @@ namespace FLFlight
                     PoolableTypes.Player);
         }
 
-        public override void InitializeAgent()
-        {
-            //rayPer = GetComponent<RayPerceptionSensorComponent3D>();
-        }
+        
 
         //Start methods for machine learning 
-        
-        
-        public override void CollectObservations()
+
+
+        public override void CollectObservations(VectorSensor sensor)
         {
             if (useObs)
             {
@@ -214,17 +211,17 @@ namespace FLFlight
                 var velocity = transform.position;
                 var rotation = transform.rotation;
                 
-                AddVectorObs(velocity.normalized.x);
-                AddVectorObs(velocity.normalized.y);
-                AddVectorObs(velocity.normalized.z);
-                AddVectorObs(rotation.normalized.x);
-                AddVectorObs(rotation.normalized.y);
-                AddVectorObs(rotation.normalized.z);
-                AddVectorObs(System.Convert.ToInt32(isShooting));
+                sensor.AddObservation(velocity.normalized.x);
+                sensor.AddObservation(velocity.normalized.y);
+                sensor.AddObservation(velocity.normalized.z);
+                sensor.AddObservation(rotation.normalized.x);
+                sensor.AddObservation(rotation.normalized.y);
+                sensor.AddObservation(rotation.normalized.z);
+                sensor.AddObservation(System.Convert.ToInt32(isShooting));
             }
         }
 
-        public override void AgentAction(float[] vectorAction)
+        public override void OnActionReceived(float[] vectorAction)
         {
             if (vectorAction.Length > 5)
             {
@@ -236,7 +233,7 @@ namespace FLFlight
                         vectorAction[4]));
 
                 
-                if (vectorAction[5] >= 0.80)
+                if (vectorAction[5] >= 1)
                 {
                     fire();
                 }
@@ -244,10 +241,10 @@ namespace FLFlight
                 AddReward(0.1f);
             }
         }
-        
-        public override float[] Heuristic()
+
+        public override void Heuristic(float[] actionsOut)
+
         {
-            var action = new float[7];
             
             if(isPlayer){
                 if (isFSMdriven)
@@ -257,45 +254,49 @@ namespace FLFlight
                             transform.position, detectRange);
                     }
         
-                    action[0] = 1;
-                    action[1] = 0;
+                    actionsOut[0] = 1;
+                    actionsOut[1] = 0;
 
                     if (target != null)
                     {
                         Vector3 localGotoPos = transform.InverseTransformVector
                             (target.transform.position - transform.position).normalized;
 
-                        action[2] = Mathf.Clamp(-localGotoPos.y * 
-                                                Input.PitchSensitivity, -1f, 1f);
-                        action[3] = Mathf.Clamp(localGotoPos.x * Input.YawSensitivity,
+                        actionsOut[2] = Mathf.Clamp(-localGotoPos.y * 
+                                                    Input.PitchSensitivity, -1f, 1f);
+                        actionsOut[3] = Mathf.Clamp(localGotoPos.x * Input.YawSensitivity,
                                 -1f, 1f);
 
                         if (timer > fireRate && Vector3.Distance(target.transform.position,
                                 transform.position) > attackRange)
-                            action[5] = 1;
+                            actionsOut[5] = 1;
+                        else 
+                            actionsOut[5] = 0;
                         
                     }
                 }
                 else
                 {
-                    action[0] = Input.Throttle;
-                    action[1] = Input.Strafe;
+                    actionsOut[0] = Input.Throttle;
+                    actionsOut[1] = Input.Strafe;
 
-                    action[2] = Input.Pitch;
-                    action[3] = Input.Yaw;
-                    action[4] = Input.Roll;
+                    actionsOut[2] = Input.Pitch;
+                    actionsOut[3] = Input.Yaw;
+                    actionsOut[4] = Input.Roll;
 
                     float fireKey = UnityEngine.Input.GetAxis("Fire1");
                     
                     if (timer > fireRate && fireKey != 0)
                     {
-                        action[5] = 1;
+                        actionsOut[5] = 1;
+                    }
+                    else
+                    {
+                        actionsOut[5] = 0;
                     }
                 }
 
             }
-            
-            return action;
         }
 
         public void addRewardOnKill()

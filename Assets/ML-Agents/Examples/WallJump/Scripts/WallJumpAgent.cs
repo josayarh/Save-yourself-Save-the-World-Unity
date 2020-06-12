@@ -2,9 +2,10 @@
 
 using System.Collections;
 using UnityEngine;
-using MLAgents;
-using Barracuda;
-
+using Unity.MLAgents;
+using Unity.Barracuda;
+using Unity.MLAgents.Sensors;
+using Unity.MLAgentsExamples;
 
 public class WallJumpAgent : Agent
 {
@@ -41,7 +42,13 @@ public class WallJumpAgent : Agent
     Vector3 m_JumpTargetPos;
     Vector3 m_JumpStartingPos;
 
-    public override void InitializeAgent()
+    string m_NoWallBehaviorName = "SmallWallJump";
+    string m_SmallWallBehaviorName = "SmallWallJump";
+    string m_BigWallBehaviorName = "BigWallJump";
+
+    EnvironmentParameters m_ResetParams;
+
+    public override void Initialize()
     {
         m_WallJumpSettings = FindObjectOfType<WallJumpSettings>();
         m_Configuration = Random.Range(0, 5);
@@ -53,6 +60,22 @@ public class WallJumpAgent : Agent
         m_GroundMaterial = m_GroundRenderer.material;
 
         spawnArea.SetActive(false);
+
+        m_ResetParams = Academy.Instance.EnvironmentParameters;
+
+        // Update model references if we're overriding
+        var modelOverrider = GetComponent<ModelOverrider>();
+        if (modelOverrider.HasOverrides)
+        {
+            noWallBrain = modelOverrider.GetModelForBehaviorName(m_NoWallBehaviorName);
+            m_NoWallBehaviorName = ModelOverrider.GetOverrideBehaviorName(m_NoWallBehaviorName);
+
+            smallWallBrain = modelOverrider.GetModelForBehaviorName(m_SmallWallBehaviorName);
+            m_SmallWallBehaviorName = ModelOverrider.GetOverrideBehaviorName(m_SmallWallBehaviorName);
+
+            bigWallBrain = modelOverrider.GetModelForBehaviorName(m_BigWallBehaviorName);
+            m_BigWallBehaviorName = ModelOverrider.GetOverrideBehaviorName(m_BigWallBehaviorName);
+        }
     }
 
     // Begin the jump sequence
@@ -132,12 +155,12 @@ public class WallJumpAgent : Agent
         }
     }
 
-    public override void CollectObservations()
+    public override void CollectObservations(VectorSensor sensor)
     {
         var agentPos = m_AgentRb.position - ground.transform.position;
 
-        AddVectorObs(agentPos / 20f);
-        AddVectorObs(DoGroundCheck(true) ? 1 : 0);
+        sensor.AddObservation(agentPos / 20f);
+        sensor.AddObservation(DoGroundCheck(true) ? 1 : 0);
     }
 
     /// <summary>
@@ -157,10 +180,10 @@ public class WallJumpAgent : Agent
     }
 
     /// <summary>
-    /// Chenges the color of the ground for a moment
+    /// Changes the color of the ground for a moment.
     /// </summary>
-    /// <returns>The Enumerator to be used in a Coroutine</returns>
-    /// <param name="mat">The material to be swaped.</param>
+    /// <returns>The Enumerator to be used in a Coroutine.</returns>
+    /// <param name="mat">The material to be swapped.</param>
     /// <param name="time">The time the material will remain.</param>
     IEnumerator GoalScoredSwapGroundMaterial(Material mat, float time)
     {
@@ -222,41 +245,39 @@ public class WallJumpAgent : Agent
         jumpingTime -= Time.fixedDeltaTime;
     }
 
-    public override void AgentAction(float[] vectorAction)
+    public override void OnActionReceived(float[] vectorAction)
     {
         MoveAgent(vectorAction);
         if ((!Physics.Raycast(m_AgentRb.position, Vector3.down, 20))
             || (!Physics.Raycast(m_ShortBlockRb.position, Vector3.down, 20)))
         {
             SetReward(-1f);
-            Done();
+            EndEpisode();
             ResetBlock(m_ShortBlockRb);
             StartCoroutine(
                 GoalScoredSwapGroundMaterial(m_WallJumpSettings.failMaterial, .5f));
         }
     }
 
-    public override float[] Heuristic()
+    public override void Heuristic(float[] actionsOut)
     {
-        var action = new float[4];
         if (Input.GetKey(KeyCode.D))
         {
-            action[1] = 2f;
+            actionsOut[1] = 2f;
         }
         if (Input.GetKey(KeyCode.W))
         {
-            action[0] = 1f;
+            actionsOut[0] = 1f;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            action[1] = 1f;
+            actionsOut[1] = 1f;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            action[0] = 2f;
+            actionsOut[0] = 2f;
         }
-        action[3] = Input.GetKey(KeyCode.Space) ? 1.0f : 0.0f;
-        return action;
+        actionsOut[3] = Input.GetKey(KeyCode.Space) ? 1.0f : 0.0f;
     }
 
     // Detect when the agent hits the goal
@@ -265,7 +286,7 @@ public class WallJumpAgent : Agent
         if (col.gameObject.CompareTag("goal") && DoGroundCheck(true))
         {
             SetReward(1f);
-            Done();
+            EndEpisode();
             StartCoroutine(
                 GoalScoredSwapGroundMaterial(m_WallJumpSettings.goalScoredMaterial, 2));
         }
@@ -279,7 +300,7 @@ public class WallJumpAgent : Agent
         blockRb.angularVelocity = Vector3.zero;
     }
 
-    public override void AgentReset()
+    public override void OnEpisodeBegin()
     {
         ResetBlock(m_ShortBlockRb);
         transform.localPosition = new Vector3(
@@ -304,7 +325,8 @@ public class WallJumpAgent : Agent
     /// <param name="config">Config.
     /// If 0 : No wall and noWallBrain.
     /// If 1:  Small wall and smallWallBrain.
-    /// Other : Tall wall and BigWallBrain. </param>
+    /// Other : Tall wall and BigWallBrain.
+    /// </param>
     void ConfigureAgent(int config)
     {
         var localScale = wall.transform.localScale;
@@ -312,31 +334,31 @@ public class WallJumpAgent : Agent
         {
             localScale = new Vector3(
                 localScale.x,
-                Academy.Instance.FloatProperties.GetPropertyWithDefault("no_wall_height", 0),
+                m_ResetParams.GetWithDefault("no_wall_height", 0),
                 localScale.z);
             wall.transform.localScale = localScale;
-            GiveModel("SmallWallJump", noWallBrain);
+            SetModel(m_NoWallBehaviorName, noWallBrain);
         }
         else if (config == 1)
         {
             localScale = new Vector3(
                 localScale.x,
-                Academy.Instance.FloatProperties.GetPropertyWithDefault("small_wall_height", 4),
+                m_ResetParams.GetWithDefault("small_wall_height", 4),
                 localScale.z);
             wall.transform.localScale = localScale;
-            GiveModel("SmallWallJump", smallWallBrain);
+            SetModel(m_SmallWallBehaviorName, smallWallBrain);
         }
         else
         {
-            var min = Academy.Instance.FloatProperties.GetPropertyWithDefault("big_wall_min_height", 8);
-            var max = Academy.Instance.FloatProperties.GetPropertyWithDefault("big_wall_max_height", 8);
+            var min = m_ResetParams.GetWithDefault("big_wall_min_height", 8);
+            var max = m_ResetParams.GetWithDefault("big_wall_max_height", 8);
             var height = min + Random.value * (max - min);
             localScale = new Vector3(
                 localScale.x,
                 height,
                 localScale.z);
             wall.transform.localScale = localScale;
-            GiveModel("BigWallJump", bigWallBrain);
+            SetModel(m_BigWallBehaviorName, bigWallBrain);
         }
     }
 }

@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using FLFlight;
-using MLAgents;
 using TMPro;
+using Unity.MLAgents;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Object = System.Object;
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         for (int c =0; c<MlAgents.transform.childCount; c++)
         {
             Agent agent = MlAgents.transform.GetChild(c).GetComponent<Agent>();
-            if(agent != null) agent.Done();
+            if(agent != null) agent.EndEpisode();
         }
     }
 

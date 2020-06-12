@@ -1,11 +1,15 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Barracuda;
+using Unity.Barracuda;
 using System.IO;
-using MLAgents;
+using Unity.MLAgents;
+using Unity.MLAgents.Policies;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
-namespace MLAgentsExamples
+namespace Unity.MLAgentsExamples
 {
     /// <summary>
     /// Utility class to allow the NNModel file for an agent to be overriden during inference.
@@ -20,7 +24,9 @@ namespace MLAgentsExamples
     public class ModelOverrider : MonoBehaviour
     {
         const string k_CommandLineModelOverrideFlag = "--mlagents-override-model";
+        const string k_CommandLineModelOverrideDirectoryFlag = "--mlagents-override-model-directory";
         const string k_CommandLineQuitAfterEpisodesFlag = "--mlagents-quit-after-episodes";
+        const string k_CommandLineQuitOnLoadFailure = "--mlagents-quit-on-load-failure";
 
         // The attached Agent
         Agent m_Agent;
@@ -28,14 +34,48 @@ namespace MLAgentsExamples
         // Assets paths to use, with the behavior name as the key.
         Dictionary<string, string> m_BehaviorNameOverrides = new Dictionary<string, string>();
 
+        string m_BehaviorNameOverrideDirectory;
+
         // Cached loaded NNModels, with the behavior name as the key.
         Dictionary<string, NNModel> m_CachedModels = new Dictionary<string, NNModel>();
+
 
         // Max episodes to run. Only used if > 0
         // Will default to 1 if override models are specified, otherwise 0.
         int m_MaxEpisodes;
 
         int m_NumSteps;
+        int m_PreviousNumSteps;
+        int m_PreviousAgentCompletedEpisodes;
+
+        bool m_QuitOnLoadFailure;
+        [Tooltip("Debug values to be used in place of the command line for overriding models.")]
+        public string debugCommandLineOverride;
+
+        // Static values to keep track of completed episodes and steps across resets
+        // These are updated in OnDisable.
+        static int s_PreviousAgentCompletedEpisodes;
+        static int s_PreviousNumSteps;
+
+        int TotalCompletedEpisodes
+        {
+            get { return m_PreviousAgentCompletedEpisodes + (m_Agent == null ? 0 : m_Agent.CompletedEpisodes);  }
+        }
+
+        int TotalNumSteps
+        {
+            get { return m_PreviousNumSteps + m_NumSteps; }
+        }
+
+        public bool HasOverrides
+        {
+            get { return m_BehaviorNameOverrides.Count > 0 || !string.IsNullOrEmpty(m_BehaviorNameOverrideDirectory);  }
+        }
+
+        public static string GetOverrideBehaviorName(string originalBehaviorName)
+        {
+            return $"Override_{originalBehaviorName}";
+        }
 
         /// <summary>
         /// Get the asset path to use from the commandline arguments.
@@ -46,9 +86,14 @@ namespace MLAgentsExamples
             m_BehaviorNameOverrides.Clear();
 
             var maxEpisodes = 0;
+            string[] commandLineArgsOverride = null;
+            if (!string.IsNullOrEmpty(debugCommandLineOverride) && Application.isEditor)
+            {
+                commandLineArgsOverride = debugCommandLineOverride.Split(' ');
+            }
 
-            var args = Environment.GetCommandLineArgs();
-            for (var i = 0; i < args.Length - 1; i++)
+            var args = commandLineArgsOverride ?? Environment.GetCommandLineArgs();
+            for (var i = 0; i < args.Length; i++)
             {
                 if (args[i] == k_CommandLineModelOverrideFlag && i < args.Length-2)
                 {
@@ -56,13 +101,21 @@ namespace MLAgentsExamples
                     var value = args[i + 2].Trim();
                     m_BehaviorNameOverrides[key] = value;
                 }
-                else if (args[i] == k_CommandLineQuitAfterEpisodesFlag)
+                else if (args[i] == k_CommandLineModelOverrideDirectoryFlag && i < args.Length-1)
+                {
+                    m_BehaviorNameOverrideDirectory = args[i + 1].Trim();
+                }
+                else if (args[i] == k_CommandLineQuitAfterEpisodesFlag && i < args.Length-1)
                 {
                     Int32.TryParse(args[i + 1], out maxEpisodes);
                 }
+                else if (args[i] == k_CommandLineQuitOnLoadFailure)
+                {
+                    m_QuitOnLoadFailure = true;
+                }
             }
 
-            if (m_BehaviorNameOverrides.Count > 0)
+            if (HasOverrides)
             {
                 // If overriding models, set maxEpisodes to 1 or the command line value
                 m_MaxEpisodes = maxEpisodes > 0 ? maxEpisodes : 1;
@@ -72,43 +125,70 @@ namespace MLAgentsExamples
 
         void OnEnable()
         {
+            // Start with these initialized to previous values in the case where we're resetting scenes.
+            m_PreviousNumSteps = s_PreviousNumSteps;
+            m_PreviousAgentCompletedEpisodes = s_PreviousAgentCompletedEpisodes;
+
             m_Agent = GetComponent<Agent>();
 
             GetAssetPathFromCommandLine();
-            if (m_BehaviorNameOverrides.Count > 0)
+            if (HasOverrides)
             {
                 OverrideModel();
             }
+        }
+
+        void OnDisable()
+        {
+            // Update the static episode and step counts.
+            // For a single agent in the scene, this will be a straightforward increment.
+            // If there are multiple agents, we'll increment the count by the Agent that completed the most episodes.
+            s_PreviousAgentCompletedEpisodes = Mathf.Max(s_PreviousAgentCompletedEpisodes, TotalCompletedEpisodes);
+            s_PreviousNumSteps = Mathf.Max(s_PreviousNumSteps, TotalNumSteps);
         }
 
         void FixedUpdate()
         {
             if (m_MaxEpisodes > 0)
             {
-                if (m_NumSteps > m_MaxEpisodes * m_Agent.maxStep)
+                // For Agents without maxSteps, exit as soon as we've hit the target number of episodes.
+                // For Agents that specify MaxStep, also make sure we've gone at least that many steps.
+                // Since we exit as soon as *any* Agent hits its target, the maxSteps condition keeps us running
+                // a bit longer in case there's an early failure.
+                if (TotalCompletedEpisodes >= m_MaxEpisodes && TotalNumSteps > m_MaxEpisodes * m_Agent.MaxStep)
                 {
-                    // Stop recording so that we don't write partial rewards to the timer info.
-                    TimerStack.Instance.Recording = false;
+                    Debug.Log($"ModelOverride reached {TotalCompletedEpisodes} episodes and {TotalNumSteps} steps. Exiting.");
                     Application.Quit(0);
+#if UNITY_EDITOR
+                    EditorApplication.isPlaying = false;
+#endif
                 }
             }
             m_NumSteps++;
         }
 
-        NNModel GetModelForBehaviorName(string behaviorName)
+        public NNModel GetModelForBehaviorName(string behaviorName)
         {
             if (m_CachedModels.ContainsKey(behaviorName))
             {
                 return m_CachedModels[behaviorName];
             }
 
-            if (!m_BehaviorNameOverrides.ContainsKey(behaviorName))
+            string assetPath = null;
+            if (m_BehaviorNameOverrides.ContainsKey(behaviorName))
             {
-                Debug.Log($"No override for behaviorName {behaviorName}");
-                return null;
+                assetPath = m_BehaviorNameOverrides[behaviorName];
+            }
+            else if(!string.IsNullOrEmpty(m_BehaviorNameOverrideDirectory))
+            {
+                assetPath = Path.Combine(m_BehaviorNameOverrideDirectory, $"{behaviorName}.nn");
             }
 
-            var assetPath = m_BehaviorNameOverrides[behaviorName];
+            if (string.IsNullOrEmpty(assetPath))
+            {
+                Debug.Log($"No override for BehaviorName {behaviorName}, and no directory set.");
+                return null;
+            }
 
             byte[] model = null;
             try
@@ -117,7 +197,7 @@ namespace MLAgentsExamples
             }
             catch(IOException)
             {
-                Debug.Log($"Couldn't load file {assetPath}", this);
+                Debug.Log($"Couldn't load file {assetPath} at full path {Path.GetFullPath(assetPath)}", this);
                 // Cache the null so we don't repeatedly try to load a missing file
                 m_CachedModels[behaviorName] = null;
                 return null;
@@ -139,11 +219,25 @@ namespace MLAgentsExamples
         {
             m_Agent.LazyInitialize();
             var bp = m_Agent.GetComponent<BehaviorParameters>();
+            var behaviorName = bp.BehaviorName;
 
-            var nnModel = GetModelForBehaviorName(bp.behaviorName);
-            Debug.Log($"Overriding behavior {bp.behaviorName} for agent with model {nnModel?.name}");
+            var nnModel = GetModelForBehaviorName(behaviorName);
+            if (nnModel == null && m_QuitOnLoadFailure)
+            {
+                Debug.Log(
+                    $"Didn't find a model for behaviorName {behaviorName}. Make " +
+                    $"sure the behaviorName is set correctly in the commandline " +
+                    $"and that the model file exists"
+                );
+                Application.Quit(1);
+#if UNITY_EDITOR
+                EditorApplication.isPlaying = false;
+#endif
+            }
+            var modelName = nnModel != null ? nnModel.name : "<null>";
+            Debug.Log($"Overriding behavior {behaviorName} for agent with model {modelName}");
             // This might give a null model; that's better because we'll fall back to the Heuristic
-            m_Agent.GiveModel($"Override_{bp.behaviorName}", nnModel);
+            m_Agent.SetModel(GetOverrideBehaviorName(behaviorName), nnModel);
 
         }
     }

@@ -1,28 +1,29 @@
 using UnityEngine;
-using MLAgents;
+using Unity.MLAgents;
+using Unity.MLAgents.Sensors;
 
 public class Ball3DHardAgent : Agent
 {
     [Header("Specific to Ball3DHard")]
     public GameObject ball;
     Rigidbody m_BallRb;
-    IFloatProperties m_ResetParams;
+    EnvironmentParameters m_ResetParams;
 
-    public override void InitializeAgent()
+    public override void Initialize()
     {
         m_BallRb = ball.GetComponent<Rigidbody>();
-        m_ResetParams = Academy.Instance.FloatProperties;
+        m_ResetParams = Academy.Instance.EnvironmentParameters;
         SetResetParameters();
     }
 
-    public override void CollectObservations()
+    public override void CollectObservations(VectorSensor sensor)
     {
-        AddVectorObs(gameObject.transform.rotation.z);
-        AddVectorObs(gameObject.transform.rotation.x);
-        AddVectorObs((ball.transform.position - gameObject.transform.position));
+        sensor.AddObservation(gameObject.transform.rotation.z);
+        sensor.AddObservation(gameObject.transform.rotation.x);
+        sensor.AddObservation((ball.transform.position - gameObject.transform.position));
     }
 
-    public override void AgentAction(float[] vectorAction)
+    public override void OnActionReceived(float[] vectorAction)
     {
         var actionZ = 2f * Mathf.Clamp(vectorAction[0], -1f, 1f);
         var actionX = 2f * Mathf.Clamp(vectorAction[1], -1f, 1f);
@@ -43,7 +44,7 @@ public class Ball3DHardAgent : Agent
             Mathf.Abs(ball.transform.position.z - gameObject.transform.position.z) > 3f)
         {
             SetReward(-1f);
-            Done();
+            EndEpisode();
         }
         else
         {
@@ -51,7 +52,7 @@ public class Ball3DHardAgent : Agent
         }
     }
 
-    public override void AgentReset()
+    public override void OnEpisodeBegin()
     {
         gameObject.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
         gameObject.transform.Rotate(new Vector3(1, 0, 0), Random.Range(-10f, 10f));
@@ -64,8 +65,8 @@ public class Ball3DHardAgent : Agent
     public void SetBall()
     {
         //Set the attributes of the ball by fetching the information from the academy
-        m_BallRb.mass = m_ResetParams.GetPropertyWithDefault("mass", 1.0f);
-        var scale = m_ResetParams.GetPropertyWithDefault("scale", 1.0f);
+        m_BallRb.mass = m_ResetParams.GetWithDefault("mass", 1.0f);
+        var scale = m_ResetParams.GetWithDefault("scale", 1.0f);
         ball.transform.localScale = new Vector3(scale, scale, scale);
     }
 

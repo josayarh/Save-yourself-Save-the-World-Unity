@@ -2992,8 +2992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DecisionPeriod: 5
-  RepeatAction: 1
-  offsetStep: 0
+  TakeActionsBetweenDecisions: 1
 --- !u!1 &326238864
 GameObject:
   m_ObjectHideFlags: 0
@@ -10147,43 +10146,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c19027b30bcaa489b3ec4b42040dea, type: 3}
---- !u!1 &1291282702 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 551607113193146564, guid: a5f95611ba0df554dbb2a2d3823afb34,
-    type: 3}
-  m_PrefabInstance: {fileID: 1154873486}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1291282704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1291282702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensorName: RayPerceptionSensor
-  detectableTags:
-  - Wall
-  - Enemy
-  - PlayerBot
-  - Building
-  raysPerDirection: 3
-  maxRayDegrees: 60
-  sphereCastRadius: 0.5
-  rayLength: 500
-  rayLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967291
-  observationStacks: 1
-  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
-  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  useWorldPositions: 0
-  startVerticalOffset: 0
-  endVerticalOffset: 0
 --- !u!1 &1292064996
 GameObject:
   m_ObjectHideFlags: 0
@@ -10363,25 +10325,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorName: RayPerceptionSensor
-  detectableTags:
+  m_SensorName: RayPerceptionSensor
+  m_DetectableTags:
   - Wall
   - Enemy
-  - PlayerBot
   - Building
-  raysPerDirection: 3
-  maxRayDegrees: 60
-  sphereCastRadius: 0.5
-  rayLength: 500
-  rayLayerMask:
+  - Player
+  m_RaysPerDirection: 3
+  m_MaxRayDegrees: 70
+  m_SphereCastRadius: 0.5
+  m_RayLength: 500
+  m_RayLayerMask:
     serializedVersion: 2
     m_Bits: 4294967291
-  observationStacks: 1
+  m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  useWorldPositions: 0
-  startVerticalOffset: 0
-  endVerticalOffset: 0
+  m_StartVerticalOffset: 0
+  m_EndVerticalOffset: 0
 --- !u!1 &1338877880
 GameObject:
   m_ObjectHideFlags: 0
@@ -12396,6 +12357,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7116590713895824843, guid: 9961cfd7e8aedf149a71014461980a24,
+        type: 3}
+      propertyPath: m_RayLength
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 4613836272851220351, guid: 9961cfd7e8aedf149a71014461980a24,
         type: 3}
       propertyPath: useWorldPositions
@@ -12459,6 +12425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4613836272851220351, guid: 9961cfd7e8aedf149a71014461980a24, type: 3}
+    - {fileID: 7116590713895824843, guid: 9961cfd7e8aedf149a71014461980a24, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9961cfd7e8aedf149a71014461980a24, type: 3}
 --- !u!1 &1613267192
 GameObject:

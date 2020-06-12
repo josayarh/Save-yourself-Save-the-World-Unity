@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
-using MLAgents;
+using Unity.MLAgents;
 
-namespace MLAgentsExamples
+namespace Unity.MLAgentsExamples
 {
     /// <summary>
     /// Used to store relevant information for acting and learning for each body part in agent.
@@ -109,6 +109,7 @@ namespace MLAgentsExamples
         [HideInInspector] public Dictionary<Transform, BodyPart> bodyPartsDict = new Dictionary<Transform, BodyPart>();
 
         [HideInInspector] public List<BodyPart> bodyPartsList = new List<BodyPart>();
+        const float k_MaxAngularVelocity = 50.0f;
 
         /// <summary>
         /// Create BodyPart object and add it to dictionary.
@@ -122,7 +123,7 @@ namespace MLAgentsExamples
                 startingPos = t.position,
                 startingRot = t.rotation
             };
-            bp.rb.maxAngularVelocity = 100;
+            bp.rb.maxAngularVelocity = k_MaxAngularVelocity;
 
             // Add & setup the ground contact script
             bp.groundContact = t.GetComponent<GroundContact>();

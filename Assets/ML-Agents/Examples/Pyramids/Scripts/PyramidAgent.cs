@@ -2,7 +2,8 @@ using System;
 using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
-using MLAgents;
+using Unity.MLAgents;
+using Unity.MLAgents.Sensors;
 
 public class PyramidAgent : Agent
 {
@@ -13,20 +14,19 @@ public class PyramidAgent : Agent
     public GameObject areaSwitch;
     public bool useVectorObs;
 
-    public override void InitializeAgent()
+    public override void Initialize()
     {
-        base.InitializeAgent();
         m_AgentRb = GetComponent<Rigidbody>();
         m_MyArea = area.GetComponent<PyramidArea>();
         m_SwitchLogic = areaSwitch.GetComponent<PyramidSwitch>();
     }
 
-    public override void CollectObservations()
+    public override void CollectObservations(VectorSensor sensor)
     {
         if (useVectorObs)
         {
-            AddVectorObs(m_SwitchLogic.GetState());
-            AddVectorObs(transform.InverseTransformDirection(m_AgentRb.velocity));
+            sensor.AddObservation(m_SwitchLogic.GetState());
+            sensor.AddObservation(transform.InverseTransformDirection(m_AgentRb.velocity));
         }
     }
 
@@ -55,34 +55,34 @@ public class PyramidAgent : Agent
         m_AgentRb.AddForce(dirToGo * 2f, ForceMode.VelocityChange);
     }
 
-    public override void AgentAction(float[] vectorAction)
+    public override void OnActionReceived(float[] vectorAction)
     {
-        AddReward(-1f / maxStep);
+        AddReward(-1f / MaxStep);
         MoveAgent(vectorAction);
     }
 
-    public override float[] Heuristic()
+    public override void Heuristic(float[] actionsOut)
     {
+        actionsOut[0] = 0;
         if (Input.GetKey(KeyCode.D))
         {
-            return new float[] { 3 };
+            actionsOut[0] = 3;
         }
-        if (Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W))
         {
-            return new float[] { 1 };
+            actionsOut[0] = 1;
         }
-        if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A))
         {
-            return new float[] { 4 };
+            actionsOut[0] = 4;
         }
-        if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
-            return new float[] { 2 };
+            actionsOut[0] = 2;
         }
-        return new float[] { 0 };
     }
 
-    public override void AgentReset()
+    public override void OnEpisodeBegin()
     {
         var enumerable = Enumerable.Range(0, 9).OrderBy(x => Guid.NewGuid()).Take(9);
         var items = enumerable.ToArray();
@@ -107,7 +107,7 @@ public class PyramidAgent : Agent
         if (collision.gameObject.CompareTag("goal"))
         {
             SetReward(2f);
-            Done();
+            EndEpisode();
         }
     }
 }

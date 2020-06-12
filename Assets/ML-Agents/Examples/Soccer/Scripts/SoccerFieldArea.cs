@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using MLAgents;
+using Unity.MLAgents;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -31,6 +31,8 @@ public class SoccerFieldArea : MonoBehaviour
     [HideInInspector]
     public bool canResetBall;
 
+    EnvironmentParameters m_ResetParams;
+
     void Awake()
     {
         canResetBall = true;
@@ -39,6 +41,8 @@ public class SoccerFieldArea : MonoBehaviour
         m_BallController = ball.GetComponent<SoccerBallController>();
         m_BallController.area = this;
         ballStartingPos = ball.transform.position;
+
+        m_ResetParams = Academy.Instance.EnvironmentParameters;
     }
 
     IEnumerator ShowGoalUI()
@@ -54,13 +58,13 @@ public class SoccerFieldArea : MonoBehaviour
         {
             if (ps.agentScript.team == scoredTeam)
             {
-                ps.agentScript.AddReward(1);
+                ps.agentScript.AddReward(1 + ps.agentScript.timePenalty);
             }
             else
             {
                 ps.agentScript.AddReward(-1);
             }
-            ps.agentScript.Done();  //all agents need to be reset
+            ps.agentScript.EndEpisode();  //all agents need to be reset
 
             if (goalTextUI)
             {
@@ -69,21 +73,13 @@ public class SoccerFieldArea : MonoBehaviour
         }
     }
 
-    public Vector3 GetBallSpawnPosition()
-    {
-        var randomSpawnPos = ground.transform.position +
-            new Vector3(0f, 0f, 0f);
-        randomSpawnPos.y = ground.transform.position.y + .5f;
-        return randomSpawnPos;
-    }
-
     public void ResetBall()
     {
-        ball.transform.position = GetBallSpawnPosition();
+        ball.transform.position = ballStartingPos;
         ballRb.velocity = Vector3.zero;
         ballRb.angularVelocity = Vector3.zero;
 
-        var ballScale = Academy.Instance.FloatProperties.GetPropertyWithDefault("ball_scale", 0.015f);
+        var ballScale = m_ResetParams.GetWithDefault("ball_scale", 0.015f);
         ballRb.transform.localScale = new Vector3(ballScale, ballScale, ballScale);
     }
 }

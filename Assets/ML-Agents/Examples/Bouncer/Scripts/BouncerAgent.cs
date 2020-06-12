@@ -1,5 +1,6 @@
 using UnityEngine;
-using MLAgents;
+using Unity.MLAgents;
+using Unity.MLAgents.Sensors;
 
 public class BouncerAgent : Agent
 {
@@ -13,25 +14,25 @@ public class BouncerAgent : Agent
     int m_NumberJumps = 20;
     int m_JumpLeft = 20;
 
-    IFloatProperties m_ResetParams;
+    EnvironmentParameters m_ResetParams;
 
-    public override void InitializeAgent()
+    public override void Initialize()
     {
         m_Rb = gameObject.GetComponent<Rigidbody>();
         m_LookDir = Vector3.zero;
 
-        m_ResetParams = Academy.Instance.FloatProperties;
+        m_ResetParams = Academy.Instance.EnvironmentParameters;
 
         SetResetParameters();
     }
 
-    public override void CollectObservations()
+    public override void CollectObservations(VectorSensor sensor)
     {
-        AddVectorObs(gameObject.transform.localPosition);
-        AddVectorObs(target.transform.localPosition);
+        sensor.AddObservation(gameObject.transform.localPosition);
+        sensor.AddObservation(target.transform.localPosition);
     }
 
-    public override void AgentAction(float[] vectorAction)
+    public override void OnActionReceived(float[] vectorAction)
     {
         for (var i = 0; i < vectorAction.Length; i++)
         {
@@ -50,7 +51,7 @@ public class BouncerAgent : Agent
         m_LookDir = new Vector3(x, y, z);
     }
 
-    public override void AgentReset()
+    public override void OnEpisodeBegin()
     {
         gameObject.transform.localPosition = new Vector3(
             (1 - 2 * Random.value) * 5, 2, (1 - 2 * Random.value) * 5);
@@ -83,7 +84,7 @@ public class BouncerAgent : Agent
         if (gameObject.transform.position.y < -1)
         {
             AddReward(-1);
-            Done();
+            EndEpisode();
             return;
         }
 
@@ -91,23 +92,20 @@ public class BouncerAgent : Agent
             || gameObject.transform.localPosition.z < -19 || gameObject.transform.localPosition.z > 19)
         {
             AddReward(-1);
-            Done();
+            EndEpisode();
             return;
         }
         if (m_JumpLeft == 0)
         {
-            Done();
+            EndEpisode();
         }
     }
 
-    public override float[] Heuristic()
+    public override void Heuristic(float[] actionsOut)
     {
-        var action = new float[3];
-
-        action[0] = Input.GetAxis("Horizontal");
-        action[1] = Input.GetKey(KeyCode.Space) ? 1.0f : 0.0f;
-        action[2] = Input.GetAxis("Vertical");
-        return action;
+        actionsOut[0] = Input.GetAxis("Horizontal");
+        actionsOut[1] = Input.GetKey(KeyCode.Space) ? 1.0f : 0.0f;
+        actionsOut[2] = Input.GetAxis("Vertical");
     }
 
     void Update()
@@ -122,7 +120,7 @@ public class BouncerAgent : Agent
 
     public void SetTargetScale()
     {
-        var targetScale = m_ResetParams.GetPropertyWithDefault("target_scale", 1.0f);
+        var targetScale = m_ResetParams.GetWithDefault("target_scale", 1.0f);
         target.transform.localScale = new Vector3(targetScale, targetScale, targetScale);
     }
 
