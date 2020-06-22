@@ -225,7 +225,6 @@ namespace FLFlight
         {
             if (vectorAction.Length > 5)
             {
-                Debug.Log(vectorAction[0]);
 
                 Physics.SetPhysicsInput(
                     new Vector3(vectorAction[1], 0.0f, vectorAction[0]),
@@ -233,7 +232,7 @@ namespace FLFlight
                         vectorAction[4]));
 
                 
-                if (vectorAction[5] >= 1)
+                if (timer > fireRate && vectorAction[5] >= 1)
                 {
                     fire();
                 }

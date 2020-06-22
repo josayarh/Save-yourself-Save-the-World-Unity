@@ -20,6 +20,7 @@ public class GameObjectStateManager : MonoBehaviour
         = new Dictionary<Guid, Tuple<Type, List<string>>>();
     private Dictionary<uint, List<Guid>> objectApperanceDictionnary = new Dictionary<uint, List<Guid>>();
     private Dictionary<Guid, GameObject> instanciatedGameobjects = new Dictionary<Guid, GameObject>();
+    
     /***
      * Stores the objects ID whose existance depends on a parent object
      * Key : Object id
@@ -91,24 +92,21 @@ public class GameObjectStateManager : MonoBehaviour
                         if (!doesParentExist(id))
                             break;
                     }
-
-                    // if (gameObjectTuple.Item1 == typeof(PlayerSave))
-                    // {
-                    //     go = Pool.Instance.get(PoolableTypes.PlayerBot);
-                    //     Ship ship  = go.GetComponent<Ship>();
-                    //     ship.FrameSteps = gameObjectTuple.Item2;
-                    // }
-                    else if (gameObjectTuple.Item1 == typeof(BulletController))
+                    else
                     {
-                        go = Pool.Instance.get(PoolableTypes.BulletBot);
-                        BulletBotController bulletBotController  = go.GetComponent<BulletBotController>();
-                        bulletBotController.FrameSteps = gameObjectTuple.Item2;
-                    }
-                    else if(gameObjectTuple.Item1 == typeof(EnemyController))
-                    {
-                        go = Pool.Instance.get(PoolableTypes.Enemy);
-                        EnemyController enemyController = go.GetComponent<EnemyController>();
-                        enemyController.FrameSaveList = gameObjectTuple.Item2;
+                        if (gameObjectTuple.Item1 == typeof(BulletController))
+                        {
+                            go = Pool.Instance.get(PoolableTypes.BulletBot);
+                            BulletBotController bulletBotController =
+                                go.GetComponent<BulletBotController>();
+                            bulletBotController.FrameSteps = gameObjectTuple.Item2;
+                        }
+                        else if (gameObjectTuple.Item1 == typeof(EnemyController))
+                        {
+                            go = Pool.Instance.get(PoolableTypes.Enemy);
+                            EnemyController enemyController = go.GetComponent<EnemyController>();
+                            enemyController.FrameSaveList = gameObjectTuple.Item2;
+                        }
                     }
 
                     if (go != null)

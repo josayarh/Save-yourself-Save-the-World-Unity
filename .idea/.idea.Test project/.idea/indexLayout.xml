@@ -21,6 +21,8 @@
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
+      <Path>Demonstration</Path>
+      <Path>Demonstrations</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>

@@ -17,6 +17,10 @@ public class BulletController : SavableObject, IPoolableObject
         id = Guid.NewGuid();
         frameSaveList.Add(MakeFrame());
         creationFrameNumber = GameObjectStateManager.Instance.FrameNumber;
+        Rigidbody rb = GetComponent<Rigidbody>();
+        
+        if(rb != null)
+            rb.angularVelocity = Vector3.zero;
     }
 
     private void FixedUpdate()
@@ -63,6 +67,10 @@ public class BulletController : SavableObject, IPoolableObject
                     Debug.Log("BulletController : Invalid Player tag type was touched");
                 }
             }
+        }
+        else if (other.gameObject.CompareTag("Wall"))
+        {
+            Debug.Log("BulletController : bullet has touched wall");
         }
 
         Destroy();
