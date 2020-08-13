@@ -68,9 +68,10 @@ public class GameManager : MonoBehaviour
         {
             //win();
 
-            EnemyManager.Instance.clearPositions();
+            GameObjectStateManager.Instance.resetDico();
             Ship playerShip = player.GetComponent<Ship>();
             playerShip.Destroy();
+            EnemyManager.Instance.launchmanager();
         }
     }
 

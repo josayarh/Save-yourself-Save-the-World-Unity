@@ -1,0 +1,46 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1596101923",
+        "python_version": "3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)]",
+        "command_line_arguments": "E:\\IDE\\Anaconda\\Scripts\\mlagents-learn Config/trainer_config.yaml --run-id=SY-SW2 --train --time-scale=1 --resume",
+        "mlagents_version": "0.17.0",
+        "mlagents_envs_version": "0.17.0",
+        "communication_protocol_version": "1.0.0",
+        "tensorflow_version": "1.15.0",
+        "end_time_seconds": "1596101940"
+    },
+    "total": 16.699119800000002,
+    "count": 1,
+    "self": 0.18784590000000279,
+    "children": {
+        "run_training.setup": {
+            "total": 0.0127648,
+            "count": 1,
+            "self": 0.0127648
+        },
+        "TrainerController.start_learning": {
+            "total": 16.4985091,
+            "count": 1,
+            "self": 0.0017753999999960968,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 16.492417,
+                    "count": 1,
+                    "self": 16.492417
+                },
+                "trainer_threads": {
+                    "total": 1.6000000009341875e-06,
+                    "count": 1,
+                    "self": 1.6000000009341875e-06
+                },
+                "TrainerController._save_model": {
+                    "total": 0.004315100000003014,
+                    "count": 1,
+                    "self": 0.004315100000003014
+                }
+            }
+        }
+    }
+}

@@ -565,8 +565,8 @@ GameObject:
   - component: {fileID: 3724653650060622726}
   - component: {fileID: 4055217565581277948}
   - component: {fileID: 3266545570039640958}
-  - component: {fileID: 7116590713895824843}
-  - component: {fileID: 4613836272851220351}
+  - component: {fileID: 2486568218243891266}
+  - component: {fileID: 1901170925374666813}
   m_Layer: 9
   m_Name: PlayerShip
   m_TagString: Player
@@ -620,12 +620,15 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  maxStep: 0
+  MaxStep: 0
   isPlayer: 1
   fireRate: 0.5
   gunTipPosition: {fileID: 2214303456480079886}
   gun: {fileID: 7092712980423206595}
   useObs: 1
+  isFSMdriven: 0
+  detectRange: 300
+  attackRange: 20
 --- !u!114 &5175795138777961344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,16 +642,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    vectorObservationSize: 7
-    numStackedVectorObservations: 1
-    vectorActionSize: 07000000
-    vectorActionDescriptions: []
-    vectorActionSpaceType: 1
+    VectorObservationSize: 7
+    NumStackedVectorObservations: 1
+    VectorActionSize: 07000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 1
-  m_BehaviorName: PlayerShipRecord
-  m_TeamID: 0
+  m_BehaviorName: SY-SW
+  TeamId: 0
   m_UseChildSensors: 1
 --- !u!114 &3724653650060622726
 MonoBehaviour:
@@ -700,7 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24809743c3f1941478c95a66fa7a0509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7116590713895824843
+--- !u!114 &2486568218243891266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -709,12 +712,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4167618010638279152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f710d360a49461cad67ff5e6bcefe1, type: 3}
+  m_Script: {fileID: 11500000, guid: f2902496c0120472b90269f94a0aec7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  record: 1
-  demonstrationName: PlayerShipRecord
---- !u!114 &4613836272851220351
+  Record: 0
+  DemonstrationName: PlayerShipRecord
+  DemonstrationDirectory: 
+--- !u!114 &1901170925374666813
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -723,28 +727,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4167618010638279152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensorName: PlayerShipRecord
-  detectableTags:
-  - Wall
-  - Enemy
-  - PlayerBot
-  - Building
-  raysPerDirection: 3
-  maxRayDegrees: 70
-  sphereCastRadius: 0.5
-  rayLength: 50
-  rayLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967291
-  observationStacks: 1
-  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
-  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  useWorldPositions: 1
-  startVerticalOffset: 0
-  endVerticalOffset: 0
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
 --- !u!1 &4167638723596720512
 GameObject:
   m_ObjectHideFlags: 0

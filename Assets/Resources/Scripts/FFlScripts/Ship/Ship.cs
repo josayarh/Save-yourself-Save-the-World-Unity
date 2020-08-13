@@ -48,12 +48,20 @@ namespace FLFlight
         private NPCDetector npcDetector;
         private GameObject target;
 
+        private float dotProduct;
+
+        private Vector3 startPostion;
+
         private void Start()
         {
             if (isPlayer)
             {
                 PlayerShip = this;
                 DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                startPostion = transform.position;
             }
             
             npcDetector = new NPCDetector();
@@ -127,37 +135,6 @@ namespace FLFlight
             rBody = GetComponent<Rigidbody>();
         }
 
-        // private void FixedUpdate()
-        // {
-        //     if (isPlayer)
-        //     {
-        //         if (isFSMdriven)
-        //         {
-        //             fsm.CurrentState.Reason(GameManager.Instance.Player, gameObject);
-        //             fsm.CurrentState.Act(GameManager.Instance.Player, gameObject);
-        //         }
-        //         else{
-        //             float fireKey = UnityEngine.Input.GetAxis("Fire1");
-        //             timer += Time.deltaTime;
-        //             isShooting = false;
-        //
-        //             if (timer > fireRate && fireKey != 0)
-        //             {
-        //                 fire();
-        //             }
-        //
-        //             // Pass the input to the physics to move the ship.
-        //             Physics.SetPhysicsInput(
-        //                 new Vector3(Input.Strafe, 0.0f, Input.Throttle),
-        //                 new Vector3(Input.Pitch, Input.Yaw, Input.Roll));
-        //
-        //
-        //             PlayerShip = this;
-        //
-        //         }
-        //     }
-        // }
-
         private void FixedUpdate()
         {
             timer += Time.deltaTime;
@@ -174,7 +151,7 @@ namespace FLFlight
         {
             GameObject bullet = Pool.Instance.get(PoolableTypes.Bullets, gunTipPosition, playerSave.Id);
             timer = 0.0f;
-            isShooting = true;
+            isShooting = false;
         }
         
         public void Destroy(Guid killerId = new Guid())
@@ -184,10 +161,13 @@ namespace FLFlight
             else 
                 playerSave.Destroy();
             
-            EndEpisode();
+            if(Pool.Instance.EnemyList.Count != 0)
+                AddReward(-1f/EnemyManager.Instance.MAXEnemies);
+            
             
             if (isPlayer)
             {
+                EndEpisode();
                 GameManager.Instance.notifyAgentsAlldone();
                 OnRelease();
                 GameManager.Instance.reloadScene();
@@ -198,7 +178,36 @@ namespace FLFlight
                     PoolableTypes.Player);
         }
 
-        
+        void getProbableTarget()
+        {
+            float radius = 100000.0f;
+            RaycastHit[] raycastHit;
+            int layerMask = 1 << 9;
+            GameObject mostProbableEnemy;
+
+            raycastHit= UnityEngine.Physics.SphereCastAll(gameObject.transform.position, radius,
+                gameObject.transform.forward, 0, layerMask);
+
+            
+            if (raycastHit.Length > 0)
+            {
+                for (int i = 0; i < raycastHit.Length; ++i)
+                {
+                    GameObject rayhit = raycastHit[i].transform.gameObject;
+                    
+                    Vector3 targetToPlayer = (rayhit.transform.position 
+                                              - transform.position).normalized;
+                    float tempDotProduct = Vector3.Dot(transform.forward.normalized, 
+                        targetToPlayer);
+
+                    if (tempDotProduct < dotProduct)
+                    {
+                        target = rayhit;
+                        dotProduct = tempDotProduct;
+                    }
+                }
+            }
+        }
 
         //Start methods for machine learning 
 
@@ -207,17 +216,27 @@ namespace FLFlight
         {
             if (useObs)
             {
+                if(target==null && !isPlayer)
+                    getProbableTarget();
                 
-                var velocity = transform.position;
-                var rotation = transform.rotation;
-                
-                sensor.AddObservation(velocity.normalized.x);
-                sensor.AddObservation(velocity.normalized.y);
-                sensor.AddObservation(velocity.normalized.z);
-                sensor.AddObservation(rotation.normalized.x);
-                sensor.AddObservation(rotation.normalized.y);
-                sensor.AddObservation(rotation.normalized.z);
-                sensor.AddObservation(System.Convert.ToInt32(isShooting));
+                if (target != null)
+                {
+                    Vector3 targetToPlayer = (target.transform.position
+                                              - transform.position);
+
+                    sensor.AddObservation(targetToPlayer.magnitude);
+                    sensor.AddObservation(dotProduct);
+                    sensor.AddObservation(target.transform.position);
+                }
+                else
+                {
+                    sensor.AddObservation(1000000);
+                    sensor.AddObservation(1000000);
+                    sensor.AddObservation(Vector3.one);
+                }
+
+                sensor.AddObservation(Pool.Instance.EnemyList.Count);
+                sensor.AddObservation(isShooting);
             }
         }
 
@@ -232,19 +251,16 @@ namespace FLFlight
                         vectorAction[4]));
 
                 
-                if (timer > fireRate && vectorAction[5] >= 1)
+                if (timer > fireRate && vectorAction[5] >= 0.5)
                 {
                     fire();
+                    isShooting = false;
                 }
-                
-                AddReward(0.1f);
             }
         }
 
         public override void Heuristic(float[] actionsOut)
-
         {
-            
             if(isPlayer){
                 if (isFSMdriven)
                 {
@@ -267,11 +283,15 @@ namespace FLFlight
                                 -1f, 1f);
 
                         if (timer > fireRate && Vector3.Distance(target.transform.position,
-                                transform.position) > attackRange)
+                            transform.position) > attackRange)
+                        {
                             actionsOut[5] = 1;
-                        else 
+                            isShooting = true;
+                            AddReward(0.001f);
+                        }
+                        else
                             actionsOut[5] = 0;
-                        
+
                     }
                 }
                 else
@@ -288,19 +308,31 @@ namespace FLFlight
                     if (timer > fireRate && fireKey != 0)
                     {
                         actionsOut[5] = 1;
+                        isShooting = true;
                     }
                     else
                     {
                         actionsOut[5] = 0;
                     }
+                    
+                    getProbableTarget();
                 }
 
             }
         }
 
+        public override void OnEpisodeBegin()
+        {
+            if (!isPlayer)
+            {
+                transform.position = startPostion;
+                transform.rotation = Quaternion.identity;
+            }
+        }
+
         public void addRewardOnKill()
         {
-            AddReward(200.0f);
+            AddReward(1f/EnemyManager.Instance.MAXEnemies);
         }
 
         public bool IsPlayer => isPlayer;

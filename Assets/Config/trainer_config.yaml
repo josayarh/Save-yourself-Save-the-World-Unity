@@ -15,19 +15,23 @@ behaviors:
       hidden_units: 256
       num_layers: 2
       vis_encode_type: simple
-    reward_signals:
-      gail:
-        gamma: 0.99
-        strength: 1.0
-        encoding_size: 128
-        learning_rate: 0.0003
-        use_actions: false
-        use_vail: false
-        demo_path: Demonstrations/PlayerShipRecord.demo
     behavioral_cloning:
       demo_path: Demonstrations/PlayerShipRecord.demo
       strength: 0.5
-      steps: 150000
+      steps: 50000
+    reward_signals:
+      extrinsic:
+        strength: 0.6
+        gamma: 0.99
+      gail:
+        gamma: 0.99
+        strength: 1
+        encoding_size: 256
+        demo_path: Demonstrations/PlayerShipRecord.demo
+      curiosity:
+        strength: 0.002
+        gamma: 0.99
+        encoding_size: 256
     keep_checkpoints: 5
     max_steps: 15000000
     time_horizon: 64

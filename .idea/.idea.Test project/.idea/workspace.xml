@@ -20,292 +20,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8507df7-9e02-4f5c-ad39-7f60cfa3727e" name="Default Changelist" comment="Fix for machine learning">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Config/trainer_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Config/trainer_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Demonstrations/PlayerShipRecord.demo" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Demonstrations/PlayerShipRecord.demo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Demonstrations/PlayerShipRecord.demo.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Demonstrations/PlayerShipRecord.demo.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demonstrations/PlayerShipRecord_0.demo" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Demonstrations/PlayerShipRecord_0.demo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demonstrations/PlayerShipRecord_0.demo.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Demonstrations/PlayerShipRecord_0.demo.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Level1Scene_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Level1Scene_timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/shot_prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/shot_prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerShip.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerShip.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scenes/Level1Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scenes/Level1Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord.nn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord.nn.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/checkpoint.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/frozen_graph_def.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/frozen_graph_def.pb.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-0.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-0.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-0.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-0.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-109440.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-109440.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-109440.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-109440.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1169.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1169.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1169.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1169.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-117073.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-117073.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-117073.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-117073.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-128.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-128.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-128.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-128.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1344.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1344.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1344.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1344.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1408.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1408.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1408.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1408.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-149888.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-149888.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-149888.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-149888.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1920.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1920.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1920.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-1920.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-197248.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-197248.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-197248.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-197248.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-199872.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-199872.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-199872.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-199872.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-22720.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-22720.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-22720.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-22720.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-231872.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-231872.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-231872.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-231872.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-23296.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-23296.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-23296.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-23296.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-248384.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-248384.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-248384.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-248384.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-249728.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-249728.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-249728.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-249728.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-249856.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-249856.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-249856.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-249856.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-2787.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-2787.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-2787.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-2787.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-295872.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-295872.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-295872.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-295872.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-299712.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-299712.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-299712.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-299712.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-303.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-303.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-303.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-303.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-31031.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-31031.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-31031.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-31031.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-320.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-320.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-320.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-320.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-349632.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-349632.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-349632.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-349632.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-349696.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-349696.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-349696.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-349696.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-399616.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-399616.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-399616.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-399616.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-448.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-448.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-448.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-448.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-448576.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-448576.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-448576.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-448576.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-449600.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-449600.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-449600.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-449600.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-472448.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-472448.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-472448.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-472448.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49713.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49713.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49713.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49713.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49856.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49856.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49856.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49856.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49920.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49920.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49920.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-49920.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-50048.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-50048.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-50048.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-50048.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-512.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-512.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-512.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-512.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-587.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-587.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-587.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-587.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-64.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-64.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-64.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-64.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-640.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-640.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-640.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-640.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-768.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-768.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-768.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-768.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-8704.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-8704.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-8704.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-8704.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-896.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-896.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-896.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-896.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-9280.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-9280.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-9280.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-9280.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-99473.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-99473.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-99473.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-99473.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-99840.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-99840.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-99840.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-99840.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-99904.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-99904.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-99904.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/model-99904.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/raw_graph_def.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PlayerShipRecord/raw_graph_def.pb.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock.nn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock.nn.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock/checkpoint.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock/frozen_graph_def.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock/frozen_graph_def.pb.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock/model-42935.cptk.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock/model-42935.cptk.data-00000-of-00001.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock/model-42935.cptk.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock/model-42935.cptk.index.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock/raw_graph_def.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/models/SY-SW/PushBlock/raw_graph_def.pb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/results/SY-SW/SY-SW.nn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/results/SY-SW/SY-SW.nn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/results/SY-SW/SY-SW/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/results/SY-SW/SY-SW/checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/results/SY-SW/SY-SW/frozen_graph_def.pb" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/results/SY-SW/SY-SW/frozen_graph_def.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/results/SY-SW/SY-SW/raw_graph_def.pb" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/results/SY-SW/SY-SW/raw_graph_def.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/results/SY-SW/configuration.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/results/SY-SW/configuration.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/results/SY-SW/run_logs/timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/results/SY-SW/run_logs/timers.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="Test project" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/csharp_timers.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/Crawler/Scripts/CrawlerAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/ShipInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/ShipPhysics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/Scripts/Utils/TransformExtensionMethods.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Utility/ObjectResetter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/3DBall/Scripts/Ball3DAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/GunController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/AimingReticuleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/SavableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Shader/ForceField.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/BulletBotController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/PlayerBotController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scenes/Level1Scene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/Bot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/BulletFrameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/ce/d129757c/Guid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerBaseFrameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/44/f3f4cebb/Buffer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Savable Objects/PlayerSave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/CannonBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Environment/Water/Water/Scripts/Water.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/ec/dac3f163/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/ShotBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BC0FF3BA-5219-4086-B0E2-BFBFF0B00B3E/81/e6c6eb88/BaseRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/c0/a8257bb1/Tuple`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/b7/47b8b237/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@1.0.2/Runtime/Sensors/RayPerceptionSensorComponent3D.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/28/02d56d33/Tuple`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/44/f3f4cebb/Buffer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/csharp_timers.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/68DD6E4A-CC00-4C7C-8BB1-2C0E7EB964F9/20/ee78396e/Model.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AEEE2A46-43FD-4B25-995B-A1E9BB530B29/ad/5baaede2/CompressionTypeProto.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/3DBall/Scripts/Ball3DAgent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/ec/dac3f163/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E1319B71-95C3-43E7-9B38-5CD3AA43F5DC/9b/04cf1c1d/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D27DFFC2-6BB9-411A-9DB4-0B1FBACE639C/87/5b51b6cd/ProcessTask`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@1.0.2/Runtime/Sensors/RayPerceptionSensor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/PushBlock/Scripts/PushAgentBasic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/FSMSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/NPCDetector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BC0FF3BA-5219-4086-B0E2-BFBFF0B00B3E/81/e6c6eb88/BaseRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/BaseAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/FollowState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/AimingLaser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/WanderState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/AttackState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/SeekBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/SteeringBehaviours.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Ai/Steering behaviours/WanderBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/PushBlock/Scripts/PushAgentBasic.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/c0/a8257bb1/Tuple`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AimingLaser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/Pool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E1319B71-95C3-43E7-9B38-5CD3AA43F5DC/9b/04cf1c1d/List`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Utilities/Pool/IPoolableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/Scripts/Utils/TransformExtensionMethods.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Utility/ObjectResetter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/ShipInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/712D4FD8-31E1-48F0-BA51-24A22B81CAC4/b7/47b8b237/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/ShipPhysics.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scenes/Level1Scene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/28/02d56d33/Tuple`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ML-Agents/Examples/Crawler/Scripts/CrawlerAgent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Savable Objects/PlayerSave.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/GunController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/AimingReticuleController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/68DD6E4A-CC00-4C7C-8BB1-2C0E7EB964F9/20/ee78396e/Model.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/SavableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AEEE2A46-43FD-4B25-995B-A1E9BB530B29/ad/5baaede2/CompressionTypeProto.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/CannonBehavior.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Environment/Water/Water/Scripts/Water.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/ShotBehavior.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/PlayerBotController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7AC571C-A2D0-4B2F-981D-0D886FA067CF/ce/d129757c/Guid.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/BulletBotController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/Bots/Bot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Shader/ForceField.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/BulletFrameData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/TimeTravelMechanic/FrameData/PlayerDiffFrameData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D27DFFC2-6BB9-411A-9DB4-0B1FBACE639C/87/5b51b6cd/ProcessTask`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@1.0.2/Runtime/Academy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -353,14 +163,14 @@
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Machine Learning Script/MyAcademy.cs" />
         <option value="$PROJECT_DIR$/../com.unity.ml-agents/Runtime/Sensor/SensorShapeValidator.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/NPCDetector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/States/FollowState.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/ShipInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameObjectStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Ai/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/ObjectsControllers/BulletController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/GameManagers/EnemyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/FFlScripts/Ship/Ship.cs" />
       </list>
     </option>
   </component>
@@ -371,8 +181,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35048753" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35050392" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30011198" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
@@ -396,15 +206,22 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22808">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="22808" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -600,7 +417,17 @@
       <workItem from="1591549400749" duration="5227000" />
       <workItem from="1591970277043" duration="2425000" />
       <workItem from="1592295009071" duration="4161000" />
-      <workItem from="1592820540113" duration="1801000" />
+      <workItem from="1592820540113" duration="3207000" />
+      <workItem from="1593678876358" duration="137000" />
+      <workItem from="1593679361238" duration="3499000" />
+      <workItem from="1594479699138" duration="794000" />
+      <workItem from="1596009467662" duration="2441000" />
+      <workItem from="1596034806398" duration="10138000" />
+      <workItem from="1596099635250" duration="6398000" />
+      <workItem from="1596719132318" duration="296000" />
+      <workItem from="1596719478262" duration="2277000" />
+      <workItem from="1597236142073" duration="3673000" />
+      <workItem from="1597306409535" duration="3015000" />
     </task>
     <task id="LOCAL-00001" summary="Added a Pool and various other optimization">
       <created>1560167981628</created>
@@ -627,7 +454,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
@@ -669,107 +496,100 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fix for machine learning" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1205" y="233" key="#xdebugger.evaluate" timestamp="1585219331606">
+    <state width="524" height="493" key="DebuggerActiveHint" timestamp="1597241433486">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state x="-1205" y="233" key="#xdebugger.evaluate/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585219331606" />
-    <state width="524" height="493" key="DebuggerActiveHint" timestamp="1588849413540">
+    <state width="524" height="493" key="DebuggerActiveHint/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241433486" />
+    <state width="1018" height="301" key="GridCell.Tab.0.bottom" timestamp="1597310207780">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241286060" />
+    <state width="1018" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1597310207780" />
+    <state width="1018" height="301" key="GridCell.Tab.0.center" timestamp="1597310207779">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241286060" />
+    <state width="1018" height="301" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1597310207779" />
+    <state width="1018" height="301" key="GridCell.Tab.0.left" timestamp="1597310207778">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241286060" />
+    <state width="1018" height="301" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1597310207778" />
+    <state width="1018" height="301" key="GridCell.Tab.0.right" timestamp="1597310207779">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241286060" />
+    <state width="1018" height="301" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1597310207779" />
+    <state width="1018" height="301" key="GridCell.Tab.1.bottom" timestamp="1597310211634">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241288164" />
+    <state width="1018" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1597310211634" />
+    <state width="1018" height="301" key="GridCell.Tab.1.center" timestamp="1597310211634">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241288164" />
+    <state width="1018" height="301" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1597310211634" />
+    <state width="1018" height="301" key="GridCell.Tab.1.left" timestamp="1597310211634">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241288164" />
+    <state width="1018" height="301" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1597310211634" />
+    <state width="1018" height="301" key="GridCell.Tab.1.right" timestamp="1597310211634">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241288164" />
+    <state width="1018" height="301" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1597310211634" />
+    <state width="924" height="301" key="GridCell.Tab.2.bottom" timestamp="1597241285665">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state width="524" height="493" key="DebuggerActiveHint/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1588849413540" />
-    <state width="559" height="466" key="DebuggerActiveHint/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1587642378824" />
-    <state width="1877" height="301" key="GridCell.Tab.0.bottom" timestamp="1592387866336">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1592319897531" />
-    <state width="1877" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866336" />
-    <state width="1877" height="301" key="GridCell.Tab.0.center" timestamp="1592387866336">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="301" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1592319897530" />
-    <state width="1877" height="301" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866336" />
-    <state width="1877" height="301" key="GridCell.Tab.0.left" timestamp="1592387866335">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="301" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1592319897530" />
-    <state width="1877" height="301" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866335" />
-    <state width="1877" height="301" key="GridCell.Tab.0.right" timestamp="1592387866336">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="301" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1592319897531" />
-    <state width="1877" height="301" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866336" />
-    <state width="1877" height="301" key="GridCell.Tab.1.bottom" timestamp="1592387866336">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1592320211253" />
-    <state width="1877" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866336" />
-    <state width="1877" height="301" key="GridCell.Tab.1.center" timestamp="1592387866336">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="301" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1592320211253" />
-    <state width="1877" height="301" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866336" />
-    <state width="1877" height="301" key="GridCell.Tab.1.left" timestamp="1592387866336">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="301" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1592320211253" />
-    <state width="1877" height="301" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866336" />
-    <state width="1877" height="301" key="GridCell.Tab.1.right" timestamp="1592387866336">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="301" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1592320211253" />
-    <state width="1877" height="301" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866336" />
-    <state width="1877" height="301" key="GridCell.Tab.2.bottom" timestamp="1592387866337">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="300" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1589236335913" />
-    <state width="1877" height="301" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866337" />
-    <state width="1877" height="301" key="GridCell.Tab.2.center" timestamp="1592387866336">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="300" key="GridCell.Tab.2.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1589236335913" />
-    <state width="1877" height="301" key="GridCell.Tab.2.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866336" />
-    <state width="1877" height="301" key="GridCell.Tab.2.left" timestamp="1592387866336">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="300" key="GridCell.Tab.2.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1589236335913" />
-    <state width="1877" height="301" key="GridCell.Tab.2.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866336" />
-    <state width="1877" height="301" key="GridCell.Tab.2.right" timestamp="1592387866337">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="300" key="GridCell.Tab.2.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1589236335913" />
-    <state width="1877" height="301" key="GridCell.Tab.2.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866337" />
-    <state width="1877" height="301" key="GridCell.Tab.3.bottom" timestamp="1592387866337">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="300" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1589236335914" />
-    <state width="1877" height="301" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866337" />
-    <state width="1877" height="301" key="GridCell.Tab.3.center" timestamp="1592387866337">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="300" key="GridCell.Tab.3.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1589236335914" />
-    <state width="1877" height="301" key="GridCell.Tab.3.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866337" />
-    <state width="1877" height="301" key="GridCell.Tab.3.left" timestamp="1592387866337">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="300" key="GridCell.Tab.3.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1589236335914" />
-    <state width="1877" height="301" key="GridCell.Tab.3.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866337" />
-    <state width="1877" height="301" key="GridCell.Tab.3.right" timestamp="1592387866337">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="300" key="GridCell.Tab.3.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1589236335914" />
-    <state width="1877" height="301" key="GridCell.Tab.3.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1592387866337" />
-    <state x="793" y="226" key="RiderGenerateDialog" timestamp="1591970681894">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="793" y="226" key="RiderGenerateDialog/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1591970681894" />
-    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1587641545164">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1587641545164" />
-    <state x="-773" y="313" width="843" height="736" key="dock-window-1" timestamp="1585218634330">
+    <state width="924" height="301" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241285665" />
+    <state width="1877" height="301" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1596720070070" />
+    <state width="924" height="301" key="GridCell.Tab.2.center" timestamp="1597241285665">
       <screen x="-1920" y="5" width="1920" height="1050" />
     </state>
-    <state x="-773" y="313" width="843" height="736" key="dock-window-1/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1585218634330" />
+    <state width="924" height="301" key="GridCell.Tab.2.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241285665" />
+    <state width="1877" height="301" key="GridCell.Tab.2.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1596720070070" />
+    <state width="924" height="301" key="GridCell.Tab.2.left" timestamp="1597241285665">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.2.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241285665" />
+    <state width="1877" height="301" key="GridCell.Tab.2.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1596720070070" />
+    <state width="924" height="301" key="GridCell.Tab.2.right" timestamp="1597241285665">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.2.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241285665" />
+    <state width="1877" height="301" key="GridCell.Tab.2.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1596720070070" />
+    <state width="924" height="301" key="GridCell.Tab.3.bottom" timestamp="1597241285666">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241285666" />
+    <state width="1877" height="301" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1596720070070" />
+    <state width="924" height="301" key="GridCell.Tab.3.center" timestamp="1597241285665">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.3.center/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241285665" />
+    <state width="1877" height="301" key="GridCell.Tab.3.center/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1596720070070" />
+    <state width="924" height="301" key="GridCell.Tab.3.left" timestamp="1597241285665">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.3.left/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241285665" />
+    <state width="1877" height="301" key="GridCell.Tab.3.left/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1596720070070" />
+    <state width="924" height="301" key="GridCell.Tab.3.right" timestamp="1597241285665">
+      <screen x="-1920" y="5" width="1920" height="1050" />
+    </state>
+    <state width="924" height="301" key="GridCell.Tab.3.right/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241285665" />
+    <state width="1877" height="301" key="GridCell.Tab.3.right/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1596720070070" />
+    <state x="793" y="226" key="RiderGenerateDialog" timestamp="1597310686432">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1127" y="231" key="RiderGenerateDialog/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597240835512" />
+    <state x="793" y="226" key="RiderGenerateDialog/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1597310686432" />
+    <state x="603" y="124" width="714" height="801" key="find.popup" timestamp="1597310739631">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1317" y="129" width="714" height="801" key="find.popup/0.0.1920.1050/-1920.5.1920.1050@-1920.5.1920.1050" timestamp="1597241117626" />
+    <state x="603" y="124" width="714" height="801" key="find.popup/0.0.1920.1050/-1920.5.1920.1050@0.0.1920.1050" timestamp="1597310739631" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -788,7 +608,7 @@
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo typeName="MLAgents.Sensor.StackingSensor" fieldName="m_StackedObservations" />
+        <PinnedItemInfo />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
@@ -796,6 +616,7 @@
         <watch expression="playerSave" />
         <watch expression="isPlayer" />
         <watch expression="sensors" />
+        <watch expression="vectorAction" />
       </configuration>
     </watches-manager>
   </component>

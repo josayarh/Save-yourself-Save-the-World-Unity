@@ -21,7 +21,7 @@ public class EnemyController : SavableObject, IPoolableObject, BaseAI
 
     public void OnPoolCreation()
     {
-        changeChildMaterial(gameObject.transform.GetChild(0).gameObject, replayMaterial);
+        changeChildMaterial(gameObject, replayMaterial);
     }
 
     private void FixedUpdate()
@@ -43,7 +43,7 @@ public class EnemyController : SavableObject, IPoolableObject, BaseAI
             {
                 if (!isAiOn)
                 {
-                    changeChildMaterial(gameObject.transform.GetChild(0).gameObject, aiMaterial);
+                    changeChildMaterial(gameObject, aiMaterial);
                 }
                 
                 isAiOn = true;
@@ -126,6 +126,7 @@ public class EnemyController : SavableObject, IPoolableObject, BaseAI
             GameObjectStateManager.Instance.addDynamicObject(id, GetType(), frameSaveList, 0);
             frameSaveList = new List<string>();
             id = Guid.Empty;
+            hasBeenKilled = false;
         }
     }
 

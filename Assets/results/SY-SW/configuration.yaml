@@ -25,6 +25,11 @@ behaviors:
         use_actions: false
         use_vail: false
         demo_path: Demonstrations/PlayerShipRecord.demo
+      curiosity:
+        gamma: 0.99
+        strength: 0.02
+        encoding_size: 256
+        learning_rate: 0.0003
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
@@ -50,7 +55,7 @@ engine_settings:
   width: 84
   height: 84
   quality_level: 5
-  time_scale: 10.0
+  time_scale: 1.0
   target_frame_rate: -1
   capture_frame_rate: 60
   no_graphics: false
@@ -62,6 +67,6 @@ checkpoint_settings:
   load_model: false
   resume: true
   force: false
-  train_model: false
+  train_model: true
   inference: false
 debug: false

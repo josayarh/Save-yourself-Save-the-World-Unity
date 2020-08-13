@@ -57,4 +57,6 @@ public class EnemyManager : MonoBehaviour
     }
 
     public static EnemyManager Instance => instance;
+
+    public int MAXEnemies => maxEnemies;
 }

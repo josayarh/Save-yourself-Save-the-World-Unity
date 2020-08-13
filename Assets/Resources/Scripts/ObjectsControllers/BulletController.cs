@@ -40,7 +40,7 @@ public class BulletController : SavableObject, IPoolableObject
             if (parentObject)
             {
                 Ship controler = parentObject.GetComponent<Ship>();
-                if (controler && !controler.IsPlayer)
+                if (controler)
                 {
                     controler.addRewardOnKill();
                 }
