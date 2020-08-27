@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1658584023442881374}
   - component: {fileID: 1658584023450993834}
   - component: {fileID: 1658584023450335276}
-  - component: {fileID: 9185547673397622589}
   - component: {fileID: 54683711048019664}
+  - component: {fileID: 293550069039799718}
   m_Layer: 0
   m_Name: shot_prefab
   m_TagString: Laser
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1658584023439639168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -124,7 +124,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0, g: 1, b: 0.17254902, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.069642544, a: 1}
   m_Intensity: 2
   m_Range: 50
   m_SpotAngle: 30
@@ -152,20 +152,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!136 &9185547673397622589
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658584023439639168}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 5.861865
-  m_Height: 58.102005
-  m_Direction: 2
-  m_Center: {x: -2.3836522, y: -0.40638447, z: 24.304071}
 --- !u!54 &54683711048019664
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -182,3 +168,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &293550069039799718
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658584023439639168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9, y: 10, z: 50}
+  m_Center: {x: 0, y: 0, z: 25}

@@ -2,8 +2,8 @@ behaviors:
   SY-SW:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 128
-      buffer_size: 2048
+      batch_size: 32
+      buffer_size: 256
       learning_rate: 0.0003
       beta: 0.01
       epsilon: 0.2
@@ -15,23 +15,16 @@ behaviors:
       hidden_units: 256
       num_layers: 2
       vis_encode_type: simple
-    behavioral_cloning:
-      demo_path: Demonstrations/PlayerShipRecord.demo
-      strength: 0.5
-      steps: 50000
     reward_signals:
       extrinsic:
-        strength: 0.6
+        strength: 0.2
         gamma: 0.99
       gail:
         gamma: 0.99
         strength: 1
-        encoding_size: 256
+        encoding_size: 64
         demo_path: Demonstrations/PlayerShipRecord.demo
-      curiosity:
-        strength: 0.002
-        gamma: 0.99
-        encoding_size: 256
+        use_actions: true
     keep_checkpoints: 5
     max_steps: 15000000
     time_horizon: 64

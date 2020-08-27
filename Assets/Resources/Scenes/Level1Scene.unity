@@ -1879,7 +1879,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 11400000, guid: 33d693251d144234b9b9d78ffa4f0228,
+      objectReference: {fileID: 11400000, guid: 89a4d326006ca3c4eb527fc2da9a7ce7,
         type: 3}
     - target: {fileID: 2117572297373086102, guid: a5f95611ba0df554dbb2a2d3823afb34,
         type: 3}
@@ -9147,7 +9147,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 11400000, guid: 33d693251d144234b9b9d78ffa4f0228,
+      objectReference: {fileID: 11400000, guid: 89a4d326006ca3c4eb527fc2da9a7ce7,
         type: 3}
     - target: {fileID: 2117572297373086102, guid: a5f95611ba0df554dbb2a2d3823afb34,
         type: 3}
@@ -12391,7 +12391,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 11400000, guid: 33d693251d144234b9b9d78ffa4f0228,
+      objectReference: {fileID: 11400000, guid: 89a4d326006ca3c4eb527fc2da9a7ce7,
         type: 3}
     - target: {fileID: 5175795138777961344, guid: 9961cfd7e8aedf149a71014461980a24,
         type: 3}
@@ -12401,7 +12401,7 @@ PrefabInstance:
     - target: {fileID: 4055223373720765598, guid: 9961cfd7e8aedf149a71014461980a24,
         type: 3}
       propertyPath: isFSMdriven
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4055223373720765598, guid: 9961cfd7e8aedf149a71014461980a24,
         type: 3}
@@ -14957,7 +14957,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 11400000, guid: 33d693251d144234b9b9d78ffa4f0228,
+      objectReference: {fileID: 11400000, guid: 89a4d326006ca3c4eb527fc2da9a7ce7,
         type: 3}
     - target: {fileID: 2117572297373086102, guid: a5f95611ba0df554dbb2a2d3823afb34,
         type: 3}
@@ -15593,7 +15593,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 11400000, guid: 33d693251d144234b9b9d78ffa4f0228,
+      objectReference: {fileID: 11400000, guid: 89a4d326006ca3c4eb527fc2da9a7ce7,
         type: 3}
     - target: {fileID: 2117572297373086102, guid: a5f95611ba0df554dbb2a2d3823afb34,
         type: 3}
